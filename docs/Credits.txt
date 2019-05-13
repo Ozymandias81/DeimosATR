@@ -2,6 +2,7 @@ Insert here all needed credits which doesn't belong to USCM mod - ozy81
 
 Project Lead, Mapper, Programmer - Oriol Rettinger
 Programmer, Modelling - Ozymandias81
+Pk3 Builder Program - Tiger
 
 Other resources taken from...
 
