@@ -1,0 +1,130 @@
+Actor PulseGrenade
+{
+	Radius 10
+	Height 0
+	Damage 50
+	Speed 50
+	RenderStyle Add
+	Scale 0.2
+	Alpha 1.0
+	+ROCKETTRAIL
+	+EXTREMEDEATH
+	+RANDOMIZE
+	+DEHEXPLOSION
+	+NOBLOCKMAP
+	-NOGRAVITY
+	+DROPOFF
+	+MISSILE
+	+ACTIVATEIMPACT
+	+ACTIVATEPCROSS
+	Decal Scorch
+	DeathSound "weapons/gexp"
+
+  States
+	{
+  Spawn:
+	TNT1 A 0 A_SetGravity(0.0)
+	PRBM A 100 
+	PRBM AAAAA 1 A_SetGravity(gravity+0.2)
+	Goto Drop
+  Drop:
+	PRBM A 1
+	Loop
+  Death:
+	TNT1 A 0 A_SetScale(1.0,1.0)
+	TNT1 A 0 A_SetGravity(0.0)
+	TNT1 A 0 A_Explode (50, 128, XF_HURTSOURCE)
+	TNT1 A 0 A_SpawnItem("FlamerFlame",0,0)
+	TNT1 A 0 A_QuakeEx(2,2,2,8,0,512,"none",QF_RELATIVE,1,256)
+	QEX1 A 2 BRIGHT A_SpawnItemEx("FlameSparks",0,0,0,frandom(-1,1),frandom(-1,1),0)
+    QEX1 B 1 BRIGHT A_SpawnItem("ItBurns",0,0)
+	QEX1 CDEFGHIJK 1 BRIGHT A_SpawnItemEx("ShotSparks",0,0,0,frandom(-2,2),frandom(-2,2),frandom(4,8))
+	Stop
+	}
+}
+
+ACTOR FlamerFlame
+{
+  Radius 8
+  Height 16
+  Speed 20
+  Damage 5
+  Projectile
+  RenderStyle Add
+  Alpha 1.0
+  Scale 0.1
+  VSpeed 1.0
+  Decal "FlameScorch"
+  DamageType "Flamer"
+  +ROLLSPRITE
+  +FORCEPAIN
+  +THRUACTORS
+  States
+  {
+  Spawn:
+	FLMF ABC 2 Bright A_SetScale(scaleX+0.1,scaleY+0.1)
+	FLMF DEF 2 Bright {
+		A_SetScale(scaleX+0.1,scaleY+0.1);
+		A_Explode(10,32,0);
+		}
+	FLMF GHIJKLMNOPQRST 1 Bright {
+		A_SetRoll(roll+12,SPF_INTERPOLATE);
+		A_Explode(10,32,0);
+		}
+    Goto Death
+  Death:
+    TNT1 A 1 {
+		A_Explode(10,32);
+		A_SpawnItemEx("FlameSparks",0,0,0,frandom(-1,1),frandom(-1,1),0,180);
+		}
+    Stop
+  }
+}
+
+ACTOR PlasmaBlast
+{
+  Radius 4
+  Height 4
+  Speed 40
+  Damage 25
+  Projectile
+  +EXTREMEDEATH
+  +RANDOMIZE
+  RenderStyle Add
+  Alpha 0.75
+  Scale 0.6
+  DeathSound "weapons/gexp"
+  DamageType "PlasmaBlast"
+  Decal "BlastScorch"
+  States
+  {
+  Spawn:
+	PLBL A 2 Bright A_SpawnItemEx("PlasmaTail",0,0,0,0,0,0,0)
+	PLBL B 2 Bright A_Explode (20, 32)
+    Loop
+  Death:
+    TNT1 A 0 A_Explode (25, 128)
+	TNT1 A 0 A_QuakeEx(2,2,2,8,0,512,"none",QF_RELATIVE,1,256)
+	PLBL CDEFGH 1 Bright A_SpawnItemEx("PlasmaSparks",0,0,0,frandom(-1,1),frandom(-1,1),0,180)
+    Stop
+  }
+}
+
+Actor PlasmaTail
+{
+	RenderStyle Add
+	Alpha 0.5
+	Scale 0.4
+	+NOINTERACTION
+	+FORCEXYBILLBOARD
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+	PLBL AB 2 A_SetScale(scaleX-0.2,scaleY-0.2)
+	Goto Death
+	Death:
+	TNT1 A 0
+	Stop
+	}
+}

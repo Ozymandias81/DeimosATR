@@ -1,0 +1,11 @@
+:puertametal
+	door		1
+	playrepeat	start
+	stopsound	end
+end
+
+:puertacorredera
+	door		2
+	playrepeat	start2
+	stopsound	end2
+end

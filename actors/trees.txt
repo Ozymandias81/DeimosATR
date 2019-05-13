@@ -1,0 +1,79 @@
+ACTOR Tree1
+{
+	//$Category Flora Props
+	-SOLID
+	States
+	{
+	Spawn:
+		KRE1 A -1
+		Stop
+	}
+}
+
+ACTOR Tree2
+{
+	//$Category Flora Props
+	-SOLID
+	States
+	{
+	Spawn:
+		JOL1 A -1
+		Stop
+	}
+}
+
+ACTOR Tree3
+{
+	//$Category Flora Props
+	Radius 1
+	Height 27
+	Scale 1.5
+	States
+	{
+	Spawn:
+		JOL6 A -1
+		Stop
+	}
+}
+
+ACTOR Tree4
+{
+	//$Category Flora Props
+	Radius 5
+	Height 89
+	Scale 1.5
+	States
+	{
+	Spawn:
+		KRE2 A -1
+		Stop
+	}
+}
+
+ACTOR Tree5
+{
+	//$Category Flora Props
+	Radius 2
+	Height 25
+	Scale 1.5
+	States
+	{
+	Spawn:
+		LOL4 A -1
+		Stop
+	}
+}
+
+ACTOR Tree6
+{
+	//$Category Flora Props
+	Radius 2
+	Height 108
+	Scale 1.5
+	States
+	{
+	Spawn:
+		LOL2 A -1
+		Stop
+	}
+}

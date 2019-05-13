@@ -1,0 +1,15 @@
+Insert here all needed credits which doesn't belong to USCM mod - ozy81
+
+Project Lead, Mapper, Programmer - Oriol Rettinger
+Programmer, Modelling - Ozymandias81
+
+Other resources taken from...
+
+3d Models (fixed, converted and reworked by Ozymandias81):
+
+Activision (Call of Duty 2 & UO): codpipe#.md3
+AFADoomer: shuttle.md3 (Blade of Agony)
+Dragonfly GF: excavator1/2.md3 - https://p3dm.ru/files/auto/other_avto/11839-excavator.html ;
+Michani Phalanx: Dropship.md3
+Ozymandias81: Chair2.md3, Chair3.md3, APC.md3,
+Vados: PowerLoader.md3 - https://p3dm.ru/files/technique/robots/7049-power-loader-.htmloadr ; 

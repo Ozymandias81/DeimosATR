@@ -1,0 +1,157 @@
+ACTOR PistolAmmo : Ammo
+{
+  Inventory.Amount 12
+  Inventory.MaxAmount 12
+  Ammo.BackpackAmount 0
+  Ammo.BackpackMaxAmount 12
+  +IGNORESKILL
+}
+
+ACTOR PulseAmmo : Ammo
+{
+  Inventory.Amount 95
+  Inventory.MaxAmount 95
+  Ammo.BackpackAmount 0
+  Ammo.BackpackMaxAmount 95
+  +IGNORESKILL
+}
+
+ACTOR PulseClip : Ammo replaces Clip
+{
+  Inventory.PickupMessage "Picked up a Pulse Rifle ammo."
+  Inventory.Amount 1
+  Inventory.MaxAmount 4
+  Ammo.BackpackAmount 1
+  Ammo.BackpackMaxAmount 6
+  Inventory.Icon "CLIPA0"
+  +IGNORESKILL
+  States
+  {
+  Spawn:
+	CLIP A -1
+    Stop
+  }
+}
+
+ACTOR NadeAmmo : Ammo replaces RocketAmmo
+{
+  Inventory.PickupMessage "Picked up grenade."
+  Inventory.Amount 1
+  Inventory.MaxAmount 6
+  Ammo.BackpackAmount 1
+  Ammo.BackpackMaxAmount 6
+  Scale 0.8
+  +IGNORESKILL
+  States
+  {
+  Spawn:
+    NADE A -1
+    Stop
+  }
+}
+
+ACTOR ShellAmmo : Ammo
+{
+  Inventory.Amount 6
+  Inventory.MaxAmount 6
+  Ammo.BackpackAmount 6
+  Ammo.BackpackMaxAmount 6
+  +IGNORESKILL
+}
+
+ACTOR FlamerAmmo : Ammo
+{
+  Inventory.Amount 100
+  Inventory.MaxAmount 100
+  Ammo.BackpackAmount 0
+  Ammo.BackpackMaxAmount 100
+  +IGNORESKILL
+}
+
+ACTOR FlamerTank : FlamerAmmo replaces RocketBox
+{
+  Inventory.PickupMessage "Picked up Flamer fuel."
+  Inventory.Amount 25
+  Inventory.MaxAmount 100
+  Ammo.BackpackAmount 25
+  Ammo.BackpackMaxAmount 100
+  Scale 0.6
+  +IGNORESKILL
+  States
+  {
+  Spawn:
+    FLAM A -1
+    Stop
+  }
+}
+
+ACTOR SmartAmmo : Ammo
+{
+  Inventory.Amount 100
+  Inventory.MaxAmount 400
+  Ammo.BackpackAmount 0
+  Ammo.BackpackMaxAmount 100
+  +IGNORESKILL
+}
+
+ACTOR SmartClip : SmartAmmo replaces ClipBox
+{
+  Inventory.PickupMessage "Picked up a Smartgun ammo."
+  Inventory.Amount 100
+  Inventory.MaxAmount 200
+  Ammo.BackpackAmount 100
+  Ammo.BackpackMaxAmount 400
+  +IGNORESKILL
+  States
+  {
+  Spawn:
+    SMGA A -1
+    Stop
+  }
+}
+
+ACTOR PlasmaCell : Ammo replaces Cell
+{
+  Inventory.PickupMessage "Picked up an energy cell."
+  Inventory.Amount 10
+  Inventory.MaxAmount 100
+  Ammo.BackpackAmount 10
+  Ammo.BackpackMaxAmount 200
+  Inventory.Icon "CELLA0"
+  States
+  {
+  Spawn:
+    CELL A -1
+    Stop
+  }
+}
+
+ACTOR PlasmaCellPack : PlasmaCell replaces CellPack
+{
+  Inventory.PickupMessage "Picked up an energy cell pack."
+  Inventory.Amount 50
+  States
+  {
+  Spawn:
+    CELP A -1
+    Stop
+  }
+}
+
+ACTOR Heat : Ammo
+{
+  Inventory.Amount 0
+  Inventory.MaxAmount 100
+  Ammo.BackpackAmount 0
+  Ammo.BackpackMaxAmount 100
+  +IGNORESKILL
+}
+
+ACTOR SentryAmount : Ammo
+{
+  Inventory.Amount 1
+  Inventory.MaxAmount 1
+  Ammo.BackpackAmount 0
+  Ammo.BackpackMaxAmount 1
+  +IGNORESKILL
+}

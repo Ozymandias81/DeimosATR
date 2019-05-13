@@ -1,0 +1,20 @@
+Information:
+Type: Fog Spawner
+Connections: None
+Spawn Offsets: Arguments
+Documentation: Yes
+Spawn Ceiling: No
+Variants: 0
+Summon: FogCloud_Generator
+ACS: No
+
+Credits:
+Submitted: zrrion the insect
+Decorate: Tormentor667, zrrion the insect
+GLDefs: None
+Sounds: None
+Sprites: zrrion the insect
+Idea Base: Clouds in TCoTD
+
+The first argument sets the radius of the circle the clouds spawn in.
+If ARGS[0] is left as 0, the spawner defaults to a 96 radius circle.

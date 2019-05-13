@@ -1,0 +1,51 @@
+//Straight from Blade of Agony, courtesy by Ozymandias81
+
+// Main menu ---------------------------------------------------------------------------------------
+ListMenu "MainMenu"
+{
+  Position 110, 60
+  TextItem "$MNU_NEWGAME", "n", "PlayerclassMenu"
+  TextItem "$MNU_OPTIONS", "o", "OptionsMenu"
+  TextItem "$AMC_OPTIONS", "a", "AMCOptionsMenu"
+  TextItem "$MNU_GAMEFILES", "g", "GameFilesMenu"
+  TextItem "$MNU_INFO", "i", "ReadThisMenu"
+  TextItem "$MNU_QUITGAME", "q", "QuitMenu"
+}
+
+//Regular Options Menu
+OptionMenuSettings
+{
+   Linespacing 11
+}
+
+// AMC options menu ------------------------------------------------------------------------------
+OptionMenu "AMCOptionsMenu"
+{
+	Title "Custom Options"
+
+	Submenu "Controls Settings", "AMCControls"
+	Submenu "Rendering Options", "AMCRendering"
+}
+
+OptionMenu "AMCControls"
+{
+	Title  "Controls Settings"
+	StaticTextSwitchable "ENTER to change, BACKSPACE to clear",
+                     "Press new key for control, ESC to cancel",
+                     "ControlMessage"
+	StaticText ""
+	Control "Toggle Flashlight",	"PukeName ToggleFlashlight"
+}
+
+OptionMenu "AMCRendering"
+{
+	Title  "Rendering Settings"
+
+	Slider "FOV", "fov", 80, 110, 2, 0
+	Option "Reflections","gl_plane_reflection","OnOff"
+	StaticText ""
+	StaticText "Distance is applied in map units"
+	StaticText "Decrease following values to improve in-game performance"
+	Slider "3d Models","amclod",1024,16384,1024, 0
+	Slider "Special Effects","amcfxlod",1024,16384,1024, 0
+}

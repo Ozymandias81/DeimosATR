@@ -1,0 +1,575 @@
+//Custom models - Ozy81
+ACTOR ACM_Model
+{
+	DistanceCheck "amclod"
+	+SOLID
+    States
+    {
+    Spawn:
+		MDLA A -1
+		Stop
+    }
+}
+
+ACTOR PowerLoader : ACM_Model
+{
+	//$Category Models/ Vehicles
+	Radius 32
+	Height 96
+}
+
+ACTOR Dropship : ACM_Model
+{
+	//$Category Models/ Vehicles
+	Radius 20
+	Height 60
+	+NOGRAVITY
+}
+
+ACTOR APC : ACM_Model
+{
+	//$Category Models/ Vehicles
+	Radius 20
+	Height 60
+	+NOGRAVITY
+}
+
+ACTOR Xcrate01 : ACM_Model
+{
+	//$Category Models/ Industrial
+    Health 30
+    Radius 32
+    Height 64
+    Mass 200
+    +NOGRAVITY
+    +NOBLOOD
+}
+
+ACTOR Xcrate02 : Xcrate01 {}
+ACTOR Xcrate03 : Xcrate01 {}
+ACTOR Xcrate04 : Xcrate01 {}
+
+ACTOR Fence : ACM_Model
+{
+	//$Category Models/ Industrial
+    Radius 4
+    Height 8
+	Mass 0x7FFFFFF
+}
+
+ACTOR Trashcan : ACM_Model
+{
+	//$Category Models/ Furniture
+    Radius 4
+    Height 8
+	Mass 0x7FFFFFF
+}
+
+ACTOR Sofa : ACM_Model
+{
+	//$Category Models/ Furniture
+    Radius 4
+    Height 8
+	Mass 0x7FFFFFF
+}
+
+ACTOR Soapdis : ACM_Model
+{
+	//$Category Models/ WC
+    Radius 16
+    Height 28
+	Mass 0x7FFFFFF
+    +NOGRAVITY
+}
+
+ACTOR Sink : ACM_Model
+{
+	//$Category Models/ WC
+    Radius 16
+    Height 28
+	Mass 0x7FFFFFF
+    +NOGRAVITY
+}
+
+ACTOR HandDryer : ACM_Model
+{
+	//$Category Models/ WC
+    Radius 4
+    Height 8
+	Mass 0x7FFFFFF
+    +NOGRAVITY
+}
+
+ACTOR Toilet1 : ACM_Model
+{
+	//$Category Models/ WC
+	Radius 16
+	Height 28
+	Mass 0x7FFFFFF
+	+FLOORCLIP
+}
+
+ACTOR Toilet2 : Toilet1
+{
+	//$Category Models/ WC
+	Radius 16
+	Height 28
+}
+
+ACTOR Switchboard : ACM_Model
+{
+	//$Category Models/ Industrial
+	Radius 12
+	Height 32
+	+NOGRAVITY
+}
+
+ACTOR Steekw : ACM_Model
+{
+	//$Category Models/ Storage
+	+FLOORCLIP
+	Radius 12
+	Height 32
+}
+
+ACTOR Pellcar : Steekw {}
+ACTOR Kruk : Steekw {}
+
+ACTOR Kist : Steekw
+{
+	//$Category Models/ Industrial
+}
+
+ACTOR Hek : Steekw
+{
+	//$Category Models/ Industrial
+}
+
+ACTOR Airpipe : Steekw
+{
+	//$Category Models/ Industrial
+}
+
+ACTOR Heating : Steekw
+{
+	//$Category Models/ Industrial
+}
+
+ACTOR Crane : Steekw
+{
+	//$Category Models/ Industrial
+}
+
+ACTOR OilBarrel : Steekw
+{
+	//$Category Models/ Industrial
+}
+
+ACTOR RustedBarrel : Steekw {}
+
+ACTOR Forklift1 : ACM_Model
+{
+	//$Category Models/ Vehicles
+	Radius 20
+	Height 64
+	Mass 0x7FFFFFF
+	+FLOORCLIP
+}
+
+ACTOR Forklift2 : Forklift1
+{
+	Radius 24
+	Height 32
+}
+
+ACTOR Truck01 : Forklift1 30339
+{
+	Radius 58
+	Height 122
+}
+
+ACTOR GreyMetalBarrel : ACM_Model
+{
+	//$Category Models/ Storage
+	Radius 12
+	Height 32
+	+NOGRAVITY
+}
+
+ACTOR RedMetalBarrel : GreyMetalBarrel {}
+
+ACTOR Hedgehog : ACM_Model
+{
+	//$Category Models/ Military
+	Radius 16
+	Height 40
+}
+
+ACTOR Workbench1 : ACM_Model
+{
+	//$Category Models/ Industrial
+	Radius 32
+	Height 32
+}
+
+ACTOR Workbench2 : Workbench1 { }
+
+ACTOR Generator : ACM_Model
+{
+	//$Category Models/ Industrial
+	Radius 32
+	Height 32
+	+NOGRAVITY
+}
+
+ACTOR Crate : ACM_Model
+{
+	//$Category Models/ Storage
+	Radius 16
+	Height 32
+	+NOGRAVITY
+}
+
+ACTOR Dumpster : ACM_Model
+{
+	//$Category Models/ Storage
+	Radius 32
+	Height 32
+}
+
+ACTOR Barrier : ACM_Model
+{
+	//$Category Models/ Military
+	Radius 32
+	Height 32
+}
+
+ACTOR Antenna : ACM_Model
+{
+	//$Category Models/ Tech
+	Radius 32
+	Height 32
+	+NOGRAVITY
+}
+
+ACTOR Autokeuken : ACM_Model
+{
+	//$Category Models/ Furniture
+	Radius 32
+	Height 32
+}
+
+ACTOR Autosync : ACM_Model
+{
+	//$Category Models/ Furniture
+	Radius 32
+	Height 32
+}
+
+ACTOR Bench2 : ACM_Model
+{
+	//$Category Models/ Furniture
+	Radius 32
+	Height 32
+}
+
+ACTOR Blusser : ACM_Model
+{
+	//$Category Models/ Furniture
+	Radius 32
+	Height 32
+	+NOGRAVITY
+}
+
+ACTOR Boxtrailer : ACM_Model
+{
+	//$Category Models/ Vehicles
+	Radius 32
+	Height 32
+}
+
+ACTOR Cam : ACM_Model
+{
+	//$Category Models/ Tech
+	Radius 32
+	Height 32
+	+NOGRAVITY
+    States
+    {
+    Spawn:
+		MDLA AABBCCDDEEFFFFEEDDCCBBAA 35
+		Loop
+    }
+}
+
+ACTOR Bed1 : ACM_Model
+{
+	//$Category Models/ Furniture
+	Radius 32
+	Height 32
+}
+
+ACTOR Bed2 : ACM_Model
+{
+	//$Category Models/ Furniture
+	Radius 32
+	Height 32
+}
+
+ACTOR Campbed : ACM_Model
+{
+	//$Category Models/ Furniture
+	Radius 32
+	Height 32
+}
+
+ACTOR Chair1 : ACM_Model
+{
+	//$Category Models/ Furniture
+	Radius 32
+	Height 32
+}
+
+ACTOR Chair2 : ACM_Model
+{
+	//$Category Models/ Furniture
+	Height 20
+	Health 10
+	Mass 999999
+	+NOGRAVITY
+	+NOBLOOD
+	+NOTAUTOAIMED
+	+SHOOTABLE
+	States
+	{
+	Spawn:
+		MDLA A -1
+		Stop
+	Death:
+		TNT1 A 0 A_UnSetSolid
+		MDLA BCDEFGHIJKLMNO 1
+		MDLA P -1
+		Stop
+	}
+}
+
+ACTOR Chair3 : Chair2 {}
+
+ACTOR Closet : ACM_Model
+{
+	//$Category Models/ Furniture
+	Radius 32
+	Height 32
+}
+
+ACTOR Const : ACM_Model
+{
+	//$Category Models/ Industrial
+	Radius 32
+	Height 32
+}
+
+ACTOR Container : ACM_Model
+{
+	//$Category Models/ Storage
+	Radius 32
+	Height 32
+}
+
+ACTOR Copy : ACM_Model
+{
+	//$Category Models/ Tech
+	Radius 32
+	Height 32
+}
+
+ACTOR DNACreator : ACM_Model
+{
+	//$Category Models/ Tech
+	Radius 32
+	Height 32
+}
+
+ACTOR Excavator : ACM_Model
+{
+	//$Category Models/ Vehicles
+	Radius 32
+	Height 32
+}
+
+ACTOR Generator4 : ACM_Model
+{
+	//$Category Models/ Industrial
+	Radius 32
+	Height 32
+	+NOGRAVITY
+}
+
+ACTOR Generator5 : ACM_Model
+{
+	//$Category Models/ Industrial
+	Radius 32
+	Height 32
+	+NOGRAVITY
+}
+
+ACTOR Jaknikker : ACM_Model
+{
+	//$Category Models/ Industrial
+	Radius 32
+	Height 32
+}
+
+ACTOR Kast1 : ACM_Model
+{
+	//$Category Models/ Industrial
+	Radius 32
+	Height 32
+}
+
+ACTOR Labtafel : ACM_Model
+{
+	//$Category Models/ Furniture
+	Radius 32
+	Height 32
+}
+
+ACTOR Lamp : ACM_Model
+{
+	//$Category Models/ Lights
+	Radius 32
+	Height 32
+	+NOGRAVITY
+}
+
+ACTOR Light2 : ACM_Model
+{
+	//$Category Models/ Lights
+	Radius 32
+	Height 32
+	+NOGRAVITY
+}
+
+ACTOR Light5 : ACM_Model
+{
+	//$Category Models/ Lights
+	Radius 32
+	Height 32
+	+NOGRAVITY
+}
+
+ACTOR Light6 : ACM_Model
+{
+	//$Category Models/ Lights
+	Radius 32
+	Height 32
+	+NOGRAVITY
+}
+
+ACTOR Medi : ACM_Model
+{
+	//$Category Models/ Furniture
+	Radius 32
+	Height 32
+	+NOGRAVITY
+}
+
+ACTOR Microsc : ACM_Model
+{
+	//$Category Models/ Tech
+	Radius 4
+	Height 4
+	+CANPASS
+	+NOGRAVITY
+}
+
+ACTOR Monitoren : ACM_Model
+{
+	//$Category Models/ Tech
+	Radius 32
+	Height 32
+}
+
+ACTOR Radar : ACM_Model
+{
+	//$Category Models/ Tech
+	Radius 32
+	Height 32
+}
+
+ACTOR Radio_Tower : ACM_Model
+{
+	//$Category Models/ Tech
+	Radius 32
+	Height 32
+}
+
+ACTOR Shuttle : ACM_Model
+{
+	//$Category Models/ Vehicles
+	Radius 32
+	Height 32
+}
+
+ACTOR Soda : ACM_Model
+{
+	//$Category Models/ Furniture
+	Radius 32
+	Height 32
+}
+
+ACTOR Truck5 : ACM_Model
+{
+	//$Category Models/ Vehicles
+	Radius 32
+	Height 32
+}
+
+ACTOR Wagon : ACM_Model
+{
+	//$Category Models/ Vehicles
+	Radius 32
+	Height 32
+}
+
+ACTOR Water : ACM_Model
+{
+	//$Category Models/ Furniture
+	Radius 32
+	Height 32
+}
+
+ACTOR Bulldozer1 : ACM_Model
+{
+	//$Category Models/ Vehicles
+	Radius 20
+	Height 64
+}
+
+ACTOR OzyPipe1 : ACM_Model
+{
+	//$Category Models/ Scenery
+	Radius 2
+	Height 2
+	-SOLID
+	+NOBLOCKMAP
+	+NOGRAVITY
+}
+
+ACTOR OzyPipe2 : OzyPipe1 {}
+ACTOR OzyPipe3 : OzyPipe1 {}
+ACTOR OzyPipe4 : OzyPipe1 {}
+ACTOR OzyPipe5 : OzyPipe1 {}
+ACTOR OzyPipe6 : OzyPipe1 {}
+ACTOR OzyPipe7 : OzyPipe1 {}
+ACTOR OzyPipe8 : OzyPipe1 {}
+ACTOR OzyPipe9 : OzyPipe1 {}
+ACTOR OzyPipe10 : OzyPipe1 {}
+ACTOR OzyPipe11 : OzyPipe1 {}
+ACTOR OzyPipe12 : OzyPipe1 {}
+ACTOR OzyPipe13 : OzyPipe1 {}
+ACTOR OzyPipe14 : OzyPipe1 {}
+ACTOR OzyPipe15 : OzyPipe1 {}
+ACTOR OzyPipe16 : OzyPipe1 {}
+ACTOR OzyPipe17 : OzyPipe1 {}
+ACTOR OzyPipe18 : OzyPipe1 {}

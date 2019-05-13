@@ -1,0 +1,377 @@
+GameInfo
+{
+    PlayerClasses = "ColonialMarine"
+	DimColor = "blue"
+	DimAmount = 0.25
+	ArmorIcons = "BLUEHUD", 75.0, "BLUEHUD"
+}
+
+Automap
+{
+    Base = "Doom"
+    ShowLocks = True
+    Background = "00 00 66"
+    YourColor = "ff 99 00"
+    WallColor = "ff ff ff"
+    TwoSidedWallColor = "66 66 66"
+    FloorDiffWallColor = "66 66 66"
+    CeilingDiffWallColor = "66 66 66"
+    ExtraFloorWallColor = "66 66 66"
+    ThingColor = "ff 99 00"
+    ThingColor_Item = "ff 99 00"
+    ThingColor_CountItem = "ff 99 00"
+    ThingColor_Monster = "ff 33 00"
+    ThingColor_Friend = "33 99 33"
+    SpecialWallColor = "00 77 77"
+    SecretWallColor = "00 aa aa"
+    GridColor = "00 88 88"
+    XHairColor = "00 00 00"
+    NotSeenColor = "00 50 50"
+    LockedColor = "ff 33 00"
+    IntraTeleportColor = "00 00 00"
+    InterTeleportColor = "00 00 00"
+    SecretSectorColor = "00 00 00"
+    AlmostBackgroundColor = "00 50 50"
+}
+
+clearepisodes
+
+episode SULACO_A
+{
+	name = "Aliens"
+	noskillmenu
+}
+
+adddefaultmap
+{
+	fallingdamage
+	keepfullinventory
+}
+
+cluster 2
+{
+	pic = "FINALPIC"
+	music = "FINAL"
+	exittext = lookup, "aliensexit"
+	hub
+}
+
+//////////ALIENS EPISODE//////////
+
+Map SULACO_A "USS Sulaco"
+{
+	cluster = 2
+	nointermission
+	music = "Sulaco"
+}
+
+Map COMPLEXA "Administrative Block"
+{
+	cluster = 2
+    nointermission
+	music = "Admin"
+}
+
+Map COMPLEX0 "Administrative Block"
+{
+	cluster = 2
+    nointermission
+	music = ""
+}
+
+Map ATMOS "Atmosphere Processor"
+{
+	cluster = 2
+    nointermission
+	music = "neutral"
+}
+
+//////////////////////////////////
+
+Map COLONY_N "Hadley's Hope Colony (Night)"
+{
+	cluster = 9
+	nointermission
+	music = ""
+}
+
+Map COLONY_D "Hadley's Hope Colony (Day)"
+{
+	cluster = 9
+	nointermission
+	music = ""
+}
+
+//////////////////////////////////
+
+Map e2m0 "Erebos Orbital Station"
+{
+	next=e2m1
+	nointermission
+	fallingdamage
+	noinfighting
+	music = ""
+	exitpic = "INTERPI4"
+	enterpic = "INTERPI4"
+	cluster = 3
+}
+
+Map e2m2 "Hangar"
+{
+	next=e2m3
+	fallingdamage
+	noinfighting
+	keepfullinventory
+	music = ""
+	exitpic = "INTERPI1"
+	enterpic = "INTERPI1"
+	cluster = 3
+}
+
+Map e2m3 "Monorail"
+{
+	next=e2m4
+	fallingdamage
+	noinfighting
+	keepfullinventory
+	music = ""
+	exitpic = "INTERPI2"
+	enterpic = "INTERPI2"
+	cluster = 3
+}
+
+Map e2m4 "Refueling Base"
+{
+	next=e2m5
+	fallingdamage
+	noinfighting
+	keepfullinventory
+	music = ""
+	exitpic = "INTERPI3"
+	enterpic = "INTERPI3"
+	cluster = 4
+}
+
+Map e2m9 "Jungle"
+{
+	next=Endgame1
+	fallingdamage
+	noinfighting
+	keepfullinventory
+	music = ""
+	exitpic = "INTERPI3"
+	enterpic = "INTERPI3"
+	cluster = 4
+}
+
+episode e2m0
+{
+	name = "LV-324"
+	noskillmenu
+}
+
+cluster 4
+{
+	pic = "PREDATOR"
+	music = "FINAL"
+	exittext = lookup, "predatorexit"
+}
+
+DoomEdNums
+{
+	98=Camara
+	131=GreyMetalBarrel
+	132=RedMetalBarrel
+	135=Hedgehog
+	141=Bed1
+	142=Workbench1
+	143=Generator
+	144=Crate
+	145=Dumpster
+	146=Barrier
+	192=RustedBarrel
+	444=Trash1
+	445=Trash2
+	446=Trash3
+	447=Trash4
+	448=Trash5
+	449=Trash6
+	450=Trash7
+	451=Trash8
+	1882=OilBarrel
+	3194=Thunder_GeneratorPink
+	3195=Thunder_GeneratorBlue
+	3196=Thunder_GeneratorRed
+	3197=Thunder_GeneratorGreen
+	3198=Thunder_GeneratorTan
+	3199=Thunder_GeneratorWhite
+	5000=GlowA
+	5100=GlowB
+	5300=Queen
+	10000=SteamSpawner
+	11008=Tree1
+	11009=Tree2
+	11010=Tree3
+	11011=Tree4
+	11012=Tree5
+	11013=Tree6
+	11014=Burger1
+	11015=Burger2
+	11016=Burger3
+	11017=Burger4
+	11018=Fries1
+	11019=Fries2
+	11020=Drink
+	11021=Bottle1
+	11022=Bottle
+	11023=Glass
+	11024=Donuts
+	11025=Dbox
+	11026=Boots
+	11027=UniformA
+	11028=Cafe1
+	11029=Cafe2
+	11030=Flor1
+	11031=Flor2
+	11500=OzyPipe1
+	11501=OzyPipe2
+	11502=OzyPipe3
+	11503=OzyPipe4
+	11504=OzyPipe5
+	11505=OzyPipe6
+	11506=OzyPipe7
+	11507=OzyPipe8
+	11508=OzyPipe9
+	11509=OzyPipe10
+	11510=OzyPipe11
+	11511=OzyPipe12
+	11512=OzyPipe13
+	11513=OzyPipe14
+	11514=OzyPipe15
+	11515=OzyPipe16
+	11516=OzyPipe17
+	11517=OzyPipe18
+	12109=Sarten2
+	12613=Kist
+	13048=ATFog4
+	13075=Pulsador_largo
+	13080=Bombilla1
+	13082=Bombilla2
+	13103=Lampara_mesa1
+	13104=Lampara_mesa2
+	13105=Microscopio
+	13106=Quirofano
+	13108=Decorative_m41a
+	13118=BolsaBasura
+	13142=WhiteSparkSpawner
+	13143=RedSparkSpawner
+	13144=OrangeSparkSpawner
+	13145=YellowSparkSpawner
+	13146=GreenSparkSpawner
+	13147=BlueSparkSpawner
+	13148=PurpleSparkSpawner
+	15000=Xcrate01
+	15001=Xcrate02
+	15002=Xcrate03
+	15003=Xcrate04
+	15202=FogCloud_Generator
+	15666=flaskblueA
+	15667=flaskblueB
+	15668=flaskpurpleA
+	15669=flaskpurpleB
+	15700=flaskredA
+	15701=flaskredB
+	15702=flaskgreenA
+	15703=flaskgreenB
+	15704=flaskyellowA
+	15705=flaskyellowB
+	15706=flaskgreyA
+	15707=flaskgreyB
+	15708=glassblue
+	15709=glasspurple
+	15710=glassred
+	15711=glassgreen
+	15712=glassyellow
+	15713=glassgrey
+	16913=Hek
+	16982=Airpipe
+	17001=RainSpawner
+	17713=Kruk
+	17982=Heating
+	18105=Cuchillos
+	18113=Olla3
+	18982=Crane
+	19793=Pellcar
+	19794=Steekw
+	19795=Switchboard
+	20952=CloudCaller
+	21946=CommSatelite
+	21985=PowerLoader
+	21986=FaceHuggerDead
+	22500=Antenna
+	22501=Autokeuken
+	22502=Autosync
+	22503=Workbench2
+	22504=Bed2
+	22505=Bench2
+	22506=Blusser
+	22507=Boxtrailer
+	22508=Cam
+	22509=Campbed
+	22510=Chair1
+	22511=Chair2
+	22512=Chair3
+	22513=Closet
+	22514=Const
+	22515=Container
+	22516=Copy
+	22517=DNACreator
+	22518=Excavator
+	22519=Generator4
+	22520=Generator5
+	22521=Jaknikker
+	22522=Kast1
+	22523=Labtafel
+	22524=Lamp
+	22525=Light2
+	22526=Light5
+	22527=Light6
+	22528=Medi
+	22529=Microsc
+	22530=Monitoren
+	22531=Radar
+	22532=Radio_Tower
+	22533=Shuttle
+	22534=Soda
+	22535=Truck5
+	22536=Wagon
+	22537=Water
+	22538=Bulldozer1
+	23108=Sarten1
+	24098=APC
+	24099=Dropship
+	29876=PDA
+	30200=Forklift1
+	30206=Toilet1
+	30253=Toilet2
+	30265=Forklift2
+	30266=HandDryer
+	30339=Truck01
+	30991=Fence
+	31007=Gotera
+	31008=IndestructibleQueen
+	31811=Sink
+	31812=Soapdis
+	31813=Sofa
+	31814=Trashcan
+}
+
+SpawnNums
+{
+	192=Xcrate01
+	193=Xcrate02
+	194=Xcrate03
+	195=Xcrate04
+	254=Dropship
+	255=gotera
+}

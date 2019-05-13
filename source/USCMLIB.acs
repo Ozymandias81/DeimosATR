@@ -1,0 +1,213 @@
+#library "USCMLIB.acs"
+#include "zcommon.acs"
+
+//RADAR CODES//
+int pid=1000000;
+int tidcounter=10000;
+int count=0;
+global int 1:kx[];
+global int 2:ky[];
+global int 3:kz[];
+
+function int sqrt2(int number)
+{
+	if(number <= 3)
+	{
+		if(number > 0)
+		{
+			return 1;
+		}
+		return 0;
+	}
+	int oldAns = number >> 1,                 // initial guess
+	newAns = (oldAns + number / oldAns) >> 1; // first iteration
+	while(newAns < oldAns)					  // main iterative method
+	{
+		oldAns = newAns;
+		newAns = (oldAns + number / oldAns) >> 1;
+	}
+	return oldAns;
+}
+
+function void DrawEllipse(int rx, int ry, int a, int b)
+{
+	int col,i,row,bnew;
+	int a_square,b_square,two_a_square,two_b_square,four_a_square,four_b_square,d;
+	b_square=b*b;
+	a_square=a*a;
+	row=b;
+	col=0;
+	two_a_square=a_square<<1;
+	four_a_square=a_square<<2;
+	four_b_square=b_square<<2;
+	two_b_square=b_square<<1;
+	SetFont("CONFONT");
+	d=two_a_square*((row-1)*(row))+a_square+two_b_square*(1-a_square);
+	while(a_square*(row)>b_square*(col))
+	{
+		if (d>=0)
+		{
+		row--;
+		d-=four_a_square*(row);
+		}
+		d+=two_b_square*(3+(col<<1));
+		col++;
+	}
+	d=two_b_square*(col+1)*col+two_a_square*(row*(row-2)+1)+(1-two_a_square)*b_square;
+	while ((row) + 1)
+	{
+		if (d<=0)
+		{
+		col++;
+		d+=four_b_square*col;
+		}
+		row--;
+		d+=two_a_square*(3-(row <<1));
+	}
+}
+
+function int abs(int x)
+{
+	if (x < 0)
+	return -x;
+	return x;
+}
+
+function int distance (int tid1, int tid2)
+{
+	int x, y, z, d;
+	x = GetActorX(tid1) - GetActorX(tid2) >> 16; // Convert fixed point to integer
+	y = GetActorY(tid1) - GetActorY(tid2) >> 16;
+	z = GetActorZ(tid1) - GetActorZ(tid2) >> 16;
+	d = sqrt2( x*x + y*y + z*z );
+	return d;
+}
+
+function int distance2 (int x1, int y1, int z1, int x2, int y2, int z2)
+{
+	int x, y, z, d;
+	x = (x1 - x2) >> 16; // Convert fixed point to integer
+	y = (y1 - y2) >> 16;
+	z = (z1 - z2) >> 16;
+	d = sqrt2( x*x + y*y + z*z );
+	return d;
+}
+
+function int getspeed (int tid)
+{
+	int x = GetActorX(tid);
+	int y = GetActorY(tid);
+	int z = GetActorZ(tid);
+	int speed = distance2(x,y,z,kx[tid],ky[tid],kz[tid]);
+	kx[tid]=GetActorX(tid);
+	ky[tid]=GetActorY(tid);
+	kz[tid]=GetActorZ(tid);
+	return speed;
+}
+
+function void DrawRadar(int tid, int scale,int x1,int y1, int dist)
+{
+	int x,y,dx,dy;
+	int scan;
+	SetHudSize(640,480,0);
+	SetFont("SMALLFONT");
+	if (CheckWeapon("Tracker") && CheckInventory("TrackDummy")>0)
+	{
+		for (int i=10000;i<tidcounter;++i)
+		{
+			x=GetActorX(tid)-GetActorX(i);
+			y=GetActorY(tid)-GetActorY(i);
+			scan=distance(tid,i) <= dist;
+			if (scan)
+			{
+				dx=((((FixedMul(x,cos(-GetActorAngle(0))))-(FixedMul(y,sin(-GetActorAngle(0)))))));
+				dy=((((FixedMul(x,sin(-GetActorAngle(0))))+(FixedMul(y,cos(-GetActorAngle(0)))))));
+				dx/=scale; dx+=y1<<16; dx=dx>>16; dx=dx<<16;
+				dy/=scale; dy+=x1<<16; dy=dy>>16; dy=dy<<16;
+				if (dx<0) dx-=0.1; else dx+=0.1;
+				if (dy<0) dy-=0.1; else dy+=0.1;
+				if (GetActorProperty(i,APROP_Health) > 0)
+				{
+					HudMessage(s:"o";HUDMSG_FADEOUT,i,CR_WHITE,dy,dx,0.20,0.20);
+					ActivatorSound("weapons/ping", 127);
+				}
+			}
+		}
+	}
+	if (count == 0)
+	{
+		count=100;
+		DrawEllipse(x1,y1,dist/scale,dist/scale);
+	}
+	--count;
+}
+
+Script 100 (Void)
+{
+	Thing_ChangeTID(0,tidcounter++);
+}
+
+// Render Radar
+Script 102 ENTER
+{
+	while (1)
+	{
+		DrawRadar(0, 15, 318, 424, 640); // the higher scale is (2nd value), the smaller the visible radar
+		Delay(34);
+	}
+}
+
+//TRANSLATIONS CODES//
+
+Script "Translations" ENTER
+{
+	CreateTranslation(99,0:255=11:15);
+	CreateTranslation(98,0:159=160:167,168:207=216:223,224:255=176:191 );
+	CreateTranslation(97,0:255=0:255);
+}
+
+Script "ResetTranslate" (void)
+{
+	Thing_SetTranslation(0,97);
+}
+
+Script "BurnTranslate" (void)
+{
+	Thing_SetTranslation(0,98);
+}
+
+Script "AshTranslate" (void)
+{
+	Thing_SetTranslation(0,99);
+}
+
+//LIGHT CODES//
+
+// Defines
+#define MAXPLAYERS 8
+int flashlightOn[MAXPLAYERS];
+
+// Scripts
+Script "PointerPitch" (void)
+{
+	SetResultValue(GetActorPitch(0) / -182);
+}
+
+Script "ToggleFlashlight" (void)
+{
+	if (flashlightOn[PlayerNumber()])
+		flashlightOn[PlayerNumber()] = 0;
+	else
+		flashlightOn[PlayerNumber()] = 1;
+	ActivatorSound("click", 127);
+}
+
+Script "FlashlightHandling" ENTER
+{
+	While(1)
+	{
+		if (flashlightOn[PlayerNumber()])
+			GiveInventory("FlashlightSpawner", 1);
+		Delay(1);
+	}
+}

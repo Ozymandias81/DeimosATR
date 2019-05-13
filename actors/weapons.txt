@@ -1,0 +1,956 @@
+ACTOR HackTool : Weapon
+{
+	Weapon.SlotNumber 9
+	Weapon.SelectionOrder 12
+	Inventory.Pickupmessage "Hacking Tool"
+	Weapon.UpSound "weapons/HMGReady"
+	+WEAPON.DONTBOB
+	+WEAPON.MELEEWEAPON
+	+WEAPON.NOALERT
+	States
+	{
+	Ready:
+		HACK A 1 A_WeaponReady
+		Loop
+	Deselect:
+		TNT1 A 0 A_Lower
+		HACK A 1 A_Lower
+		Loop
+	Select:
+		TNT1 A 0 A_Raise
+		HACK A 1 A_Raise
+		Loop
+	Fire:
+		HACK B 1
+		HACK C 1
+		Goto Hack
+	Hack:
+		HACK D 2 A_Saw("weapons/HackingTool", "", 0, "Hacking", SF_NOUSEAMMO|SF_NORANDOM|SF_NOPULLIN|SF_NOTURN, 32, 0, 0)
+		HACK A 0 A_ReFire("Hack")
+		HACK A 0 A_StopSound (CHAN_WEAPON)
+		HACK C 1
+		HACK B 1
+		Goto Ready
+	}
+}
+
+ACTOR Welder : Weapon replaces Chainsaw
+{
+	Weapon.SlotNumber 8
+	Weapon.SelectionOrder 11
+	Inventory.Pickupmessage "Welder"
+	Weapon.UpSound "weapons/HMGReady"
+	+WEAPON.MELEEWEAPON
+	+WEAPON.NOALERT
+	Decal "BulletChip"
+	Scale 0.6
+	States
+	{
+	Ready:
+		WELD A 1 A_WeaponReady
+		Loop
+	Deselect:
+		TNT1 A 0 A_StopSound (CHAN_WEAPON)
+		TNT1 A 0 A_Lower
+		WELD A 1 A_Lower
+		Loop
+	Select:
+		TNT1 A 0 A_Raise
+		WELD A 1 A_Raise
+		Loop
+	Fire:
+		TNT1 A 0 A_PlaySound("weapons/weld",CHAN_WEAPON,1.0,true)
+		Goto FireLoop
+	FireLoop:
+		TNT1 A 0 A_GunFlash
+		WELD B 2 BRIGHT A_Saw("", "", 1, "BulletPuffNew", SF_NOUSEAMMO|SF_NORANDOM|SF_NOPULLIN|SF_NOTURN, 64, 0, 0)
+		WELD C 2 BRIGHT A_SpawnItemEX("ShotSpark",18,0,36)
+		WELD D 2 BRIGHT A_Saw("", "", 1, "BulletPuffNew", SF_NOUSEAMMO|SF_NORANDOM|SF_NOPULLIN|SF_NOTURN, 64, 0, 0)
+		WELD E 2 BRIGHT A_SpawnItemEX("ShotSpark",18,0,36)
+		WELD A 0 A_ReFire
+		WELD A 2 A_StopSound (CHAN_WEAPON)
+		Goto Ready
+	Spawn:
+		WELD F 4 BRIGHT
+		WELD F 4
+		Loop
+	Flash:
+		TNT1 A 4 BRIGHT A_Light2
+		TNT1 B 4 BRIGHT A_Light1
+		TNT1 A 0 A_Light0
+		Goto LightDone
+	}
+}
+
+ACTOR M4Pistol : Weapon
+{
+	Weapon.SlotNumber 1
+	Weapon.SelectionOrder 4
+	Inventory.Pickupmessage "Motion Tracker"
+	Weapon.UpSound "weapons/GReady"
+	decal "BulletChip"
+	Weapon.KickBack 50
+	+WEAPON.DONTBOB
+	+WEAPON.NOAUTOAIM
+	States
+	{
+	Ready:
+		M4PL A 1 A_WeaponReady
+		Loop
+	Deselect:
+		TNT1 A 0 A_Lower
+		TNT1 A 0 A_Lower
+		M4PL A 1 A_Lower
+		Loop
+	Select:
+		TNT1 A 0 A_Raise
+		TNT1 A 0 A_Raise
+		M4PL A 1 A_Raise
+		Loop
+	Fire:
+		TNT1 A 0 A_JumpIf(CountInv("PistolAmmo")==0,"ReloadClip")
+		TNT1 A 0 A_GunFlash
+		TNT1 A 0 A_SpawnItem("ShotSpark",0,0,0)
+		M4PL B 2 BRIGHT A_PlaySound ("weapons/pistol", CHAN_WEAPON)
+		TNT1 A 0 A_ZoomFactor (0.99, ZOOM_NOSCALETURNING)
+		TNT1 A 0 A_TakeInventory ("PistolAmmo",1)
+		M4PL C 1 BRIGHT A_FireBullets(4, 2, 1, 4, "BulletPuff", 1)
+		TNT1 A 0 A_SpawnItemEX("MuzzleSmoke",cos(pitch)*24,4,36-(sin(pitch)*24),cos(pitch)*4,0,-sin(pitch)*4,0,SXF_TRANSFERPITCH)
+		TNT1 A 0 A_ZoomFactor (1.0, ZOOM_NOSCALETURNING)
+		TNT1 A 0 A_FireProjectile("PistolCaseSpawn",0,0,6,-2)
+		M4PL DE 2
+		M4PL F 2
+		M4PL A 2 A_ReFire
+		Goto Ready
+	AltFire:
+		TNT1 A 0 A_JumpIf(CountInv("PistolAmmo")==12,"Ready")
+		Goto ReloadClip
+	ReloadClip:
+		M4PL AFED 2 A_WeaponOffset(0,8,WOF_ADD)
+		TNT1 A 0 A_PlaySound("weapons/reload1",CHAN_WEAPON)
+		M4PL D 24 A_WeaponOffset(-1,4,WOF_ADD)
+		TNT1 A 0 A_PlaySound("weapons/weaponpickup",CHAN_WEAPON)
+		M4PL D 8 A_WeaponOffset(1,-4,WOF_ADD)
+		TNT1 A 0 A_GiveInventory ("PistolAmmo",12)
+		M4PL DEFA 2 A_WeaponOffset(0,-8,WOF_ADD)
+		Goto Ready
+	Flash:
+		TNT1 A 2 BRIGHT A_Light2
+		TNT1 B 2 BRIGHT A_Light1
+		TNT1 A 0 A_Light0
+		Goto LightDone
+	}
+}
+
+ACTOR TrackerPickup : CustomInventory replaces Supershotgun
+{
+	Inventory.Amount 1
+	Inventory.MaxAmount 1
+	States
+	{
+	Spawn:
+		MTPU A -1
+		Stop
+	Pickup:
+		TNT1 A 0 A_GiveInventory("Tracker",1)
+		TNT1 A 0 A_TakeInventory("M4Pistol",1)
+		Stop
+	}
+}
+
+ACTOR TrackDummy : Inventory
+{
+	Inventory.Amount 1
+	Inventory.MaxAmount 1
+}
+
+ACTOR Tracker : Weapon
+{
+	Weapon.SlotNumber 1
+	Weapon.SelectionOrder 4
+	Inventory.Pickupmessage "Motion Tracker"
+	Weapon.UpSound "weapons/GReady"
+	decal "BulletChip"
+	Weapon.KickBack 50
+	+WEAPON.DONTBOB
+	+WEAPON.NOAUTOAIM
+	States
+	{
+	Ready:
+		MTPL G 5 A_GiveInventory("TrackDummy",1)	
+		Goto RealReady
+	RealReady:
+		TNT1 A 0 A_GunFlash("BeepFlash")
+		MTPL A 4 A_WeaponReady
+		TNT1 A 0 A_PlaySound ("weapons/tracker", CHAN_WEAPON)
+		MTPL A 31 A_WeaponReady
+		Loop
+	BeepFlash:
+		MTFL ABCDEFG 2 BRIGHT
+		MTFL A 21 BRIGHT
+		Goto LightDone
+	Deselect:
+		MTPL G 9 A_TakeInventory("TrackDummy",1)
+		Goto Lower
+	Lower:
+		MTPL G 1 A_Lower
+		Loop
+	Select:
+		TNT1 A 0 A_Raise
+		TNT1 A 0 A_Raise
+		MTPL G 1 A_Raise
+		Loop
+	Fire:
+		TNT1 A 0 A_JumpIf(CountInv("PistolAmmo")==0,"ReloadClip")
+		TNT1 A 0 A_GunFlash
+		TNT1 A 0 A_SpawnItem("ShotSpark",0,0,0)
+		MTPL B 2 BRIGHT A_PlaySound ("weapons/pistol", CHAN_WEAPON)
+		TNT1 A 0 A_ZoomFactor (0.99, ZOOM_NOSCALETURNING)
+		TNT1 A 0 A_TakeInventory ("PistolAmmo",1)
+		MTPL C 1 BRIGHT A_FireBullets(4, 2, 1, 4, "BulletPuff", 1)
+		TNT1 A 0 A_SpawnItemEX("MuzzleSmoke",cos(pitch)*24,4,36-(sin(pitch)*24),cos(pitch)*4,0,-sin(pitch)*4,0,SXF_TRANSFERPITCH)
+		TNT1 A 0 A_ZoomFactor (1.0, ZOOM_NOSCALETURNING)
+		TNT1 A 0 A_FireProjectile("PistolCaseSpawn",0,0,6,-2)
+		MTPL DE 2
+		MTPL F 2
+		MTPL A 2 A_ReFire
+		Goto Ready
+	AltFire:
+		TNT1 A 0 A_JumpIf(CountInv("PistolAmmo")==12,"Ready")
+		Goto ReloadClip
+	ReloadClip:
+		TNT1 A 0 A_TakeInventory("TrackDummy",1)
+		MTPL AFED 2 A_WeaponOffset(0,16,WOF_ADD)
+		TNT1 A 0 A_PlaySound("weapons/reload1",CHAN_WEAPON)
+		MTPL D 24 A_WeaponOffset(-1,4,WOF_ADD)
+		TNT1 A 0 A_PlaySound("weapons/weaponpickup",CHAN_WEAPON)
+		MTPL D 8 A_WeaponOffset(1,-4,WOF_ADD)
+		TNT1 A 0 A_GiveInventory ("PistolAmmo",12)
+		MTPL DEFA 2 A_WeaponOffset(0,-16,WOF_ADD)
+		TNT1 A 0 A_GiveInventory("TrackDummy",1)
+		Goto Ready
+	Flash:
+		TNT1 A 2 BRIGHT A_Light2
+		TNT1 B 2 BRIGHT A_Light1
+		TNT1 A 0 A_Light0
+		Goto LightDone
+	}
+}
+
+ACTOR PistolCaseSpawn
+{
+	Speed 20
+	PROJECTILE
+	+NOCLIP
+	+DONTSPLASH  
+	States
+	{
+	Spawn:
+		TNT1 A 1
+		TNT1 A 1 A_CustomMissile("PistolCasing",8,4,random(-85,-95),2,random(15,30))
+		Stop
+	}
+}
+
+ACTOR PistolCasing
+{
+	Height 8
+	Radius 6
+	Speed 6
+	Scale 0.14
+	BounceFactor 0.4
+	Mass 1
+	ReactionTime 30
+	PROJECTILE
+	+DOOMBOUNCE
+	-NOGRAVITY 
+	-NOBLOCKMAP
+	States
+	{
+	Spawn:
+		CAS3 ABC 2
+		CAS3 D 2 A_Countdown
+		Goto Spawn+1
+	Death:
+		CAS3 A 0 A_Jump(64,8)
+		CAS3 A 0 A_Jump(85,12)
+		CAS3 A 0 A_Jump(128,16)
+		CAS3 A 350
+		CAS3 A 3  A_SetTranslucent(0.8, 0)
+		CAS3 A 3  A_SetTranslucent(0.6, 0)
+		CAS3 A 3  A_SetTranslucent(0.4, 0)
+		CAS3 A 3  A_SetTranslucent(0.2, 0)      
+		Stop
+		CAS3 B 350
+		CAS3 B 3  A_SetTranslucent(0.8, 0)
+		CAS3 B 3  A_SetTranslucent(0.6, 0)
+		CAS3 B 3  A_SetTranslucent(0.4, 0)
+		CAS3 B 3  A_SetTranslucent(0.2, 0)      
+		Stop
+		CAS3 C 350
+		CAS3 C 3  A_SetTranslucent(0.8, 0)
+		CAS3 C 3  A_SetTranslucent(0.6, 0)
+		CAS3 C 3  A_SetTranslucent(0.4, 0)
+		CAS3 C 3  A_SetTranslucent(0.2, 0)      
+		Stop
+		CAS3 D 350
+		CAS3 D 3  A_SetTranslucent(0.8, 0)
+		CAS3 D 3  A_SetTranslucent(0.6, 0)
+		CAS3 D 3  A_SetTranslucent(0.4, 0)
+		CAS3 D 3  A_SetTranslucent(0.2, 0)      
+		Stop
+	}
+}
+
+ACTOR PulseRifle : Weapon replaces Pistol
+{
+	Inventory.PickupMessage "Pulse Rifle"
+	Inventory.PickupSound "weapons/weaponpickup"
+	Weapon.UpSound "weapons/GReady"
+	Weapon.SlotNumber 2
+	Weapon.SelectionOrder 1
+	Weapon.KickBack 200
+	Weapon.BobStyle Smooth
+	Weapon.BobRangeX 0.5
+	Weapon.BobRangeY 0.5
+	Weapon.AmmoType "PulseClip"
+	Weapon.AmmoGive 1
+	Weapon.AmmoType2 "NadeAmmo"
+	Weapon.AmmoGive2 1
+	Decal "BulletChip"
+	Scale 0.6
+	+ALWAYSPICKUP
+	+Weapon.NOAUTOAIM
+	States
+	{
+	Spawn:
+		PRPU A -1
+		Stop
+	Ready:
+		PRGL A 1 A_WeaponReady
+		Loop
+	Select:
+		TNT1 A 0 A_Raise
+		PRGL A 1 A_Raise
+		Loop
+	Deselect:
+		TNT1 A 0 A_Lower
+		PRGL A 1 A_Lower
+		Loop
+	Fire:
+		TNT1 A 0 A_JumpIf(CountInv("PulseClip")==0 && CountInv("PulseAmmo")==0,"Empty")
+		TNT1 A 0 A_JumpIf(CountInv("PulseAmmo")==0,"Reload")
+		TNT1 A 0 A_WeaponOffset (1,1,WOF_ADD)
+		TNT1 A 0 A_PlaySound ("weapons/PRFire", CHAN_WEAPON)
+		TNT1 A 0 A_SpawnItem("ShotSpark",0,0,0)
+		PRGL B 1 BRIGHT A_GunFlash
+		TNT1 A 0 A_ZoomFactor (0.99, ZOOM_NOSCALETURNING)
+		PRGL A 1 BRIGHT	A_FireBullets(1, 2, 1, 4, "BulletPuff", 1)
+		TNT1 A 0 A_TakeInventory("PulseAmmo",1)
+		TNT1 A 0 A_WeaponOffset (-1,-1,WOF_ADD)
+		TNT1 A 0 A_ZoomFactor (1.0, ZOOM_NOSCALETURNING)
+		PRGL C 1 BRIGHT A_GunFlash
+		PRGL A 1 BRIGHT A_FireBullets(1, 2, 1, 4, "BulletPuff", 1)
+		TNT1 A 0 A_TakeInventory("PulseAmmo",1)
+		TNT1 A 0 A_WeaponOffset (1,1,WOF_ADD)
+		TNT1 A 0 A_ZoomFactor (1.0, ZOOM_NOSCALETURNING)
+		TNT1 A 0 A_SpawnItem("ShotSpark",0,0,0)
+		PRGL D 1 BRIGHT A_GunFlash
+		PRGL A 1 BRIGHT A_FireBullets(1, 2, 1, 4, "BulletPuff", 1)
+		TNT1 A 0 A_SpawnItemEX("MuzzleSmoke",cos(pitch)*24,4,36-(sin(pitch)*24),cos(pitch)*4,0,-sin(pitch)*4,0,SXF_TRANSFERPITCH)
+		TNT1 A 0 A_TakeInventory("PulseAmmo",1)
+		TNT1 A 0 A_ZoomFactor (0.99, ZOOM_NOSCALETURNING)
+		PRGL A 2 A_WeaponOffset (-1,-1,WOF_ADD)
+		PRGL C 1 BRIGHT A_GunFlash
+		TNT1 A 0 A_ZoomFactor (1.0, ZOOM_NOSCALETURNING)
+		TNT1 A 0 A_JumpIf(CountInv("PulseAmmo")==0,"Ready")
+		PRGL A 1 BRIGHT A_FireBullets(1, 2, 1, 4, "BulletPuff", 1)
+		TNT1 A 0 A_TakeInventory("PulseAmmo",1)
+		TNT1 A 0 A_ZoomFactor (1.0, ZOOM_NOSCALETURNING)
+		TNT1 A 0 A_WeaponOffset (0,32)
+		TNT1 A 0 A_Refire
+		Goto Ready
+	AltFire:
+		TNT1 A 0 A_JumpIf(CountInv("NadeAmmo")==0,"Empty")
+		PRGL A 0 A_WeaponOffset (2,2,WOF_ADD)
+		PRGL A 0 A_Recoil(0.15)
+		PRGL A 0 A_PlaySound ("weapons/GLFire", CHAN_WEAPON)
+		PRGL A 0 A_ZoomFactor (0.99, ZOOM_NOSCALETURNING)
+		TNT1 A 0 A_SpawnItem("ShotSpark",0,0,0)
+		TNT1 A 0 A_GunFlash
+		TNT1 A 0 A_TakeInventory("NadeAmmo",1)
+		PRGL E 2 BRIGHT A_FireProjectile ("PulseGrenade", 0, 0, 2, 0, 8)
+		PRGL A 0 A_ZoomFactor (1.0, ZOOM_NOSCALETURNING)
+		PRGL F 2 BRIGHT {
+		A_QuakeEx(2,1,0,4,0,4,"none");
+		A_FireProjectile("ShotSparks",frandom(-8,8),false,4,6,FPF_NOAUTOAIM,frandom(-4,4));
+		A_FireProjectile("ShotSparks",frandom(-8,8),false,4,6,FPF_NOAUTOAIM,frandom(-4,4));
+		A_SpawnItemEX("MuzzleSmoke",cos(pitch)*24,4,36-(sin(pitch)*24),cos(pitch)*4,0,-sin(pitch)*4,0,SXF_TRANSFERPITCH);
+		}
+		PRGL G 2 A_WeaponOffset (0,32)
+		PRGL A 8
+		PRGL H 2 A_WeaponOffset (1,1,WOF_ADD)
+		PRGL I 1 A_WeaponOffset (1,1,WOF_ADD)
+		PRGL J 4 A_WeaponOffset (1,1,WOF_ADD)
+		PRGL I 2 A_WeaponOffset (-1,-1,WOF_ADD)
+		PRGL H 1 A_WeaponOffset (-1,-1,WOF_ADD)
+		TNT1 A 0 A_WeaponOffset (-1,-1,WOF_ADD)
+		PRGL A 17
+		PRGL A 1 A_ReFire
+		Goto Ready
+	Reload:
+		TNT1 A 0 A_WeaponOffset (1,1,WOF_ADD)
+		TNT1 A 0 A_ZoomFactor (1.0, ZOOM_NOSCALETURNING)
+		TNT1 A 0 A_JumpIf(CountInv("PulseClip")==0,"Empty")
+		PRGL AKLMN 1 A_WeaponOffset (1,1,WOF_ADD)
+		PRGL N 15 {
+		A_WeaponOffset(6,40);
+		A_PlaySound("weapons/reload1",CHAN_WEAPON);
+		}
+		PRGL N 15 A_TakeInventory("PulseClip",1)
+		PRGL N 15 {
+		A_GiveInventory("PulseAmmo",95);
+		A_PlaySound("weapons/reload2",CHAN_WEAPON);
+		A_WeaponOffset(6,36);
+		}
+		PRGL NMKLA 1 A_WeaponOffset(-1,-1,WOF_ADD)
+		PRGL A 5 A_WeaponOffset (0,32)
+		Goto Ready
+	Empty:
+		PRGL A 10 A_PlaySound("weapons/empty",CHAN_WEAPON)
+		Goto Ready
+	Flash:
+		TNT1 A 1 BRIGHT A_Light2
+		TNT1 B 1 BRIGHT A_Light1
+		TNT1 A 0 A_Light0
+		Goto LightDone
+	}
+}
+
+ACTOR Shotty : Weapon replaces Shotgun
+{
+	Weapon.SelectionOrder 3
+	Weapon.AmmoGive 6
+	Weapon.AmmoType "Shell"
+	Weapon.AmmoGive2 6
+	Weapon.AmmoType2 "ShellAmmo"
+	Inventory.PickupMessage "Shotgun"
+	Inventory.PickupSound "weapons/weaponpickup"
+	Weapon.UpSound "weapons/GReady"
+	Weapon.SlotNumber 3
+	Decal "BulletChip"
+	Scale 0.6
+	+Weapon.NOAUTOAIM
+	States
+	{
+	Spawn:
+		SHTP A -1
+		Stop
+	Ready:
+		SHTG A 1 A_WeaponReady
+		Loop
+	Deselect:
+		TNT1 A 0 A_Lower
+		TNT1 A 0 A_Lower
+		SHTG A 1 A_Lower
+		Wait
+	Select:
+		TNT1 A 0 A_Raise
+		TNT1 A 0 A_Raise
+		SHTG A 1 A_Raise
+		Loop
+	Fire:
+		TNT1 A 0 A_JumpIf(CountInv("ShellAmmo")==0,"Empty")
+		TNT1 A 0 A_JumpIf(CountInv("ShellAmmo")==0 && CountInv("Shell")==0,"Empty")
+		SHTG A 0 A_Recoil(0.30)
+		SHTG A 0 A_PlaySound ("weapons/shotgf", CHAN_WEAPON)
+		SHTG A 0 A_ZoomFactor (0.99, ZOOM_NOSCALETURNING)
+		TNT1 A 0 A_SpawnItem("ShotSpark",0,0,0)
+		TNT1 A 0 A_GunFlash
+		TNT1 A 0 A_WeaponOffset(2,2,WOF_ADD)
+		SHTG B 1 BRIGHT A_FireBullets (3, 3, 16, 2, "BulletPuff", 1)
+		SHTG C 2 {
+		A_QuakeEx(2,1,0,4,0,4,"none");
+		A_TakeInventory("ShellAmmo",1);
+		A_FireProjectile("ShotSparks",frandom(-8,8),false,4,6,FPF_NOAUTOAIM,frandom(-4,4));
+		A_FireProjectile("ShotSparks",frandom(-8,8),false,4,6,FPF_NOAUTOAIM,frandom(-4,4));
+		A_FireProjectile("ShotSparks",frandom(-8,8),false,4,6,FPF_NOAUTOAIM,frandom(-4,4));
+		A_FireProjectile("ShotSparks",frandom(-8,8),false,4,6,FPF_NOAUTOAIM,frandom(-4,4));
+		A_SpawnItemEX("MuzzleSmoke",cos(pitch)*24,4,36-(sin(pitch)*24),cos(pitch)*4,0,-sin(pitch)*4,0,SXF_TRANSFERPITCH);
+		}
+		SHTG D 1 A_ZoomFactor (1.0, ZOOM_NOSCALETURNING)
+		SHTG AE 2 A_WeaponOffset(1,1,WOF_ADD)
+		SHTG FGHI 1 A_SpawnItemEX("MuzzleSmoke",cos(pitch)*24,4,36-(sin(pitch)*24),frandom(-0.5,0.5),frandom(-0.5,0.5),0.5,0,SXF_TRANSFERPITCH)
+		TNT1 A 0  A_FireProjectile("ShellCaseSpawn",0,0,6,-4)
+		SHTG J 8 A_WeaponOffset(1,1,WOF_ADD)
+		SHTG IHGF 1 A_WeaponOffset(-1,-1,WOF_ADD)
+		SHTG A 8 A_WeaponOffset(0,32)
+		TNT1 A 0 A_ReFire
+		Goto Ready
+	AltFire:
+		TNT1 A 0 A_JumpIf(CountInv("Shell")==0,"Empty")
+		TNT1 A 0 A_JumpIf(CountInv("ShellAmmo")==6,"Ready")
+		SHTG AE 2
+		SHTG FGKLMN 1
+		Load:
+		TNT1 A 0 A_JumpIf(CountInv("Shell")==0,10)
+		SHTG O 4 A_JumpIf(CountInv("ShellAmmo")==6,10)
+		SHTG PQ 1
+		SHTG R 6 {
+		A_WeaponOffset(-1,-1,WOF_ADD);
+		A_GiveInventory("ShellAmmo",1);
+		A_TakeInventory("Shell",1);
+		A_PlaySound("weapons/empty",CHAN_WEAPON);
+		}
+		TNT1 A 0 A_WeaponOffset(0,32)
+		SHTG QP 1
+		SHTG O 2 
+		SHTG O 2 A_Refire("Load")
+		SHTG NMLKGFE 1
+		Goto Ready
+	Empty:
+		SHTG A 10 A_PlaySound("weapons/empty",CHAN_WEAPON)
+		Goto Ready
+	Flash:
+		TNT1 A 1 BRIGHT A_Light2
+		TNT1 B 1 BRIGHT A_Light1
+		TNT1 A 0 A_Light0
+		Goto LightDone
+	}
+}
+
+ACTOR ShellCaseSpawn
+{
+	Speed 20
+	PROJECTILE
+	+NOCLIP
+	+DONTSPLASH
+	States
+	{
+	Spawn:
+		TNT1 A 1
+		TNT1 A 1 A_CustomMissile("ShellCasing",2,4,random(-85,-95),2,random(10,20))
+		Stop
+	}
+}
+
+ACTOR ShellCasing
+{
+	Height 8
+	Radius 6
+	Speed 6
+	Scale 0.16   
+	BounceFactor 0.4
+	Mass 1
+	ReactionTime 30
+	PROJECTILE
+	+DOOMBOUNCE
+	-NOGRAVITY 
+	-NOBLOCKMAP
+	States
+	{
+	Spawn:
+		CAS2 ABC 2 A_SpawnItem("MuzzleSmoke")
+		CAS2 D 2 A_Countdown
+		Goto Spawn+1
+	Death:
+		CAS2 A 0 A_Jump(64,8)
+		CAS2 A 0 A_Jump(85,12)
+		CAS2 A 0 A_Jump(128,16)
+		CAS2 A 350
+		CAS2 A 3  A_SetTranslucent(0.8, 0)
+		CAS2 A 3  A_SetTranslucent(0.6, 0)
+		CAS2 A 3  A_SetTranslucent(0.4, 0)
+		CAS2 A 3  A_SetTranslucent(0.2, 0)      
+		Stop
+		CAS2 B 350
+		CAS2 B 3  A_SetTranslucent(0.8, 0)
+		CAS2 B 3  A_SetTranslucent(0.6, 0)
+		CAS2 B 3  A_SetTranslucent(0.4, 0)
+		CAS2 B 3  A_SetTranslucent(0.2, 0)      
+		Stop
+		CAS2 C 350
+		CAS2 C 3  A_SetTranslucent(0.8, 0)
+		CAS2 C 3  A_SetTranslucent(0.6, 0)
+		CAS2 C 3  A_SetTranslucent(0.4, 0)
+		CAS2 C 3  A_SetTranslucent(0.2, 0)      
+		Stop
+		CAS2 D 350
+		CAS2 D 3  A_SetTranslucent(0.8, 0)
+		CAS2 D 3  A_SetTranslucent(0.6, 0)
+		CAS2 D 3  A_SetTranslucent(0.4, 0)
+		CAS2 D 3  A_SetTranslucent(0.2, 0)      
+		Stop
+	}
+}
+
+ACTOR DummyPuff : BulletPuff
+{
+	BloodType "none"
+	+PUFFONACTORS
+	+BLOODLESSIMPACT
+	+NODECAL
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		Stop
+	Melee:
+		TNT1 A 0
+		Stop
+	}
+}
+
+ACTOR FreeFire : Inventory
+{
+	Inventory.Amount 1
+	Inventory.MaxAmount 1
+	+INVENTORY.QUIET
+	+INVENTORY.NOSCREENFLASH
+}
+
+ACTOR SmartGun : Weapon replaces Chaingun
+{
+	Inventory.PickupMessage "Smartgun"
+	Inventory.PickupSound "weapons/weaponpickup"
+	Weapon.AmmoType "SmartAmmo"
+	Weapon.AmmoUse 1
+	Weapon.SelectionOrder 2
+	Weapon.SlotNumber 4
+	Weapon.KickBack 150
+	Weapon.AmmoGive 100
+	Weapon.UpSound "weapons/GReady"
+	Weapon.BobStyle Smooth
+	Weapon.BobRangeX 0.25
+	Weapon.BobRangeY 0.25
+	Weapon.AmmoType2 "SmartAmmo"
+	Weapon.AmmoUse2 1
+	Decal "BulletChip"
+	Scale 0.6
+	+WEAPON.NOAUTOAIM
+
+	States
+	{
+	Spawn:
+		SGPU A -1
+		Stop
+	Ready:
+		TNT1 A 0 A_WeaponReady
+		TNT1 A 0 A_TakeInventory("Heat",2)
+		TNT1 A 0 A_TakeInventory("FreeFire",1)
+		SMTG A 1
+		Loop
+	Select:
+		SMTG A 1 A_Raise
+		Loop
+	Deselect:
+		TNT1 A 0 A_TakeInventory("Heat",100)
+		TNT1 A 0 A_TakeInventory("FreeFire",1)
+		SMTG A 1 A_Lower
+		Loop
+	Fire:
+		TNT1 A 0 A_JumpIf(CountInv("Heat")==100,"Overheat")
+		SMTG AAAA 1 A_CustomPunch (0,0,0,"DummyPuff",2048)
+		TNT1 A 0 A_ReFire("FireLoop")
+		Goto Ready
+	FireLoop:
+		TNT1 A 0 A_Recoil(0.10)
+		TNT1 A 0 A_PlaySound ("weapons/M56Fire", CHAN_WEAPON)
+		TNT1 A 0 A_SpawnItem("ShotSpark",0,0,0)
+		TNT1 A 0 A_GunFlash
+		TNT1 A 0 A_CustomPunch (0,0,0,"DummyPuff",1024)
+		TNT1 A 0 A_ZoomFactor (0.99, ZOOM_NOSCALETURNING)
+		SMTG B 1 BRIGHT A_FireBullets(3, 1, 1, 4, "BulletPuff", 1)
+		TNT1 A 0 A_GiveInventory("Heat",1)
+		TNT1 A 0 A_WeaponOffset (1,1,WOF_ADD)
+		TNT1 A 0 A_GunFlash
+		TNT1 A 0 A_CustomPunch (0,0,0,"DummyPuff",1024)
+		TNT1 A 0 A_ZoomFactor (1.0, ZOOM_NOSCALETURNING)
+		SMTG C 1 BRIGHT A_FireBullets(3, 1, 1, 4, "BulletPuff", 1)
+		TNT1 A 0 A_GiveInventory("Heat",1)
+		TNT1 A 0 A_WeaponOffset (-1,-1,WOF_ADD)
+		TNT1 A 0 A_StopSound (CHAN_WEAPON)
+		TNT1 A 0 A_PlaySound ("weapons/M56Fire", CHAN_WEAPON)
+		TNT1 A 0 A_SpawnItem("ShotSpark",0,0,0)
+		TNT1 A 0 A_GunFlash
+		TNT1 A 0 A_CustomPunch (0,0,0,"DummyPuff",1024)
+		TNT1 A 0 A_ZoomFactor (0.99, ZOOM_NOSCALETURNING)
+		SMTG D 1 BRIGHT A_FireBullets(3, 1, 1, 4, "BulletPuff", 1)
+		TNT1 A 0 A_GiveInventory("Heat",1)
+		TNT1 A 0 A_GunFlash
+		TNT1 A 0 A_CustomPunch (0,0,0,"DummyPuff",1024)
+		TNT1 A 0 A_ZoomFactor (1.0, ZOOM_NOSCALETURNING)
+		SMTG E 2 BRIGHT A_FireBullets(3, 1, 1, 4, "BulletPuff", 1)
+		TNT1 A 0 A_GiveInventory("Heat",1)
+		TNT1 A 0 A_Refire
+		SMTG A 4 {
+		A_SpawnItemEX("MuzzleSmoke",cos(pitch)*24,4,36-(sin(pitch)*24),cos(pitch)*4,0,-sin(pitch)*4,0,SXF_TRANSFERPITCH);
+		A_SpawnItemEX("MuzzleSmoke",cos(pitch)*24,4,36-(sin(pitch)*24),frandom(-0.5,0.5),frandom(-0.5,0.5),0.5,0,SXF_TRANSFERPITCH);
+		}
+		Goto Ready
+	AltFire:
+		TNT1 A 0 A_JumpIf(CountInv("Heat")==100,"Overheat")
+		TNT1 A 0 A_GiveInventory("FreeFire",1)
+		TNT1 A 0 A_Recoil(0.10)
+		TNT1 A 0 A_PlaySound ("weapons/M56Fire", CHAN_WEAPON)
+		TNT1 A 0 A_SpawnItem("ShotSpark",0,0,0)
+		TNT1 A 0 A_GunFlash
+		TNT1 A 0 A_ZoomFactor (0.99, ZOOM_NOSCALETURNING)
+		SMTG E 1 A_WeaponOffset (1,1,WOF_ADD)
+		SMTG B 1 BRIGHT A_FireBullets(3, 1, 1, 4, "BulletPuff", 1)
+		TNT1 A 0 A_GunFlash
+		TNT1 A 0 A_ZoomFactor (1.0, ZOOM_NOSCALETURNING)
+		TNT1 A 0 A_GiveInventory("Heat",2)
+		SMTG C 1 BRIGHT A_FireBullets(3, 1, 1, 4, "BulletPuff", 1)
+		TNT1 A 0 A_WeaponOffset (-1,-1,WOF_ADD)
+		SMTG D 1 BRIGHT A_ZoomFactor (1.0, ZOOM_NOSCALETURNING)
+		TNT1 A 0 A_GiveInventory("Heat",2)
+		TNT1 A 0 A_Refire
+		TNT1 A 0 A_TakeInventory("FreeFire",1)
+		SMTG A 4 {
+		A_SpawnItemEX("MuzzleSmoke",cos(pitch)*24,4,36-(sin(pitch)*24),cos(pitch)*4,0,-sin(pitch)*4,0,SXF_TRANSFERPITCH);
+		A_SpawnItemEX("MuzzleSmoke",cos(pitch)*24,4,36-(sin(pitch)*24),frandom(-0.5,0.5),frandom(-0.5,0.5),0.5,0,SXF_TRANSFERPITCH);
+		}
+		Goto Ready
+	Overheat:
+		TNT1 A 0 A_WeaponOffset (0,32)
+		TNT1 A 0 A_TakeInventory("FreeFire",1)
+		TNT1 A 0 A_PlaySound("weapons/cool",CHAN_WEAPON)
+		Goto Cooldown
+	Cooldown:
+		TNT1 A 0 A_JumpIf(CountInv("Heat")==0,"Ready")
+		SMTG A 2 {
+		A_TakeInventory("Heat",2);
+		A_SpawnItemEX("MuzzleSmoke",cos(pitch)*24,4,36-(sin(pitch)*24),frandom(-0.5,0.5),frandom(-0.5,0.5),0.5,0,SXF_TRANSFERPITCH,128);
+		}
+		Loop
+	Empty:
+		SMTG A 10 A_PlaySound("weapons/empty",CHAN_WEAPON)
+		Goto Ready
+	Flash:
+		TNT1 A 2 BRIGHT A_Light2
+		TNT1 B 2 BRIGHT A_Light1
+		TNT1 A 0 A_Light0
+		Goto LightDone
+	}
+}
+
+ACTOR Flamer : Weapon replaces RocketLauncher
+{
+	Weapon.SelectionOrder 3
+	Weapon.SlotNumber 5
+	Weapon.AmmoUse 1
+	Weapon.AmmoGive 100
+	Weapon.AmmoType "FlamerAmmo"
+	Inventory.PickupMessage "Flamethrower"
+	Inventory.PickupSound "weapons/weaponpickup"
+	Weapon.UpSound "weapons/GReady"
+	Weapon.BobRangeX 0.5
+	Weapon.BobRangeY 0.5
+	Weapon.BobStyle "Smooth"
+	Scale 0.6
+	States
+	{
+	Spawn:
+		FLPU A -1
+		Stop
+	Ready:
+		FLMR BCD 2 A_WeaponReady
+		Loop
+	Deselect:
+		TNT1 A 0 A_StopSound(CHAN_WEAPON)
+		TNT1 A 0 A_Lower
+		FLMR A 1 A_Lower
+		Loop
+	Select:
+		TNT1 A 0 A_Raise
+		FLMR A 1 A_Raise
+		Loop
+	Fire:
+		FLMR GHI 1
+		FLMR J 1 A_PlaySound("weapons/flamerstart",2)
+		FLMR K 1 A_PlaySound("weapons/flamer",CHAN_WEAPON,1.0,true)
+		Goto FireLoop
+	FireLoop:
+		TNT1 A 0 A_WeaponOffset(frandom(-1,1),32,WOF_INTERPOLATE)
+		TNT1 A 0 A_GunFlash
+		FLMR EE 1 Bright A_SpawnItemEX("MuzzleFlame",cos(pitch)*24,4,38-(sin(pitch)*24),cos(pitch)*4,0,-sin(pitch)*4,0,SXF_TRANSFERPITCH)
+		FLMR F 1 Bright A_FireProjectile("FlamerFlame",random(-2,2),true,4,6,FPF_NOAUTOAIM)
+		TNT1 A 0 A_Refire("FireLoop")
+		FLMR GHIJK 1 A_WeaponOffset(0,32)
+		TNT1 A 0 A_StopSound(CHAN_WEAPON)
+		TNT1 A 0 A_PlaySound("weapons/flamerstart",2)
+		Goto Ready
+	Flash:
+		TNT1 A 1 A_Light1
+		TNT1 A 1 A_Light2
+		Goto LightDone
+	}
+}
+
+ACTOR PlasmaPulse : Weapon replaces PlasmaRifle
+{
+	Inventory.PickupMessage "Plasma Pulse Rifle"
+	Inventory.PickupSound "weapons/weaponpickup"
+	Weapon.UpSound "weapons/GReady"
+	Weapon.SlotNumber 6
+	Weapon.SelectionOrder 0
+	Weapon.KickBack 400
+	Weapon.BobStyle Smooth
+	Weapon.BobRangeX 0.5
+	Weapon.BobRangeY 0.5
+	Weapon.AmmoType "PlasmaCell"
+	Weapon.AmmoGive 100
+	Weapon.AmmoUse 1
+	Decal "RailScorch"
+	Scale 0.6
+	+EXTREMEDEATH
+	+Weapon.NOAUTOAIM
+	States
+	{
+	Spawn:
+		PMPU A -1
+		Stop
+	Ready:
+		TNT1 A 0 A_GunFlash("IdleFlash")
+		TNT1 A 0 A_TakeInventory("Heat",2)
+		PLMP A 1 A_WeaponReady
+		Loop
+	Select:
+		TNT1 A 0 A_Raise
+		PLMP A 1 A_Raise
+		Loop
+	Deselect:
+		TNT1 A 0 A_TakeInventory("Heat",100)
+		TNT1 A 0 A_Lower
+		PLMP A 1 A_Lower
+		Loop
+	Fire:
+		TNT1 A 0 A_JumpIf(CountInv("Heat")==100,"Overheat")
+		TNT1 A 0 A_WeaponOffset (1,2,WOF_ADD)
+		TNT1 A 0 A_PlaySound ("weapons/plfire", CHAN_WEAPON)
+		TNT1 A 0 A_SpawnItem("PlasmaSpark",0,0,0)
+		PLMP B 1 BRIGHT A_GunFlash
+		TNT1 A 0 A_GiveInventory("Heat",10)
+		TNT1 A 0 A_ZoomFactor (0.99, ZOOM_NOSCALETURNING)
+		TNT1 A 0 A_RailAttack(0,5,0,"none","white",RGF_FULLBRIGHT|RGF_SILENT,0,"none",0,0,4096,15,0.25,0,"none",6)
+		PLMP C 2 BRIGHT	A_RailAttack(10,5,1,"none","lightblue",RGF_FULLBRIGHT|RGF_SILENT,0,"BulletPuffNew",0,0,4096,25,0.25,2,"none",6)
+		TNT1 A 0 A_ZoomFactor (1.0, ZOOM_NOSCALETURNING)
+		PLMP D 1 BRIGHT A_WeaponOffset (-1,-2,WOF_ADD)
+		PLMP E 8 A_SpawnItemEX("MuzzleSmoke",cos(pitch)*24,4,36-(sin(pitch)*24),frandom(-0.5,0.5),frandom(-0.5,0.5),0.5,0,SXF_TRANSFERPITCH)
+		PLMP FGH 2 A_SpawnItemEX("MuzzleSmoke",cos(pitch)*24,4,36-(sin(pitch)*24),frandom(-0.5,0.5),frandom(-0.5,0.5),0.5,0,SXF_TRANSFERPITCH,128)
+		PLMP A 4 A_Refire
+		Goto Ready
+	AltFire:
+		TNT1 A 0 A_JumpIf(CountInv("Heat")==100,"Overheat")
+		TNT1 A 0 A_JumpIf(CountInv("PlasmaCell")<10,"Empty")
+		TNT1 A 0 A_PlaySound ("weapons/charge1", CHAN_WEAPON)
+		TNT1 A 0 A_SpawnItem("PlasmaSpark",0,0,0)
+		TNT1 A 0 A_GunFlash
+		PLMP A 2 BRIGHT A_RailAttack(0,5,0,"none","lightblue",RGF_FULLBRIGHT|RGF_SILENT,4,"DummyPuff",0,0,4096,10,32,0,"none",6)
+		PLMP A 2 BRIGHT	A_RailAttack(0,5,0,"none","lightblue",RGF_FULLBRIGHT|RGF_SILENT,3,"DummyPuff",0,0,4096,10,16,0,"none",6)
+		PLMP A 2 BRIGHT A_RailAttack(0,5,0,"none","lightblue",RGF_FULLBRIGHT|RGF_SILENT,2,"DummyPuff",0,0,4096,10,8,0,"none",6)
+		PLMP A 2 BRIGHT	A_RailAttack(1,5,0,"none","lightblue",RGF_FULLBRIGHT|RGF_SILENT,1,"DummyPuff",0,0,4096,10,4,0,"none",6)
+		PLMP H 2 BRIGHT	A_RailAttack(2,5,0,"none","lightblue",RGF_FULLBRIGHT|RGF_SILENT,0,"DummyPuff",0,0,4096,10,2,1,"none",6)
+		PLMP G 2 BRIGHT A_RailAttack(3,5,0,"none","lightblue",RGF_FULLBRIGHT|RGF_SILENT,0,"DummyPuff",0,0,4096,10,1,2,"none",6)
+		PLMP F 2 BRIGHT	A_RailAttack(4,5,0,"none","lightblue",RGF_FULLBRIGHT|RGF_SILENT,0,"BulletPuffNew",0,0,4096,10,0.5,3,"none",6)
+		PLMP E 2 BRIGHT A_RailAttack(5,5,0,"none","white",RGF_FULLBRIGHT|RGF_SILENT,0,"BulletPuffNew",0,0,4096,10,0.25,4,"none",6)
+		TNT1 A 0 A_ZoomFactor (0.99, ZOOM_NOSCALETURNING)
+		TNT1 A 0 A_WeaponOffset (1,2,WOF_ADD)
+		TNT1 A 0 A_TakeInventory ("PlasmaCell",10)
+		PLMP B 2 BRIGHT A_FireProjectile ("PlasmaBlast",0,0,5,5,6)
+		TNT1 A 0 A_GiveInventory("Heat",50)
+		TNT1 A 0 A_PlaySound ("weapons/plfire", CHAN_WEAPON)
+		TNT1 A 0 A_PlaySound ("weapons/plstart", 2, 0.75)
+		TNT1 A 0 A_ZoomFactor (1.0, ZOOM_NOSCALETURNING)
+		TNT1 A 0 A_WeaponOffset (-1,-2,WOF_ADD)
+		PLMP CD 1 BRIGHT
+		PLMP E 8 A_SpawnItemEX("MuzzleSmoke",cos(pitch)*24,4,36-(sin(pitch)*24),frandom(-0.5,0.5),frandom(-0.5,0.5),0.5,0,SXF_TRANSFERPITCH)
+		PLMP FGH 2 A_SpawnItemEX("MuzzleSmoke",cos(pitch)*24,4,36-(sin(pitch)*24),frandom(-0.5,0.5),frandom(-0.5,0.5),0.5,0,SXF_TRANSFERPITCH,128)
+		PLMP A 24
+		PLMP A 4 A_Refire
+		Goto Ready
+	Empty:
+		TNT1 A 0 A_GunFlash("EmptyFlash")
+		PLMP A 10 A_PlaySound("weapons/empty",CHAN_WEAPON)
+		Goto Ready
+	Overheat:
+		TNT1 A 0 A_PlaySound("weapons/cool",CHAN_WEAPON)
+		Goto Cooldown
+	Cooldown:
+		TNT1 A 0 A_GunFlash("HeatFlash")
+		TNT1 A 0 A_JumpIf(CountInv("Heat")==0,"Ready")
+		PLMP A 4 {
+		A_TakeInventory("Heat",4);
+		A_SpawnItemEX("MuzzleSmoke",cos(pitch)*24,4,36-(sin(pitch)*24),frandom(-0.5,0.5),frandom(-0.5,0.5),0.5,0,SXF_TRANSFERPITCH,128);
+		}
+		Loop
+	Flash:
+		PLMP J 1 BRIGHT A_Light2
+		PLMP J 2 BRIGHT A_Light1
+		PLMP J 15
+		PLMP I 4
+		TNT1 A 0 A_Light0
+		Goto LightDone
+	AltFlash:
+		PLMP J 16 BRIGHT
+		PLMP K 2 BRIGHT A_Light2
+		PLMP K 2 BRIGHT A_Light1
+		PLMP K 8 BRIGHT
+		PLMP K 2 BRIGHT
+		PLMP K 2 BRIGHT
+		PLMP J 2 BRIGHT
+		PLMP K 4 BRIGHT
+		PLMP J 4 BRIGHT
+		PLMP K 4 BRIGHT
+		PLMP J 4 BRIGHT
+		PLMP K 4 BRIGHT
+		PLMP J 4 BRIGHT
+		PLMP I 4 BRIGHT
+		TNT1 A 0 A_Light0
+		Goto LightDone
+	IdleFlash:
+		PLMP I 2 BRIGHT
+		Goto LightDone
+	HeatFlash:
+		PLMP JK 2 BRIGHT
+		Goto LightDone
+	EmptyFlash:
+		PLMP I 10 BRIGHT
+		Goto LightDone
+	}
+}
+
+ACTOR Sentry : Weapon replaces BFG9000
+{
+	Height 20
+	Scale 0.8
+	Weapon.AmmoType "SentryAmount"
+	Weapon.AmmoGive 1
+	Weapon.SelectionOrder 10
+	Weapon.SlotNumber 7
+	+WEAPON.NOAUTOFIRE
+	+WEAPON.NOALERT
+	Inventory.PickupMessage "Got a Sentrygun!"
+	States
+	{
+	Spawn:
+		SENB A -1
+		Stop
+	Ready:
+		SENT D 1 A_WeaponReady
+		Loop
+	Deselect:
+		SENT D 1 A_Lower
+		Loop
+	Select:
+		SENT D 1 A_Raise
+		Loop
+	Fire:
+		SENT DDDDDDDD 1 A_WeaponOffset(0,8,WOF_ADD)
+		TNT1 A 0 A_TakeInventory("SentryAmount",1)
+		SENT D 1 A_SpawnItemEx ("SentryGun", 56, 0, 8, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_TakeInventory ("Sentry",1)
+		Goto Ready
+	}
+}

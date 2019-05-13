@@ -1,0 +1,179 @@
+//USCM soundinfo
+//WEAPONS
+
+weapons/GReady GNRDY
+weapons/weaponpickup GUNPCKUP
+weapons/reload1 AMMOPCKP
+weapons/reload2 RFLRDY
+weapons/empty EMPTY
+weapons/cool COOL
+
+weapons/tracker TRACK
+weapons/ping PING
+
+$random weapons/PRFire { weapons/PRFire1 weapons/PRFire2 weapons/PRFire3 }
+weapons/PRFire1 PR1
+weapons/PRFire2 PR2
+weapons/PRFire3 PR3
+
+weapons/gexp GEXP2
+weapons/GLFire GLFIRE
+
+weapons/shotgf SHTGN
+
+$random weapons/M56Fire { weapons/M56Fire1 weapons/M56Fire2 weapons/M56Fire3 }
+weapons/M56Fire1 SMRTGNF1
+weapons/M56Fire2 SMRTGNF2
+weapons/M56Fire3 SMRTGNF3
+
+weapons/flamer FLMR
+weapons/flamerstart FLMRSS
+
+weapons/plfire PLFIRE
+weapons/charge1 CHARGE1
+weapons/plstart PLSTART
+
+weapons/Weld WELD
+weapons/HackingTool HACK
+
+//MONSTERS
+
+$random Warrior/sight { Warrior/sight1 Warrior/sight2 }
+Warrior/sight1 ALSEE1
+Warrior/sight2 ALSEE2
+
+Warrior/melee ALATK
+Warrior/pain ALPAIN
+Warrior/death ALDIE
+
+$random Warrior/active { Warrior/active1 Warrior/active2  }
+Warrior/active1 ALACT1
+Warrior/active2 ALACT2
+
+$random Warrior/jump { Warrior/jump1 Warrior/jump2 }
+Warrior/jump1 ALJUMP1
+Warrior/jump2 ALJUMP2
+
+$random Warrior/run { Warrior/run1 Warrior/run2 }
+Warrior/run1 ALRUN1
+Warrior/run2 ALRUN2
+
+//CUSTOM soundinfo
+
+tubes/break TSTTB
+
+Steam/Loop	STEMLOOP
+Steam/Fire	STEMFIRE
+
+AMBRAIN AMBRAIN
+Ambient/Rain	AMBRAIN
+
+$random thunder/hit { thunder/hit1 thunder/hit2 }
+thunder/hit1 THNDS01
+thunder/hit2 THNDS02
+
+END END
+START START
+
+END2 END2
+START2 START2
+
+ACCESDEN ACCESDEN
+ACCESSGR ACCESSGR
+LIGHTBR1 LIGHTBR1
+LIGHTBR2 LIGHTBR2
+LIGHTBR3 LIGHTBR3
+Level2 Level2
+Thunder1 thunder1
+Thunder2 thunder2
+Thunder3 thunder3
+Thunder4 thunder4
+
+Alarm1 Alarm1
+Alarm2 Alarm2
+Alarm3 Alarm3
+Susp1 Susp1
+Susp2 Susp2
+Susp3 Susp3
+Drip1 Drip1
+Ext1 Ext1
+Fan1 Fan1
+Fan2 Fan2
+Fan3 Fan3
+Fan4 Fan4
+Fan5 Fan5
+Gen1 Gen1
+Jungle1 Jungle1
+Jungle2 Jungle2
+Jungle3 Jungle3
+Jungle4 Jungle4
+PC1 PC1
+PC2 PC2
+PC3 PC3
+PC4 PC4
+Radio1 Radio1
+Radio2 Radio2
+Radio3 Radio3
+Rain1 Rain1
+wind1 wind1
+wind2 wind2
+wind3 wind3
+wind4 wind4
+rainout rainout
+Electr1 Electr1
+Electr2 Electr2
+Creepy1 Creepy1
+
+$AMBIENT 1 Alarm1 POINT CONTINUOUS 1.0
+$AMBIENT 2 Alarm2 POINT CONTINUOUS 1.0
+$AMBIENT 3 Alarm3 POINT CONTINUOUS 1.0
+$AMBIENT 4 Susp1 POINT CONTINUOUS 1.0
+$AMBIENT 5 Susp2 POINT CONTINUOUS 1.0
+$AMBIENT 6 Drip1 POINT CONTINUOUS 1.0
+$AMBIENT 7 Ext1 POINT CONTINUOUS 1.0
+$AMBIENT 8 Fan1 POINT CONTINUOUS 1.0
+$AMBIENT 9 Fan2 POINT CONTINUOUS 1.0
+$AMBIENT 10 Fan3 POINT CONTINUOUS 1.0
+$AMBIENT 11 Fan4 POINT CONTINUOUS 1.0
+$AMBIENT 12 Fan5 POINT CONTINUOUS 1.0
+$AMBIENT 13 Gen1 POINT CONTINUOUS 1.0
+$AMBIENT 14 Jungle1 POINT CONTINUOUS 1.0
+$AMBIENT 15 Jungle2 POINT CONTINUOUS 1.0
+$AMBIENT 16 Jungle3 POINT CONTINUOUS 1.0
+$AMBIENT 17 Jungle4 POINT CONTINUOUS 1.0
+$AMBIENT 18 PC1 POINT CONTINUOUS 1.0
+$AMBIENT 19 PC2 POINT CONTINUOUS 1.0
+$AMBIENT 20 PC3 POINT CONTINUOUS 1.0
+$AMBIENT 21 PC4 POINT CONTINUOUS 1.0
+$AMBIENT 22 Radio1 POINT CONTINUOUS 1.0
+$AMBIENT 23 Radio2 POINT CONTINUOUS 1.0
+$AMBIENT 24 Radio3 POINT CONTINUOUS 1.0
+$AMBIENT 25 Rain1 POINT CONTINUOUS 1.0
+$AMBIENT 26 wind1 POINT CONTINUOUS 1.0
+$AMBIENT 27 wind2 POINT CONTINUOUS 1.0
+$AMBIENT 28 wind3 POINT CONTINUOUS 1.0
+$AMBIENT 29 wind4 POINT CONTINUOUS 1.0
+$AMBIENT 30 susp3 POINT CONTINUOUS 1.0
+$AMBIENT 31 rainout POINT CONTINUOUS 1.0
+$AMBIENT 32 Electr1 POINT CONTINUOUS 1.0
+$AMBIENT 33 Electr2 POINT CONTINUOUS 1.0
+
+sparks/spark1 Spark1
+sparks/spark2 Spark2
+
+$random sparks/spark {sparks/spark1 sparks/spark2}
+
+colony/announcement1 ED_ALLPE
+colony/announcement2 ED_CONTS
+colony/announcement3 ED_SECUR
+
+$random colony/announcement {colony/announcement1 colony/announcement2 colony/announcement3}
+
+$RANDOM Thunder { Thunder1 Thunder2 Thunder3 Thunder4 }
+
+crack1 crack1
+crack2 crack2
+crack3 crack3
+crack4 crack4
+
+$RANDOM crack { crack1 crack2 crack3 crack4 }

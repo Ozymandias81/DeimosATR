@@ -1,0 +1,52 @@
+ACTOR Helmet : BasicArmorBonus replaces ArmorBonus
+{
+  Inventory.Icon "ARMORHUD"
+  Radius 20
+  Height 16
+  Inventory.PickupMessage "Picked up armor bonus."
+  Armor.SavePercent 25
+  Armor.SaveAmount 1
+  Armor.MaxSaveAmount 200
+  +COUNTITEM
+  +INVENTORY.ALWAYSPICKUP
+  States
+  {
+  Spawn:
+    BON2 ABCDCB 6
+    Loop
+  }
+}
+
+ACTOR LightArmor : BasicArmorPickup replaces GreenArmor
+{
+  Inventory.Icon "GREENHUD"
+  Radius 20
+  Height 16
+  Inventory.PickupMessage "Picked up light armor."
+  Armor.SavePercent 50
+  Armor.SaveAmount 100
+  States
+  {
+  Spawn:
+    ARM1 A 6
+    ARM1 B 7 Bright
+    Loop
+  }
+}
+
+ACTOR HeavyArmor : BasicArmorPickup replaces BlueArmor
+{
+  Inventory.Icon "BLUEHUD"
+  Radius 20
+  Height 16
+  Inventory.PickupMessage "Picked up heavy armor."
+  Armor.SavePercent 75
+  Armor.SaveAmount 200
+  States
+  {
+  Spawn:
+    ARM2 A 6
+    ARM2 B 6 Bright
+    Loop
+  }
+}

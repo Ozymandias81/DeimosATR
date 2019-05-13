@@ -1,0 +1,23 @@
+USCM Arsenal Modification for GZDoom compiled and edited by:
+willkuer
+
+Alien sound effects from Alien: Isolation by:
+Creative Assembly/Sega
+
+Pulse Rifle sound effect from Aliens: Colonial Marines by:
+Gearbox/Sega
+
+Motion Tracker/Radar code adapted from HUD mod v2 by:
+Cybermind, Endless123
+
+Alien sprite adapted from Colonial Marines by:
+Deimos Anomaly
+
+Original Bullet Casings code from ZDoom Forums by:
+Enjay
+
+Original Flashlight from ZDoom Forums by:
+The Zombie Killer
+
+Sentrygun Actor code from Realm667 by:
+Captain Toenail

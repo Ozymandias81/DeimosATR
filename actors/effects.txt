@@ -1,0 +1,287 @@
+ACTOR BulletPuffNew replaces BulletPuff
+{
+  +NOBLOCKMAP
+  +NOGRAVITY
+  +ALLOWPARTICLES
+  +RANDOMIZE
+  RenderStyle Add
+  Alpha 0.4
+  VSpeed 0.4
+  Mass 5
+  Scale 0.2
+  States
+  {
+  Spawn:
+    DRG1 ABCDE 2 Bright A_SpawnItemEx("ShotSparks",0,0,0,frandom(-1,1),frandom(-1,1),frandom(2,4))
+	SMO1 ABCDEF 2
+	Stop
+  Melee:
+    SMO1 ABCDEF 2
+    Stop
+  }
+}
+
+ACTOR Hacking
+{
+  +NOBLOCKMAP
+  +NOGRAVITY
+  +ALLOWPARTICLES
+  +RANDOMIZE
+  RenderStyle Add
+  Alpha 0.4
+  VSpeed 0.4
+  Mass 5
+  Scale 0.2
+  States
+  {
+  Spawn:
+    TNT1 A 8
+	Stop
+  Melee:
+    TNT1 A 8
+    Stop
+  }
+}
+
+ACTOR MuzzleFlame
+{
+  +NOBLOCKMAP
+  +NOGRAVITY
+  +NOINTERACTION
+  RenderStyle Add
+  Alpha 0.4
+  VSpeed 0.4
+  Mass 5
+  Scale 0.2
+  States
+  {
+  Spawn:
+    DRG1 ABCDE 2 Bright
+	Goto Death
+  Death:
+    SMO1 ABCDEF 1
+    Stop
+  }
+}
+
+ACTOR ShotSpark
+  {
+  Projectile
+  +RANDOMIZE
+  +FORCEXYBILLBOARD
+  +BOUNCEONFLOORS
+  +BOUNCEONCEILINGS
+  -NOGRAVITY
+  +NOTIMEFREEZE
+  Damage 0
+  Speed 0
+  States
+  {
+  Spawn:
+	TNT1 A 4 BRIGHT
+	Goto Death
+  Death:
+	TNT1 A 0
+	Stop
+  }
+}
+
+ACTOR ShotSparks
+  {
+  Projectile
+  +RANDOMIZE
+  +FORCEXYBILLBOARD
+  +BOUNCEONFLOORS
+  +BOUNCEONCEILINGS
+  -BOUNCEONWALLS
+  -NOGRAVITY
+  Damage 0
+  BounceType Grenade
+  bouncefactor 0.2
+  wallbouncefactor 0.1
+  speed 25
+  alpha 1
+  scale 0.15
+  RenderStyle Add
+  States
+  {
+  Spawn:
+	PRBM A 16 BRIGHT
+	Goto Death
+  Death:
+	TNT1 A 0
+	Stop
+  }
+}
+
+ACTOR PlasmaSpark
+  {
+  Projectile
+  +RANDOMIZE
+  +FORCEXYBILLBOARD
+  +BOUNCEONFLOORS
+  +BOUNCEONCEILINGS
+  -NOGRAVITY
+  +NOTIMEFREEZE
+  Damage 0
+  Speed 0
+  States
+  {
+  Spawn:
+	TNT1 A 4 BRIGHT
+	Goto Death
+  Death:
+	TNT1 A 0
+	Stop
+  }
+}
+
+ACTOR PlasmaSparks
+  {
+  Projectile
+  +RANDOMIZE
+  +FORCEXYBILLBOARD
+  +BOUNCEONFLOORS
+  +BOUNCEONCEILINGS
+  -NOGRAVITY
+  Damage 0
+  BounceType Grenade
+  bouncefactor 0.2
+  wallbouncefactor 0.1
+  speed 25
+  alpha 1
+  scale 0.15
+  RenderStyle Add
+  States
+  {
+  Spawn:
+	PRBM A 16 BRIGHT
+	Goto Death
+  Death:
+	TNT1 A 0
+	Stop
+  }
+}
+
+ACTOR FlameSparks
+  {
+  Projectile
+  +RANDOMIZE
+  +FORCEXYBILLBOARD
+  +BOUNCEONFLOORS
+  +BOUNCEONCEILINGS
+  -NOGRAVITY
+  Damage 0
+  DamageType "Flamer"
+  BounceType Grenade
+  bouncefactor 0.2
+  wallbouncefactor 0.2
+  speed 35
+  alpha 1
+  scale 0.4
+  RenderStyle Add
+  States
+  {
+  Spawn:
+	BAL1 A 1 Bright
+	PRBM A 1 Bright
+	BAL1 A 1 Bright
+	PRBM A 1 Bright
+	BAL1 A 1 Bright
+	PRBM A 1 Bright
+	BAL1 A 1 Bright
+	PRBM A 1 Bright
+	BAL1 A 1 Bright
+	PRBM A 1 Bright
+	BAL1 A 1 Bright
+	PRBM A 1 Bright
+	BAL1 A 1 Bright
+	PRBM A 1 Bright
+	BAL1 A 1 Bright
+	PRBM A 1 Bright
+	Goto Death
+  Death:
+	TNT1 A 0 A_SetScale(0.0)
+	TNT1 A 0 A_ScaleVelocity(0)
+	SMOK ABCDEFGHIJKLMNO 1 A_SetScale(scaleX+0.025,scaleY+0.025)
+	SMOK ABCDEFGHIJKLMNO 1 A_Explode(2,32)
+	SMOK ABCDEFGHIJKLMNO 1 A_SetScale(scaleX-0.025,scaleY-0.025)
+	Stop
+  XDeath:
+	TNT1 A 0 A_SetScale(0.0)
+	TNT1 A 0 A_ScaleVelocity(0)
+	SMOK ABCDEFGHIJ 1 A_SetScale(scaleX+0.025,scaleY+0.025)
+	SMOK KLMNOABCDEFGHIJKLMNOABCDE 1
+	SMOK FGHIJKLMNO 1 A_SetScale(scaleX-0.025,scaleY-0.025)
+	Stop
+  }
+}
+
+Actor ItBurns
+{
+  Radius 8
+  Height 40
+  Projectile
+  RenderStyle Add
+  DamageType "Flamer"
+  Scale 0.8
+  Alpha 1.0
+  VSpeed 1.0
+  +NoGravity
+  +NoExplodeFloor
+  +NoDamageThrust
+  States
+  {
+  Spawn:
+    TNT1 A 0 A_PlaySound("weapons/Flame")
+    Goto Burn
+  Burn:
+    BRNZ A 1 BRIGHT A_Explode(4, 16, XF_HURTSOURCE, 0)
+	BRNZ BCDEFGHI 1 BRIGHT A_SpawnItem("Smoke",0,8)
+	Goto Death
+  Death:
+	BRNZ BCDEFGHI 1 BRIGHT A_FadeOut(0.1)
+	Stop
+  }
+}
+
+Actor MuzzleSmoke
+{
+	RenderStyle Add
+	Alpha 0.2
+	Scale 0.25
+	VSpeed 0.5
+	+NOINTERACTION
+	+FORCEXYBILLBOARD
+	+NOTIMEFREEZE
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+	SMO1 ABCDEF 2
+	Goto Death
+	Death:
+	TNT1 A 0
+	Stop
+	}
+}
+
+Actor Smoke
+{
+	RenderStyle Add
+	Alpha 0.2
+	Scale 0.8
+	VSpeed 1.0
+	+NOINTERACTION
+	+FORCEXYBILLBOARD
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+	SMO1 ABCDEF 2
+	Goto Death
+	Death:
+	TNT1 A 0
+	Stop
+	}
+}

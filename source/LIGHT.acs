@@ -1,0 +1,34 @@
+// ACS
+#library "Light.acs"
+#include "zcommon.acs"
+
+// Defines
+#define MAXPLAYERS 8
+int flashlightOn[MAXPLAYERS];
+
+// Scripts
+Script "PointerPitch" (void)
+{
+	SetResultValue(GetActorPitch(0) / -182);
+}
+
+Script "ToggleFlashlight" (void)
+{
+	if (flashlightOn[PlayerNumber()])
+		flashlightOn[PlayerNumber()] = 0;
+	else
+		flashlightOn[PlayerNumber()] = 1;
+	ActivatorSound("click", 127);
+}
+
+Script "FlashlightHandling" ENTER
+{
+	While(1)
+	{
+		if (flashlightOn[PlayerNumber()])
+			GiveInventory("FlashlightSpawner", 1);
+		Delay(1);
+	}
+}
+
+// Functions

@@ -1,0 +1,48 @@
+//This is the merged version between my actual mod and USCM
+#include "actors/acmain.txt"
+#include "actors/alien.txt"
+#include "actors/ammo.txt"
+#include "actors/armor.txt"
+#include "actors/effects.txt"
+#include "actors/flashlight.txt"
+#include "actors/fog.txt"
+#include "actors/labs.txt"
+#include "actors/models.txt"
+#include "actors/monsters.txt"
+#include "actors/projectiles.txt"
+#include "actors/rain.txt"
+#include "actors/sparks.txt"
+#include "actors/steam.txt"
+#include "actors/thunfx.txt"
+#include "actors/sentrygun.txt"
+#include "actors/trees.txt"
+#include "actors/weapons.txt"
+
+// PLAYER CLASS
+Actor ColonialMarine : DoomPlayer 
+{
+	Player.Face "MUG"
+	Player.ForwardMove 0.6, 0.8
+	Player.SideMove 0.6, 0.8
+	Player.JumpZ 8
+	Player.ViewBob 0.5
+	Player.WeaponSlot 1, "M4Pistol"
+	Player.WeaponSlot 1, "Tracker"
+	Player.WeaponSlot 2, "PulseRifle"
+	Player.WeaponSlot 3, "Shotty"
+	Player.WeaponSlot 4, "SmartGun"
+	Player.WeaponSlot 5, "Flamer"
+	Player.WeaponSlot 6, "PlasmaPulse"
+	Player.WeaponSlot 7, "Sentry"
+	Player.WeaponSlot 8, "Welder"
+	Player.WeaponSlot 9, "HackTool"
+	Player.startitem "PulseRifle"
+	Player.startitem "M4Pistol"
+	Player.startitem "HackTool"
+	Player.startitem "PistolAmmo" 12
+	Player.startitem "PulseAmmo" 95
+	Player.startitem "PulseClip" 1
+	Player.startitem "NadeAmmo" 6
+	DamageFactor "Flamer", 0.0
+	DamageFactor "PlasmaBlast", 0.0
+}

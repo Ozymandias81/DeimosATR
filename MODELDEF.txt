@@ -1,0 +1,1079 @@
+Model APC
+{
+	Path "models"
+	Model 0 "apc.md3"
+	Scale 0.55 0.55 0.55
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Airpipe
+{
+	Path "models"
+	Model 0 "airpipe.md3"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Antenna
+{
+	Path "models"
+	Model 0 "antenna.md3"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Autokeuken
+{
+	Path "models"
+	Model 0 "autokeuken.md3"
+	Scale 0.5 0.5 0.5
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Autosync
+{
+	Path "models"
+	Model 0 "autosync.md3"
+	Scale 0.5 0.5 0.5
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Barrier
+{
+	Path "models"
+	Model 0 "barrier.md3"
+	Scale 1.0 1.0 1.2
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Bed1
+{
+	Path "models"
+	Model 0 "bed1.md3"
+	Scale 2.0 2.0 2.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Bed2
+{
+	Path "models"
+	Model 0 "bed2.md3"
+	Scale 0.5 0.5 0.5
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Bench2
+{
+	Path "models"
+	Model 0 "bench2.md3"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Blusser
+{
+	Path "models"
+	Model 0 "blusser.md3"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Boxtrailer
+{
+	Path "models"
+	Model 0 "boxtrailer.md3"
+	Scale 0.2 0.2 0.2
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Bulldozer1
+{ 
+	Path "Models" 
+	Model 0 "bulldozer.md3" 
+	Skin 0 "bulldozer.png"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Cam
+{
+	Path "models"
+	Model 0 "cam.md3"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+	FrameIndex MDLA B 0 1
+	FrameIndex MDLA C 0 2
+	FrameIndex MDLA D 0 3
+	FrameIndex MDLA E 0 4
+	FrameIndex MDLA F 0 5
+}
+
+Model Campbed
+{
+	Path "models"
+	Model 0 "campbed2.md3"
+	Skin 0 "campbed.png"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Chair1
+{
+	Path "models"
+	Model 0 "chair1.md3"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+//death anims doesn't inherit pitch/roll properties in order to avoid weird final positions - anims by Ozy81
+Model Chair2
+{
+	Path "models"
+	Model 0 "chair2.md3"
+	Scale 0.95 0.95 0.95
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Chair2
+{
+	Path "models"
+	Model 0 "chair2.md3"
+	Scale 0.95 0.95 0.95
+	FrameIndex MDLA B 0 1
+	FrameIndex MDLA C 0 2
+	FrameIndex MDLA D 0 3
+	FrameIndex MDLA E 0 4
+	FrameIndex MDLA F 0 5
+	FrameIndex MDLA G 0 6
+	FrameIndex MDLA H 0 7
+	FrameIndex MDLA I 0 8
+	FrameIndex MDLA J 0 9
+	FrameIndex MDLA K 0 10
+	FrameIndex MDLA L 0 11
+	FrameIndex MDLA M 0 12
+	FrameIndex MDLA N 0 13
+	FrameIndex MDLA O 0 14
+	FrameIndex MDLA P 0 15
+}
+
+//death anims doesn't inherit pitch/roll properties in order to avoid weird final positions - anims by Ozy81
+Model Chair3
+{
+	Path "models"
+	Model 0 "chair3.md3"
+	Scale 0.4 0.4 0.4
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Chair3
+{
+	Path "models"
+	Model 0 "chair3.md3"
+	Scale 0.4 0.4 0.4
+	FrameIndex MDLA B 0 1
+	FrameIndex MDLA C 0 2
+	FrameIndex MDLA D 0 3
+	FrameIndex MDLA E 0 4
+	FrameIndex MDLA F 0 5
+	FrameIndex MDLA G 0 6
+	FrameIndex MDLA H 0 7
+	FrameIndex MDLA I 0 8
+	FrameIndex MDLA J 0 9
+	FrameIndex MDLA K 0 10
+	FrameIndex MDLA L 0 11
+	FrameIndex MDLA M 0 12
+	FrameIndex MDLA N 0 13
+	FrameIndex MDLA O 0 14
+	FrameIndex MDLA P 0 15
+}
+
+Model Closet
+{
+	Path "models"
+	Model 0 "closet.md3"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Const
+{
+	Path "models"
+	Model 0 "const.md2"
+	Skin 0 "const.png"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Container
+{
+	Path "models"
+	Model 0 "container_open.md2"
+	Skin 0 "container_open.jpg"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Copy
+{
+	Path "models"
+	Model 0 "copy.md2"
+	Skin 0 "copy.jpg"
+	Scale 1.3 1.3 1.3
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Crane
+{
+	Path "models"
+	Model 0 "crane.md2"
+	Skin 0 "crane.png"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Crate
+{
+	Path "models"
+	Model 0 "CRATE.md3"
+	Skin 0 "CRATE.png"
+	Scale 1.0 1.0 1.2
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Dropship
+{
+	Path "models"
+	Model 0 "dropship.md3"
+	Scale 10.0 10.0 10.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Dumpster
+{
+	Path "models"
+	Model 0 "dumbster.md2"
+	Skin 0 "dumbster.png"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model DNACreator
+{
+	Path "models"
+	Model 0 "dnacreator.md2"
+	Skin 0 "dnacreator.jpg"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Excavator
+{
+	Path "models"
+	Model 0 "excavator.md3"
+	Scale 0.35 0.35 0.35
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Fence
+{ 
+	Path "Models" 
+	Model 0 "fence.md2" 
+	Skin 0 "fence.png"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Forklift1
+{ 
+	Path "Models" 
+	Model 0 "forktruck.md2" 
+	Skin 0 "forktruck.png"
+	Scale 1.2 1.2 1.2
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Forklift2
+{ 
+	Path "Models" 
+	Model 0 "forklift.md3" 
+	Skin 0 "forklift.png"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Generator
+{
+	Path "models"
+	Model 0 "GENER.md2"
+	Skin 0 "GENER.png"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Generator4
+{
+	Path "models"
+	Model 0 "generator4.md2"
+	Skin 0 "generator4.png"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Generator5
+{
+	Path "models"
+	Model 0 "generator5.md2"
+	Skin 0 "generator5.png"
+	Scale 1.2 1.2 1.2
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model GreyMetalBarrel
+{
+	Path "models"
+	Model 0 "mbar1.md3"
+	Skin 0 "mbar1.png"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model HandDryer
+{ 
+	Path "Models" 
+	Model 0 "handdryer.md3" 
+	Skin 0 "handdryer.png"
+	Scale 1.5 1.5 1.5
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Hek
+{
+	Path "models"
+	Model 0 "hek.md2"
+	Skin 0 "hek.png"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Heating
+{
+	Path "models"
+	Model 0 "heating.md2"
+	Skin 0 "heating.png"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Hedgehog
+{ 
+	Path "Models" 
+	Model 0 "hhog2.md3" 
+	Skin 0 "hhog2.png"
+	Scale 0.8 0.8 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Jaknikker
+{
+	Path "models"
+	Model 0 "jaknikker.md2"
+	Skin 0 "jaknikker.jpg"
+	Scale 2.0 2.0 2.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Kruk
+{
+	Path "models"
+	Model 0 "kruk.md2"
+	Skin 0 "kruk.png"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Kist
+{
+	Path "models"
+	Model 0 "kist.md2"
+	Skin 0 "kist.png"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Kast1
+{
+	Path "models"
+	Model 0 "kast1.md2"
+	Skin 0 "kast1.jpg"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Labtafel
+{
+	Path "models"
+	Model 0 "labtafel.md2"
+	Skin 0 "labtafel.jpg"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Lamp
+{
+	Path "models"
+	Model 0 "lamp.md3"
+	Skin 0 "lamp.png"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Light2
+{
+	Path "models"
+	Model 0 "light2.md2"
+	Skin 0 "light2.png"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Light5
+{
+	Path "models"
+	Model 0 "light5.md2"
+	Skin 0 "light5.png"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Light6
+{
+	Path "models"
+	Model 0 "light6.md2"
+	Skin 0 "light6.png"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Medi
+{
+	Path "models"
+	Model 0 "medi.md2"
+	Skin 0 "medi.jpg"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Microsc
+{
+	Path "models"
+	Model 0 "microsc.md3"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Monitoren
+{
+	Path "models"
+	Model 0 "monitoren.md2"
+	Skin 0 "monitoren.jpg"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model OilBarrel
+{
+	Path "models"
+	Model 0 "oiltank1.md2"
+	Skin 0 "oiltank1.png"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model OzyPipe1
+{
+	Path "models"
+	Model 0 "codpipe1.md3"
+	Scale 5.0 5.0 5.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model OzyPipe2
+{
+	Path "models"
+	Model 0 "codpipe2.md3"
+	Scale 5.0 5.0 5.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model OzyPipe3
+{
+	Path "models"
+	Model 0 "codpipe3.md3"
+	Scale 5.0 5.0 5.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model OzyPipe4
+{
+	Path "models"
+	Model 0 "codpipe4.md3"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model OzyPipe5
+{
+	Path "models"
+	Model 0 "codpipe5.md3"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model OzyPipe6
+{
+	Path "models"
+	Model 0 "codpipe6.md3"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model OzyPipe7
+{
+	Path "models"
+	Model 0 "codpipe7.md3"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model OzyPipe8
+{
+	Path "models"
+	Model 0 "codpipe8.md3"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model OzyPipe9
+{
+	Path "models"
+	Model 0 "codpipe9.md3"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model OzyPipe10
+{
+	Path "models"
+	Model 0 "codpipe10.md3"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model OzyPipe11
+{
+	Path "models"
+	Model 0 "codpipe11.md3"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model OzyPipe12
+{
+	Path "models"
+	Model 0 "codpipe12.md3"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model OzyPipe13
+{
+	Path "models"
+	Model 0 "codpipe13.md3"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model OzyPipe14
+{
+	Path "models"
+	Model 0 "codpipe14.md3"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model OzyPipe15
+{
+	Path "models"
+	Model 0 "codpipe15.md3"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model OzyPipe16
+{
+	Path "models"
+	Model 0 "codpipe16.md3"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model OzyPipe17
+{
+	Path "models"
+	Model 0 "codpipe17.md3"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model OzyPipe18
+{
+	Path "models"
+	Model 0 "codpipe18.md3"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Pellcar
+{
+	Path "models"
+	Model 0 "pellcar.md2"
+	Skin 0 "pellcar.png"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model PowerLoader
+{
+	Path "models"
+	Model 0 "PowerLoader.md3"
+	Scale 0.40 0.40 0.40
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Radar
+{
+	Path "models"
+	Model 0 "radar.md3"
+	Skin 0 "radar.png"
+	Scale 10.0 10.0 10.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Radio_Tower
+{
+	Path "models"
+	Model 0 "radio_tower.md3"
+	Skin 0 "radio_tower.png"
+	Scale 5.0 5.0 5.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model RustedBarrel
+{
+	Path "models"
+	Model 0 "barrel.md3"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model RedMetalBarrel
+{
+	Path "models"
+	Model 0 "mbar3.md3"
+	Skin 0 "mbar3.png"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Sink
+{
+	Path "models"
+	Model 0 "sink2.md3"
+	Skin 0 "sink2.png"
+	Scale 2.9 2.9 2.9
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Soapdis
+{
+	Path "models"
+	Model 0 "soapdisp.md3"
+	Skin 0 "soapdisp.png"
+	Scale 2.0 2.0 2.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Sofa
+{
+	Path "models"
+	Model 0 "sofa.md2"
+	Skin 0 "sofa.png"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Switchboard
+{
+	Path "models"
+	Model 0 "switchboard.md2"
+	Skin 0 "switchboard.png"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Steekw
+{
+	Path "models"
+	Model 0 "steekw.md2"
+	Skin 0 "steekw.png"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Shuttle //AFADoomer
+{
+	Path "models"
+	Model 0 "shuttle.md3"
+	Skin 0 "shuttle.jpg"
+	Scale 1.5 1.5 1.5
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Soda
+{
+	Path "models"
+	Model 0 "soda.md2"
+	Skin 0 "soda.jpg"
+	Scale 2.0 2.0 2.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Truck5
+{
+	Path "models"
+	Model 0 "truck5.md2"
+	Skin 0 "truck5.png"
+	Scale 2.0 2.0 2.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Trashcan
+{
+	Path "models"
+	Model 0 "trashcan.md2"
+	Skin 0 "trashcan.png"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Toilet1
+{ 
+	Path "Models" 
+	Model 0 "toilet1.md2" 
+	Skin 0 "toilet1.png"
+	Scale 0.83 0.83 0.83
+	USEACTORPITCH
+	USEACTORROLL
+	Frame MDLA A 0 "idle"
+}
+
+Model Toilet2
+{ 
+	Path "Models" 
+	Model 0 "toilet1.md2" 
+	Skin 0 "toilet2.png"
+	Scale 0.83 0.83 0.83
+	USEACTORPITCH
+	USEACTORROLL
+	Frame MDLA A 0 "idle"
+}
+
+Model Truck01
+{ 
+	Path "Models" 
+	Model 0 "truckresearch.md3" 
+	Skin 0 "truckresearch.png"
+	Scale 0.95 0.95 0.95
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Workbench1
+{
+	Path "models"
+	Model 0 "bank1.md3"
+	Scale 0.8 0.8 0.8
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Workbench2
+{
+	Path "models"
+	Model 0 "bank1.md3"
+	Skin 0 "bank2.jpg"
+	Scale 0.8 0.8 0.8
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Wagon
+{
+	Path "models"
+	Model 0 "wagon.md2"
+	Skin 0 "wagon.png"
+	Scale 2.0 2.0 2.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Water
+{
+	Path "models"
+	Model 0 "water.md2"
+	Skin 0 "water.jpg"
+	Scale 1.5 1.5 1.5
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+}
+
+Model Xcrate01
+{ 
+	Path "Models" 
+	Model 0 "xcrate01.md3" 
+	Skin 0 "xcrate01.png"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+		FrameIndex MDLA B 0 1 //break anim
+		FrameIndex MDLA C 0 2
+		FrameIndex MDLA D 0 3
+		FrameIndex MDLA E 0 4
+		FrameIndex MDLA F 0 5
+		FrameIndex MDLA G 0 6
+}
+
+Model Xcrate02
+{ 
+	Path "Models" 
+	Model 0 "xcrate01.md3" 
+	Skin 0 "xcrate02.png"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+		FrameIndex MDLA B 0 1 //break anim
+		FrameIndex MDLA C 0 2
+		FrameIndex MDLA D 0 3
+		FrameIndex MDLA E 0 4
+		FrameIndex MDLA F 0 5
+		FrameIndex MDLA G 0 6
+}
+
+Model Xcrate03
+{ 
+	Path "Models" 
+	Model 0 "xcrate01.md3" 
+	Skin 0 "xcrate03.png"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+		FrameIndex MDLA B 0 1 //break anim
+		FrameIndex MDLA C 0 2
+		FrameIndex MDLA D 0 3
+		FrameIndex MDLA E 0 4
+		FrameIndex MDLA F 0 5
+		FrameIndex MDLA G 0 6
+}
+
+Model Xcrate04
+{ 
+	Path "Models" 
+	Model 0 "xcrate01.md3" 
+	Skin 0 "xcrate04.png"
+	Scale 1.0 1.0 1.0
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex MDLA A 0 0
+		FrameIndex MDLA B 0 1 //break anim
+		FrameIndex MDLA C 0 2
+		FrameIndex MDLA D 0 3
+		FrameIndex MDLA E 0 4
+		FrameIndex MDLA F 0 5
+		FrameIndex MDLA G 0 6
+}

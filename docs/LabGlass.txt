@@ -1,0 +1,17 @@
+Name: Laboratory Glassware Pack
+Connection: none
+Palette: PNG
+Summon: flaskblueA, flaskblueB, flaskpurpleA, flaskpurpleB, flaskredA, flaskredB, flaskgreenA, flaskgreenB,
+flaskyellowA, flaskyellowB, flaskgreyA, flaskgreyB, glassblue, glasspurple, glassred, glassgreen, glassyellow, glassgrey
+Ambient Sound: none
+De-/Activatable: no
+Destroyable: yes
+Special Effects: none
+
+Submitted: DavidRaven
+Decorate: DavidRaven
+GLDefs: none
+Sounds: Raven Software, DavidRaven
+Sprites: Raven Software, Tormentor667, DavidRaven
+Sprite Edit: DavidRaven
+Idea Base: DavidRaven

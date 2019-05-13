@@ -1,0 +1,199 @@
+height 32;
+monospacefonts true, "0";
+
+mugshot "Normal"
+{
+	{FACE0, FACE1, FACE2} 16; 
+}
+
+mugshot "Grin"
+{
+	{FACE3} 48; 
+}
+
+mugshot "Rampage"
+{
+	{FACE4} 32; 
+}
+
+mugshot "God"
+{
+	{FACE5} 2; 
+}
+
+mugshot "Pain"
+{
+	{FACE6} 8; 
+}
+
+mugshot "Ouch"
+{
+	{FACE6} 8; 
+}
+
+mugshot "Death"
+{
+	{FACE7} 2; 
+}
+
+statusbar fullscreen, fullscreenoffsets // ZDoom HUD
+{
+    drawshader 1920, 24, vertical, reverse, 0, 0;
+	
+	drawimage "HPHUD", 48, -24;
+	drawnumber 3, HUDNUMBS, untranslated, health, interpolate(5), whennotzero, 75, -13;
+	drawimage "EMPTYHUD", 48, -48;
+	drawimage armoricon, 48, -48;
+	drawnumber 3, HUDNUMBS, untranslated, armor, interpolate(5), whennotzero, 75, -37;
+	
+	drawmugshot 1, 0, -48;
+	
+    //ammo
+    isselected "M4Pistol"
+	{
+	drawbar "BULFRONT", "BULLBACK", ammo("PistolAmmo"), vertical, -14, -62;
+	}
+	
+	isselected "Tracker"
+	{
+	drawbar "BULFRONT", "BULLBACK", ammo("PistolAmmo"), vertical, -14, -62;
+	}
+	
+	isselected "PulseRifle"
+	{
+	drawimage "PRFLHUD", -25, -1, centerbottom;
+	drawbar "NADEFRNT", "NADEBACK", ammo("NadeAmmo"), horizontal, reverse, -47, -50;
+	drawnumber 2, NUMBDIGI, untranslated, "PulseAmmo", interpolate(5), -14, -25;
+	drawimage "CLIPA0", -45, -1;
+	drawnumber 2, HUDNUMBS, untranslated, "PulseClip", drawshadow, -52, -15;
+	}
+	
+	isselected "Shotty"
+	{
+	drawbar "SHELFRNT", "SHELBACK", ammo("ShellAmmo"), horizontal, reverse, -62, -26;
+	drawimage "SBOXA0", -19, -28;
+	drawnumber 2, HUDNUMBS, untranslated, ammo1, drawshadow, -38, -38;
+	}
+	
+	isselected "SmartGun"
+	{
+	drawimage "SMRTHUD", -30, -1, centerbottom;
+	drawnumber 3, NUMBDIGI, untranslated, ammo1, interpolate(5), -14, -25;
+	drawimage "TRACKHUD", -28, -43;
+	drawbar "HEATFRNT", "HEATBACK", ammo("Heat"), horizontal, -56, -42;
+	ininventory "FreeFire", 1 { drawimage "FREEHUD", -28, -43; }
+	}
+
+	isselected "Flamer"
+	{
+	drawbar "FLMFRONT", "FLMBACK", ammo1, vertical, -30, -52;
+	}
+	
+	isselected "PlasmaPulse"
+	{
+	drawimage "PLMHUD", -37, -1, centerbottom;
+	drawbar "PLMFRONT", "PLMBACK", ammo1, horizontal, reverse, -58, -16;
+	drawbar "HEATFRNT", "HEATBACK", ammo("Heat"), horizontal, -58, -25;
+	}
+	
+	isselected "Sentry"
+	{
+	drawimage "SENBA0", -28, -1, centerbottom;
+	drawnumber 1, HUDNUMBS, untranslated, "SentryAmount", drawshadow, -60, -15;
+	}
+	
+    usesammo
+    {
+        //secondary ammo and inventory
+        usessecondaryammo
+        {
+            inventorybarnotvisible
+            {
+                drawselectedinventory centerbottom, drawshadow, alwaysshowcounter, HUDFONT_DOOM, -14, -39, -26, -56, untranslated;
+            }
+        }
+        //no secondary ammo
+        usessecondaryammo not
+        {
+            inventorybarnotvisible
+            {
+                drawselectedinventory centerbottom, drawshadow, alwaysshowcounter, HUDFONT_DOOM, -14, -21, -26, -38, untranslated;
+            }
+        }
+    }
+	
+    // no ammo but inventory
+    usesammo not
+    {
+        inventorybarnotvisible
+        {
+            drawselectedinventory centerbottom, drawshadow, alwaysshowcounter, HUDFONT_DOOM, -14, -3, -26, -20, untranslated;
+        }
+    }
+
+    gamemode deathmatch
+    {
+        drawnumber 2, HUDFONT_DOOM, untranslated, frags, drawshadow, -3, 1;
+    }
+    gamemode singleplayer, cooperative, teamgame
+    {
+        drawkeybar 6, vertical, reverserows, auto, -10, 2, 0, 3, auto;
+    }
+}
+
+statusbar normal // Standard Doom Status bar
+{
+    drawimage "STBAR", 0, 168;
+    drawimage "STTPRCNT", 90, 171;
+    drawimage "STTPRCNT", 221, 171;
+    drawnumber 3, HUDFONT_DOOM, untranslated, ammo1, 44, 171;
+    drawnumber 3, HUDFONT_DOOM, untranslated, health, 90, 171;
+    drawnumber 3, HUDFONT_DOOM, untranslated, armor, 221, 171;
+
+    //keys
+    drawswitchableimage keyslot 2 && 5, "nullimage", "STKEYS0", "STKEYS3", "STKEYS6", 239, 171;
+    drawswitchableimage keyslot 3 && 6, "nullimage", "STKEYS1", "STKEYS4", "STKEYS7", 239, 181;
+    drawswitchableimage keyslot 1 && 4, "nullimage", "STKEYS2", "STKEYS5", "STKEYS8", 239, 191;
+
+    drawnumber 3, INDEXFONT, gold, ammo Clip, 288, 173;
+    drawnumber 3, INDEXFONT, gold, ammo Shell, 288, 179;
+    drawnumber 3, INDEXFONT, gold, ammo RocketAmmo, 288, 185;
+    drawnumber 3, INDEXFONT, gold, ammo Cell, 288, 191;
+
+    drawnumber 3, INDEXFONT, gold, ammocapacity Clip, 314, 173;
+    drawnumber 3, INDEXFONT, gold, ammocapacity Shell, 314, 179;
+    drawnumber 3, INDEXFONT, gold, ammocapacity RocketAmmo, 314, 185;
+    drawnumber 3, INDEXFONT, gold, ammocapacity Cell, 314, 191;
+    gamemode deathmatch, teamgame
+    {
+        drawnumber 2, HUDFONT_DOOM, untranslated, frags, 138, 171;
+    }
+    gamemode cooperative, singleplayer
+    {
+        drawimage "STARMS", 104, 168;
+        drawswitchableimage weaponslot 2, "STGNUM2", "STYSNUM2", 111, 172; 
+        drawswitchableimage weaponslot 3, "STGNUM3", "STYSNUM3", 123, 172;
+        drawswitchableimage weaponslot 4, "STGNUM4", "STYSNUM4", 135, 172;
+        drawswitchableimage weaponslot 5, "STGNUM5", "STYSNUM5", 111, 182;
+        drawswitchableimage weaponslot 6, "STGNUM6", "STYSNUM6", 123, 182;
+        drawswitchableimage weaponslot 7, "STGNUM7", "STYSNUM7", 135, 182;
+    }
+    gamemode cooperative, deathmatch, teamgame
+    {
+        drawimage translatable "STFBANY", 144, 169;
+    }
+    drawselectedinventory alternateonempty, INDEXFONT, 143, 168
+    {
+        //drawmugshot 5, 143, 168;
+    }
+}
+
+statusbar inventory // Standard bar overlay (ZDoom Addition)
+{
+    drawinventorybar Doom, 7, INDEXFONT, 50, 170;
+}
+
+statusbar inventoryfullscreen // ZDoom HUD overlay.
+{
+    drawinventorybar Doom, translucent, 7, INDEXFONT, 50, 170;
+}
