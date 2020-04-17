@@ -86,6 +86,13 @@ Map ATMOS "Atmosphere Processor"
 	music = "neutral"
 }
 
+Map OPS0 "Operations"
+{
+	cluster = 2
+	nointermission
+	music = ""
+}
+
 //////////////////////////////////
 
 Map COLONY_N "Hadley's Hope Colony (Night)"
@@ -208,6 +215,12 @@ DoomEdNums
 	5000=GlowA
 	5100=GlowB
 	5300=Queen
+	8760=DoomDoor
+	8761=FourwayDoor
+	8762=LabDoor
+	8763=LabDoorLarge
+	8764=IndustrialDoor
+	8765=IndustrialGate
 	10000=SteamSpawner
 	11008=Tree1
 	11009=Tree2

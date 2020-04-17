@@ -3,6 +3,7 @@
 #include "actors/alien.txt"
 #include "actors/ammo.txt"
 #include "actors/armor.txt"
+#include "actors/doors.txt"
 #include "actors/effects.txt"
 #include "actors/flashlight.txt"
 #include "actors/fog.txt"

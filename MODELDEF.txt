@@ -1,3 +1,170 @@
+//3d doors
+Model DoomDoor
+{ 
+   Path "models/doors"
+   SKIN 0 "door1.jpg"
+   MODEL 0 "door1.md3"
+   Scale 1.0 1.1 1.3
+   
+   FrameIndex DOR3 A 0 0
+   FrameIndex DOR3 B 0 1
+   FrameIndex DOR3 C 0 2
+   FrameIndex DOR3 D 0 3
+   FrameIndex DOR3 E 0 4
+   FrameIndex DOR3 F 0 5
+   FrameIndex DOR3 G 0 6
+   FrameIndex DOR3 H 0 7
+   FrameIndex DOR3 I 0 8
+   FrameIndex DOR3 J 0 9
+   FrameIndex DOR3 K 0 10
+   FrameIndex DOR3 L 0 11
+   FrameIndex DOR3 M 0 12
+}
+
+Model FourwayDoor
+{ 
+   Path "models/doors"
+   SKIN 0 "door4w.jpg"
+   MODEL 0 "4WDoor.md3"
+   Scale 1.0 0.825 0.95
+   
+   FrameIndex DOR3 A 0 0
+   FrameIndex DOR3 B 0 1
+   FrameIndex DOR3 C 0 2
+   FrameIndex DOR3 D 0 3
+   FrameIndex DOR3 E 0 4
+   FrameIndex DOR3 F 0 5
+   FrameIndex DOR3 G 0 6
+   FrameIndex DOR3 H 0 7
+   FrameIndex DOR3 I 0 8
+   FrameIndex DOR3 J 0 9
+   FrameIndex DOR3 K 0 10
+   FrameIndex DOR3 L 0 11
+   FrameIndex DOR3 M 0 12
+   FrameIndex DOR3 N 0 13
+   FrameIndex DOR3 O 0 14
+   FrameIndex DOR3 P 0 15
+   FrameIndex DOR3 Q 0 16
+   FrameIndex DOR3 R 0 17
+   FrameIndex DOR3 S 0 18
+   FrameIndex DOR3 T 0 19
+   FrameIndex DOR3 U 0 20
+   FrameIndex DOR3 V 0 21
+   FrameIndex DOR3 W 0 22
+   FrameIndex DOR3 X 0 23
+   FrameIndex DOR3 Y 0 24
+   FrameIndex DOR3 Z 0 25
+   FrameIndex NADB A 0 26
+   FrameIndex NADB B 0 27
+   FrameIndex NADB C 0 28
+   FrameIndex NADB D 0 29
+   FrameIndex NADB E 0 30
+}
+
+Model LabDoor
+{ 
+   Path "models/doors"
+   SKIN 0 "smalldb.jpg"
+   MODEL 0 "SmallDouble.md3"
+   Scale 1.0 0.8 0.95
+   
+   FrameIndex DOR3 A 0 0
+   FrameIndex DOR3 B 0 1
+   FrameIndex DOR3 C 0 2
+   FrameIndex DOR3 D 0 3
+   FrameIndex DOR3 E 0 4
+   FrameIndex DOR3 F 0 5
+   FrameIndex DOR3 G 0 6
+   FrameIndex DOR3 H 0 7
+   FrameIndex DOR3 I 0 8
+   FrameIndex DOR3 J 0 9
+   FrameIndex DOR3 K 0 10
+}
+
+Model LabDoorLarge
+{ 
+   Path "models/doors"
+   SKIN 0 "largedb.jpg"
+   MODEL 0 "Largedouble.md3"
+   Scale 1.0 1.1 1.1
+   
+   FrameIndex DOR3 A 0 0
+   FrameIndex DOR3 B 0 1
+   FrameIndex DOR3 C 0 2
+   FrameIndex DOR3 D 0 3
+   FrameIndex DOR3 E 0 4
+   FrameIndex DOR3 F 0 5
+   FrameIndex DOR3 G 0 6
+   FrameIndex DOR3 H 0 7
+   FrameIndex DOR3 I 0 8
+   FrameIndex DOR3 J 0 9
+   FrameIndex DOR3 K 0 10
+   FrameIndex DOR3 L 0 11
+   FrameIndex DOR3 M 0 12
+   FrameIndex DOR3 N 0 13
+   FrameIndex DOR3 O 0 14
+   FrameIndex DOR3 P 0 15
+   FrameIndex DOR3 Q 0 16
+}
+
+Model IndustrialDoor
+{ 
+   Path "models/doors"
+   SKIN 0 "indusgt.jpg"
+   MODEL 0 "IndustrialGate.md3"
+   Scale 1.0 1.0 0.95
+   
+   FrameIndex DOR3 A 0 0
+   FrameIndex DOR3 B 0 1
+   FrameIndex DOR3 C 0 2
+   FrameIndex DOR3 D 0 3
+   FrameIndex DOR3 E 0 4
+   FrameIndex DOR3 F 0 5
+   FrameIndex DOR3 G 0 6
+   FrameIndex DOR3 H 0 7
+   FrameIndex DOR3 I 0 8
+   FrameIndex DOR3 J 0 9
+   FrameIndex DOR3 K 0 10
+   FrameIndex DOR3 L 0 11
+   FrameIndex DOR3 M 0 12
+}
+
+Model IndustrialGate
+{ 
+   Path "models/doors"
+   SKIN 0 "indusrf.jpg"
+   MODEL 0 "IndustrialReinforced.md3"
+   Scale 1.0 1.45 1.6
+   
+   FrameIndex DOR3 A 0 0
+   FrameIndex DOR3 B 0 1
+   FrameIndex DOR3 C 0 2
+   FrameIndex DOR3 D 0 3
+   FrameIndex DOR3 E 0 4
+   FrameIndex DOR3 F 0 5
+   FrameIndex DOR3 G 0 6
+   FrameIndex DOR3 H 0 7
+   FrameIndex DOR3 I 0 8
+   FrameIndex DOR3 J 0 9
+   FrameIndex DOR3 K 0 10
+   FrameIndex DOR3 L 0 11
+   FrameIndex DOR3 M 0 12
+   FrameIndex DOR3 N 0 13
+   FrameIndex DOR3 O 0 14
+   FrameIndex DOR3 P 0 15
+   FrameIndex DOR3 Q 0 16
+   FrameIndex DOR3 R 0 17
+   FrameIndex DOR3 S 0 18
+   FrameIndex DOR3 T 0 19
+   FrameIndex DOR3 U 0 20
+   FrameIndex DOR3 V 0 21
+   FrameIndex DOR3 W 0 22
+   FrameIndex DOR3 X 0 23
+   FrameIndex DOR3 Y 0 24
+   FrameIndex DOR3 Z 0 25
+}
+
+//Aliens stuff
 Model APC
 {
 	Path "models"

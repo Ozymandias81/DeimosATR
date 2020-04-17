@@ -9471,6 +9471,1851 @@ Texture "ATMOP2", 256, 256
 	Patch "ATMOP2", 0, 0
 }
 
+Texture "DMANI1", 128, 64
+{
+	Patch "DMANI1", 0, 0
+}
+
+Texture "DMANI2", 128, 64
+{
+	Patch "DMANI2", 0, 0
+}
+
+Texture "DMANI3", 128, 64
+{
+	Patch "DMANI3", 0, 0
+}
+
+Texture "DMANI4", 128, 64
+{
+	Patch "DMANI4", 0, 0
+}
+
+Texture "DMANI5", 128, 64
+{
+	Patch "DMANI5", 0, 0
+}
+
+Texture "DMANI6", 128, 64
+{
+	Patch "DMANI6", 0, 0
+}
+
+Texture "DMANI7", 128, 64
+{
+	Patch "DMANI7", 0, 0
+}
+
+Texture "DMCPU1", 64, 128
+{
+	Patch "DMCPU1", 0, 0
+}
+
+Texture "DMCPU2", 512, 128
+{
+	Patch "DMCPU2", 0, 0
+}
+
+Texture "DMCPU3", 128, 128
+{
+	Patch "DMCPU3", 0, 0
+}
+
+Texture "DMKEY1", 64, 64
+{
+	Patch "DMKEY1", 0, 0
+}
+
+Texture "DMKEY2", 64, 64
+{
+	Patch "DMKEY2", 0, 0
+}
+
+Texture "DMKEY3", 64, 64
+{
+	Patch "DMKEY3", 0, 0
+}
+
+Texture "DMPC1", 64, 64
+{
+	Patch "DMPC1", 0, 0
+}
+
+Texture "DMPC2", 64, 64
+{
+	Patch "DMPC2", 0, 0
+}
+
+Texture "DMPC3", 64, 64
+{
+	Patch "DMPC3", 0, 0
+}
+
+Texture "DMPC4", 64, 64
+{
+	Patch "DMPC4", 0, 0
+}
+
+Texture "DMRACK", 128, 256
+{
+	Patch "DMRACK", 0, 0
+}
+
+Texture "DMSET1", 64, 64
+{
+	Patch "DMSET1", 0, 0
+}
+
+Texture "DMSET2", 64, 64
+{
+	Patch "DMSET2", 0, 0
+}
+
+Texture "DMSET3", 64, 64
+{
+	Patch "DMSET3", 0, 0
+}
+
+Texture "DMSET4", 64, 64
+{
+	Patch "DMSET4", 0, 0
+}
+
+Texture "DMTEK1", 128, 128
+{
+	Patch "DMTEK1", 0, 0
+}
+
+Texture "DMTEK2", 128, 128
+{
+	Patch "DMTEK2", 0, 0
+}
+
+Texture "DMTEK5", 64, 64
+{
+	Patch "DMTEK5", 0, 0
+}
+
+Texture "DMTEK6", 64, 64
+{
+	Patch "DMTEK6", 0, 0
+}
+
+Texture "DMTEK7", 64, 64
+{
+	Patch "DMTEK7", 0, 0
+}
+
+Texture "DMTEK8", 64, 64
+{
+	Patch "DMTEK8", 0, 0
+}
+
+Texture "DMTEK9", 64, 64
+{
+	Patch "DMTEK9", 0, 0
+}
+
+Texture "DMTEK10", 64, 64
+{
+	Patch "DMTEK10", 0, 0
+}
+
+Texture "DMTEK11", 64, 128
+{
+	Patch "DMTEK11", 0, 0
+}
+
+Texture "DMLGHT1", 32, 128
+{
+	Patch "DMLGHT1", 0, 0
+}
+
+Texture "DMLGHT2", 128, 64
+{
+	Patch "DMLGHT2", 0, 0
+}
+
+Texture "DMLGHT3", 64, 128
+{
+	Patch "DMLGHT3", 0, 0
+}
+
+Texture "DMETAL01", 128, 128
+{
+	Patch "DMETAL01", 0, 0
+}
+
+Texture "DMETAL02", 128, 128
+{
+	Patch "DMETAL02", 0, 0
+}
+
+Texture "DMETAL03", 128, 128
+{
+	Patch "DMETAL03", 0, 0
+}
+
+Texture "DMETAL04", 128, 128
+{
+	Patch "DMETAL04", 0, 0
+}
+
+Texture "DMETAL05", 128, 128
+{
+	Patch "DMETAL05", 0, 0
+}
+
+Texture "DMETAL06", 128, 128
+{
+	Patch "DMETAL06", 0, 0
+}
+
+Texture "DMETAL07", 128, 64
+{
+	Patch "DMETAL07", 0, 0
+}
+
+Texture "DMETAL08", 128, 128
+{
+	Patch "DMETAL08", 0, 0
+}
+
+Texture "DMETAL09", 128, 128
+{
+	Patch "DMETAL09", 0, 0
+}
+
+Texture "DMETAL10", 128, 64
+{
+	Patch "DMETAL10", 0, 0
+}
+
+Texture "DMETAL11", 32, 128
+{
+	Patch "DMETAL11", 0, 0
+}
+
+Texture "DMETAL12", 128, 128
+{
+	Patch "DMETAL12", 0, 0
+}
+
+Texture "DMETAL13", 64, 128
+{
+	Patch "DMETAL13", 0, 0
+}
+
+Texture "DMETAL14", 128, 64
+{
+	Patch "DMETAL14", 0, 0
+}
+
+Texture "DMETAL15", 64, 128
+{
+	Patch "DMETAL15", 0, 0
+}
+
+Texture "DMETAL16", 128, 64
+{
+	Patch "DMETAL16", 0, 0
+}
+
+Texture "DMETAL17", 64, 32
+{
+	Patch "DMETAL17", 0, 0
+}
+
+Texture "DMETAL18", 64, 32
+{
+	Patch "DMETAL18", 0, 0
+}
+
+Texture "DMETAL19", 32, 256
+{
+	Patch "DMETAL19", 0, 0
+}
+
+Texture "DMETAL20", 256, 32
+{
+	Patch "DMETAL20", 0, 0
+}
+
+Texture "DMETAL21", 16, 128
+{
+	Patch "DMETAL21", 0, 0
+}
+
+Texture "DMETAL22", 128, 16
+{
+	Patch "DMETAL22", 0, 0
+}
+
+Texture "DMETAL23", 128, 128
+{
+	Patch "DMETAL23", 0, 0
+}
+
+Texture "DMETAL24", 64, 128
+{
+	Patch "DMETAL24", 0, 0
+}
+
+Texture "DMETAL25", 64, 128
+{
+	Patch "DMETAL25", 0, 0
+}
+
+Texture "DMETAL26", 64, 128
+{
+	Patch "DMETAL26", 0, 0
+}
+
+Texture "DMETAL27", 64, 128
+{
+	Patch "DMETAL27", 0, 0
+}
+
+Texture "DMETAL28", 64, 128
+{
+	Patch "DMETAL28", 0, 0
+}
+
+Texture "DMETAL29", 128, 32
+{
+	Patch "DMETAL29", 0, 0
+}
+
+Texture "DMETAL30", 32, 128
+{
+	Patch "DMETAL30", 0, 0
+}
+
+Texture "DMETAL31", 64, 128
+{
+	Patch "DMETAL31", 0, 0
+}
+
+Texture "DMETAL32", 128, 64
+{
+	Patch "DMETAL32", 0, 0
+}
+
+Texture "DMETAL33", 64, 64
+{
+	Patch "DMETAL33", 0, 0
+}
+
+Texture "DMETAL34", 64, 64
+{
+	Patch "DMETAL34", 0, 0
+}
+
+Texture "DMETAL35", 64, 64
+{
+	Patch "DMETAL35", 0, 0
+}
+
+Texture "DMETAL36", 128, 64
+{
+	Patch "DMETAL36", 0, 0
+}
+
+Texture "DMETAL37", 64, 128
+{
+	Patch "DMETAL37", 0, 0
+}
+
+Texture "DMETAL38", 128, 128
+{
+	Patch "DMETAL38", 0, 0
+}
+
+Texture "DMETAL39", 128, 128
+{
+	Patch "DMETAL39", 0, 0
+}
+
+Texture "DMETAL40", 128, 128
+{
+	Patch "DMETAL40", 0, 0
+}
+
+Texture "DMETAL41", 32, 128
+{
+	Patch "DMETAL41", 0, 0
+}
+
+Texture "DMETAL42", 128, 32
+{
+	Patch "DMETAL42", 0, 0
+}
+
+Texture "DMETAL43", 128, 64
+{
+	Patch "DMETAL43", 0, 0
+}
+
+Texture "DMETAL44", 128, 128
+{
+	Patch "DMETAL44", 0, 0
+}
+
+Texture "DMETAL45", 128, 64
+{
+	Patch "DMETAL45", 0, 0
+}
+
+Texture "DMETAL46", 128, 128
+{
+	Patch "DMETAL46", 0, 0
+}
+
+Texture "DMETAL47", 128, 32
+{
+	Patch "DMETAL47", 0, 0
+}
+
+Texture "DMETAL48", 64, 128
+{
+	Patch "DMETAL48", 0, 0
+}
+
+Texture "DMETAL49", 128, 64
+{
+	Patch "DMETAL49", 0, 0
+}
+
+Texture "DMETAL50", 64, 128
+{
+	Patch "DMETAL50", 0, 0
+}
+
+Texture "DMETAL51", 128, 128
+{
+	Patch "DMETAL51", 0, 0
+}
+
+Texture "DMETAL52", 128, 128
+{
+	Patch "DMETAL52", 0, 0
+}
+
+Texture "DMETAL53", 128, 128
+{
+	Patch "DMETAL53", 0, 0
+}
+
+Texture "DMETAL54", 128, 128
+{
+	Patch "DMETAL54", 0, 0
+}
+
+Texture "DMETAL55", 128, 128
+{
+	Patch "DMETAL55", 0, 0
+}
+
+Texture "DMETAL56", 64, 128
+{
+	Patch "DMETAL56", 0, 0
+}
+
+Texture "DMETAL57", 64, 128
+{
+	Patch "DMETAL57", 0, 0
+}
+
+Texture "DMETAL58", 128, 128
+{
+	Patch "DMETAL58", 0, 0
+}
+
+Texture "DMETAL59", 128, 128
+{
+	Patch "DMETAL59", 0, 0
+}
+
+Texture "DMETAL60", 128, 128
+{
+	Patch "DMETAL60", 0, 0
+}
+
+Texture "DMETAL61", 64, 128
+{
+	Patch "DMETAL61", 0, 0
+}
+
+Texture "DMETAL62", 128, 128
+{
+	Patch "DMETAL62", 0, 0
+}
+
+Texture "DMETAL63", 128, 128
+{
+	Patch "DMETAL63", 0, 0
+}
+
+Texture "DMETAL64", 128, 128
+{
+	Patch "DMETAL64", 0, 0
+}
+
+Texture "DMETAL65", 128, 128
+{
+	Patch "DMETAL65", 0, 0
+}
+
+Texture "DMETAL66", 128, 128
+{
+	Patch "DMETAL66", 0, 0
+}
+
+Texture "DMETAL67", 64, 128
+{
+	Patch "DMETAL67", 0, 0
+}
+
+Texture "DMETAL68", 64, 128
+{
+	Patch "DMETAL68", 0, 0
+}
+
+Texture "DMETAL69", 128, 128
+{
+	Patch "DMETAL69", 0, 0
+}
+
+Texture "DMETAL70", 128, 128
+{
+	Patch "DMETAL70", 0, 0
+}
+
+Texture "DMETAL71", 128, 128
+{
+	Patch "DMETAL71", 0, 0
+}
+
+Texture "DMETAL72", 128, 128
+{
+	Patch "DMETAL72", 0, 0
+}
+
+Texture "DMETAL73", 128, 128
+{
+	Patch "DMETAL73", 0, 0
+}
+
+Texture "DMETAL74", 64, 128
+{
+	Patch "DMETAL74", 0, 0
+}
+
+Texture "DMETAL75", 64, 128
+{
+	Patch "DMETAL75", 0, 0
+}
+
+Texture "DMETAL76", 128, 128
+{
+	Patch "DMETAL76", 0, 0
+}
+
+Texture "DMETAL77", 64, 128
+{
+	Patch "DMETAL77", 0, 0
+}
+
+Texture "DMETAL78", 64, 128
+{
+	Patch "DMETAL78", 0, 0
+}
+
+Texture "DMETAL79", 128, 64
+{
+	Patch "DMETAL79", 0, 0
+}
+
+Texture "DMETAL80", 128, 256
+{
+	Patch "DMETAL80", 0, 0
+}
+
+Texture "DMSUP01", 64, 128
+{
+	Patch "DMSUP01", 0, 0
+}
+
+Texture "DMSUP02", 64, 128
+{
+	Patch "DMSUP02", 0, 0
+}
+
+Texture "DMSUP03", 64, 128
+{
+	Patch "DMSUP03", 0, 0
+}
+
+Texture "DMSUP04", 64, 128
+{
+	Patch "DMSUP04", 0, 0
+}
+
+Texture "DMSUP05", 64, 128
+{
+	Patch "DMSUP05", 0, 0
+}
+
+Texture "DMSUP06", 128, 32
+{
+	Patch "DMSUP06", 0, 0
+}
+
+Texture "DMSUP07", 32, 128
+{
+	Patch "DMSUP07", 0, 0
+}
+
+Texture "DMSUP08", 64, 128
+{
+	Patch "DMSUP08", 0, 0
+}
+
+Texture "DMSUP09", 128, 64
+{
+	Patch "DMSUP09", 0, 0
+}
+
+Texture "DMSUP10", 64, 64
+{
+	Patch "DMSUP10", 0, 0
+}
+
+Texture "DMSUP11", 64, 64
+{
+	Patch "DMSUP11", 0, 0
+}
+
+Texture "DMSUP12", 64, 64
+{
+	Patch "DMSUP12", 0, 0
+}
+
+Texture "DMSUP13", 128, 64
+{
+	Patch "DMSUP13", 0, 0
+}
+
+Texture "DMSUP14", 64, 128
+{
+	Patch "DMSUP14", 0, 0
+}
+
+Texture "DMSUP15", 128, 128
+{
+	Patch "DMSUP15", 0, 0
+}
+
+Texture "DMSUP16", 128, 128
+{
+	Patch "DMSUP16", 0, 0
+}
+
+Texture "DMSUP17", 128, 128
+{
+	Patch "DMSUP17", 0, 0
+}
+
+Texture "DMSUP18", 32, 128
+{
+	Patch "DMSUP18", 0, 0
+}
+
+Texture "DMSUP19", 128, 32
+{
+	Patch "DMSUP19", 0, 0
+}
+
+Texture "DMSUP20", 128, 64
+{
+	Patch "DMSUP20", 0, 0
+}
+
+Texture "DMSUP21", 128, 128
+{
+	Patch "DMSUP21", 0, 0
+}
+
+Texture "DMSUP22", 128, 64
+{
+	Patch "DMSUP22", 0, 0
+}
+
+Texture "DMSUP23", 128, 64
+{
+	Patch "DMSUP23", 0, 0
+}
+
+Texture "DMSUP24", 64, 128
+{
+	Patch "DMSUP24", 0, 0
+}
+
+Texture "DMSUP25", 128, 64
+{
+	Patch "DMSUP25", 0, 0
+}
+
+Texture "DMSUP26", 64, 32
+{
+	Patch "DMSUP26", 0, 0
+}
+
+Texture "DMSUP27", 64, 32
+{
+	Patch "DMSUP27", 0, 0
+}
+
+Texture "DMSUP28", 32, 256
+{
+	Patch "DMSUP28", 0, 0
+}
+
+Texture "DMSUP29", 256, 32
+{
+	Patch "DMSUP29", 0, 0
+}
+
+Texture "DMSUP30", 16, 128
+{
+	Patch "DMSUP30", 0, 0
+}
+
+Texture "DMSUP31", 128, 16
+{
+	Patch "DMSUP31", 0, 0
+}
+
+Texture "DMSUP32", 128, 128
+{
+	Patch "DMSUP32", 0, 0
+}
+
+Texture "DMSUP33", 16, 256
+{
+	Patch "DMSUP33", 0, 0
+}
+
+Texture "DMSUP34", 32, 256
+{
+	Patch "DMSUP34", 0, 0
+}
+
+Texture "DMSUP35", 256, 32
+{
+	Patch "DMSUP35", 0, 0
+}
+
+Texture "DMSUP36", 32, 128
+{
+	Patch "DMSUP36", 0, 0
+}
+
+Texture "DMSUP37", 128, 32
+{
+	Patch "DMSUP37", 0, 0
+}
+
+Texture "DMSUP38", 64, 128
+{
+	Patch "DMSUP38", 0, 0
+}
+
+Texture "DMSUP39", 16, 128
+{
+	Patch "DMSUP39", 0, 0
+}
+
+Texture "DMSUP40", 128, 16
+{
+	Patch "DMSUP40", 0, 0
+}
+
+Texture "DMSUP41", 128, 128
+{
+	Patch "DMSUP41", 0, 0
+}
+
+Texture "DMSUP42", 64, 128
+{
+	Patch "DMSUP42", 0, 0
+}
+
+Texture "DMSUP43", 64, 64
+{
+	Patch "DMSUP43", 0, 0
+}
+
+Texture "DMSUP44", 32, 128
+{
+	Patch "DMSUP44", 0, 0
+}
+
+Texture "DMSUP45", 128, 32
+{
+	Patch "DMSUP45", 0, 0
+}
+
+Texture "DMSUP46", 16, 128
+{
+	Patch "DMSUP46", 0, 0
+}
+
+Texture "DMSUP47", 128, 16
+{
+	Patch "DMSUP47", 0, 0
+}
+
+Texture "DMSUP48", 32, 128
+{
+	Patch "DMSUP48", 0, 0
+}
+
+Texture "DMSUP49", 128, 64
+{
+	Patch "DMSUP49", 0, 0
+}
+
+Texture "DMSUP50", 64, 64
+{
+	Patch "DMSUP50", 0, 0
+}
+
+Texture "DMSUP51", 128, 64
+{
+	Patch "DMSUP51", 0, 0
+}
+
+Texture "DMSUP52", 64, 64
+{
+	Patch "DMSUP52", 0, 0
+}
+
+Texture "DMSUP53", 64, 128
+{
+	Patch "DMSUP53", 0, 0
+}
+
+Texture "DMSUP54", 128, 64
+{
+	Patch "DMSUP54", 0, 0
+}
+
+Texture "DMSUP55", 64, 128
+{
+	Patch "DMSUP55", 0, 0
+}
+
+Texture "DMSUP56", 128, 64
+{
+	Patch "DMSUP56", 0, 0
+}
+
+Texture "DMSUP57", 64, 64
+{
+	Patch "DMSUP57", 0, 0
+}
+
+Texture "DMSUP58", 128, 32
+{
+	Patch "DMSUP58", 0, 0
+}
+
+Texture "DMSUP59", 16, 64
+{
+	Patch "DMSUP59", 0, 0
+}
+
+Texture "DMSUP60", 64, 16
+{
+	Patch "DMSUP60", 0, 0
+}
+
+Texture "DMSUP61", 64, 64
+{
+	Patch "DMSUP61", 0, 0
+}
+
+Texture "DMSUP62", 128, 64
+{
+	Patch "DMSUP62", 0, 0
+}
+
+Texture "DMSUP63", 128, 128
+{
+	Patch "DMSUP63", 0, 0
+}
+
+Texture "DMSUP64", 64, 32
+{
+	Patch "DMSUP64", 0, 0
+}
+
+Texture "DMSUP65", 128, 32
+{
+	Patch "DMSUP65", 0, 0
+}
+
+Texture "DMSUP66", 32, 128
+{
+	Patch "DMSUP66", 0, 0
+}
+
+Texture "DMSUP67", 128, 32
+{
+	Patch "DMSUP67", 0, 0
+}
+
+Texture "DMSUP68", 128, 64
+{
+	Patch "DMSUP68", 0, 0
+}
+
+Texture "DMSUP69", 64, 64
+{
+	Patch "DMSUP69", 0, 0
+}
+
+Texture "DMSUP70", 64, 128
+{
+	Patch "DMSUP70", 0, 0
+}
+
+Texture "DMSUP71", 32, 128
+{
+	Patch "DMSUP71", 0, 0
+}
+
+Texture "DMSUP72", 128, 64
+{
+	Patch "DMSUP72", 0, 0
+}
+
+Texture "DMSUP73", 128, 128
+{
+	Patch "DMSUP73", 0, 0
+}
+
+Texture "DMSUP74", 64, 32
+{
+	Patch "DMSUP74", 0, 0
+}
+
+Texture "DMSUP75", 128, 64
+{
+	Patch "DMSUP75", 0, 0
+}
+
+Texture "DMSUP76", 64, 128
+{
+	Patch "DMSUP76", 0, 0
+}
+
+Texture "DMSUP77", 128, 128
+{
+	Patch "DMSUP77", 0, 0
+}
+
+Texture "DMSUP78", 64, 128
+{
+	Patch "DMSUP78", 0, 0
+}
+
+Texture "DMSUP79", 128, 64
+{
+	Patch "DMSUP79", 0, 0
+}
+
+Texture "DMSUP80", 64, 64
+{
+	Patch "DMSUP80", 0, 0
+}
+
+Texture "DMSUP81", 128, 128
+{
+	Patch "DMSUP81", 0, 0
+}
+
+Texture "DMSUP82", 128, 64
+{
+	Patch "DMSUP82", 0, 0
+}
+
+Texture "DMSUP83", 128, 128
+{
+	Patch "DMSUP83", 0, 0
+}
+
+Texture "DMSUP84", 256, 256
+{
+	Patch "DMSUP84", 0, 0
+}
+
+Texture "DMSUP85", 128, 128
+{
+	Patch "DMSUP85", 0, 0
+}
+
+Texture "DMSUP86", 128, 64
+{
+	Patch "DMSUP86", 0, 0
+}
+
+Texture "DMSUP87", 128, 64
+{
+	Patch "DMSUP87", 0, 0
+}
+
+Texture "DMSUP88", 128, 64
+{
+	Patch "DMSUP88", 0, 0
+}
+
+Texture "DMSUP89", 64, 128
+{
+	Patch "DMSUP89", 0, 0
+}
+
+Texture "DMSUP90", 128, 64
+{
+	Patch "DMSUP90", 0, 0
+}
+
+Texture "DMSUP91", 32, 128
+{
+	Patch "DMSUP91", 0, 0
+}
+
+Texture "DMSUP92", 64, 128
+{
+	Patch "DMSUP92", 0, 0
+}
+
+Texture "DMSUP93", 128, 128
+{
+	Patch "DMSUP93", 0, 0
+}
+
+Texture "DMSUP94", 128, 128
+{
+	Patch "DMSUP94", 0, 0
+}
+
+Texture "DMSUP95", 128, 64
+{
+	Patch "DMSUP95", 0, 0
+}
+
+Texture "DMSUP96", 64, 128
+{
+	Patch "DMSUP96", 0, 0
+}
+
+Texture "DMLGHT1", 128, 32
+{
+	Patch "DMLGHT1", 0, 0
+}
+
+Texture "DMLGHT2", 32, 128
+{
+	Patch "DMLGHT2", 0, 0
+}
+
+Texture "DMLGHT3", 128, 64
+{
+	Patch "DMLGHT3", 0, 0
+}
+
+Texture "DMLGHT4", 64, 128
+{
+	Patch "DMLGHT4", 0, 0
+}
+
+Texture "DMLGHT5", 128, 32
+{
+	Patch "DMLGHT5", 0, 0
+}
+
+Texture "DMLGHT6", 32, 128
+{
+	Patch "DMLGHT6", 0, 0
+}
+
+Texture "DMLGHT7", 128, 64
+{
+	Patch "DMLGHT7", 0, 0
+}
+
+Texture "DMLGHT8", 64, 128
+{
+	Patch "DMLGHT8", 0, 0
+}
+
+Texture "DMLGHT9", 64, 128
+{
+	Patch "DMLGHT9", 0, 0
+}
+
+Texture "DMLGHT10", 64, 128
+{
+	Patch "DMLGHT10", 0, 0
+}
+
+Texture "DMLGHT11", 128, 32
+{
+	Patch "DMLGHT11", 0, 0
+}
+
+Texture "DMLGHT12", 128, 128
+{
+	Patch "DMLGHT12", 0, 0
+}
+
+Texture "DMLGHT90", 128, 32
+{
+	Patch "DMLGHT90", 0, 0
+}
+
+Texture "DMLGHT91", 32, 128
+{
+	Patch "DMLGHT91", 0, 0
+}
+
+Texture "DMLGHT92", 128, 64
+{
+	Patch "DMLGHT92", 0, 0
+}
+
+Texture "DMLGHT1", 32, 128
+{
+	Patch "DMLGHT1", 0, 0
+}
+
+Texture "DMLGHT2", 128, 64
+{
+	Patch "DMLGHT2", 0, 0
+}
+
+Texture "DMLGHT3", 64, 128
+{
+	Patch "DMLGHT3", 0, 0
+}
+
+Texture "PINKT", 128, 128
+{
+	Patch "PINKT", 0, 0
+}
+
+Texture "SW1S0", 32, 32
+{
+	Patch "SW1S0", 0, 0
+}
+
+Texture "SW1S1", 32, 32
+{
+	Patch "SW1S1", 0, 0
+}
+
+Texture "SW2S0", 32, 32
+{
+	Patch "SW2S0", 0, 0
+}
+
+Texture "SW2S1", 32, 32
+{
+	Patch "SW2S1", 0, 0
+}
+
+Texture "SW2_7", 32, 32
+{
+	Patch "SW2_7", 0, 0
+}
+
+Texture "SW2_8", 32, 32
+{
+	Patch "SW2_8", 0, 0
+}
+
+Texture "SW3S0", 27, 32
+{
+	Patch "SW3S0", 0, 0
+}
+
+Texture "SW3S1", 27, 32
+{
+	Patch "SW3S1", 0, 0
+}
+
+Texture "SW450", 32, 31
+{
+	Patch "SW450", 0, 0
+}
+
+Texture "SW451", 32, 31
+{
+	Patch "SW451", 0, 0
+}
+
+Texture "SW4S0", 32, 31
+{
+	Patch "SW4S0", 0, 0
+}
+
+Texture "SW4S1", 32, 31
+{
+	Patch "SW4S1", 0, 0
+}
+
+Texture "DMSUP97", 128, 16
+{
+	Patch "DMSUP97", 0, 0
+}
+
+Texture "DMSUP98", 16, 128
+{
+	Patch "DMSUP98", 0, 0
+}
+
+Texture "DMSUP99", 128, 32
+{
+	Patch "DMSUP99", 0, 0
+}
+
+Texture "DMSUP100", 32, 128
+{
+	Patch "DMSUP100", 0, 0
+}
+
+Texture "DMLGHT13", 128, 128
+{
+	Patch "DMLGHT13", 0, 0
+}
+
+Texture "DMSUP97", 128, 16
+{
+	Patch "DMSUP97", 0, 0
+}
+
+Texture "DMSUP98", 16, 128
+{
+	Patch "DMSUP98", 0, 0
+}
+
+Texture "DMSUP99", 128, 32
+{
+	Patch "DMSUP99", 0, 0
+}
+
+Texture "DMSUP100", 32, 128
+{
+	Patch "DMSUP100", 0, 0
+}
+
+Texture "DMSUP101", 64, 128
+{
+	Patch "DMSUP101", 0, 0
+}
+
+Texture "DMSUP102", 128, 128
+{
+	Patch "DMSUP102", 0, 0
+}
+
+Texture "DMSUP103", 32, 128
+{
+	Patch "DMSUP103", 0, 0
+}
+
+Texture "DMSUP104", 32, 128
+{
+	Patch "DMSUP104", 0, 0
+}
+
+Texture "DMSUP105", 32, 128
+{
+	Patch "DMSUP105", 0, 0
+}
+
+Texture "DMSUP106", 128, 128
+{
+	Patch "DMSUP106", 0, 0
+}
+
+Texture "DMSUP107", 128, 16
+{
+	Patch "DMSUP107", 0, 0
+}
+
+Texture "DMSUP108", 16, 128
+{
+	Patch "DMSUP108", 0, 0
+}
+
+Texture "DMSUP109", 128, 128
+{
+	Patch "DMSUP109", 0, 0
+}
+
+Texture "DMSUP110", 64, 64
+{
+	Patch "DMSUP110", 0, 0
+}
+
+Texture "DMSUP111", 128, 64
+{
+	Patch "DMSUP111", 0, 0
+}
+
+Texture "DMSUP112", 64, 128
+{
+	Patch "DMSUP112", 0, 0
+}
+
+Texture "DMSUP113", 128, 128
+{
+	Patch "DMSUP113", 0, 0
+}
+
+Texture "DMSUP114", 128, 64
+{
+	Patch "DMSUP114", 0, 0
+}
+
+Texture "DMSUP115", 64, 128
+{
+	Patch "DMSUP115", 0, 0
+}
+
+Texture "DMSUP116", 128, 128
+{
+	Patch "DMSUP116", 0, 0
+}
+
+Texture "DMSUP117", 32, 64
+{
+	Patch "DMSUP117", 0, 0
+}
+
+Texture "DMSUP118", 64, 32
+{
+	Patch "DMSUP118", 0, 0
+}
+
+Texture "DMSUP119", 128, 128
+{
+	Patch "DMSUP119", 0, 0
+}
+
+Texture "DMSUP120", 128, 128
+{
+	Patch "DMSUP120", 0, 0
+}
+
+Texture "DMSUP121", 128, 64
+{
+	Patch "DMSUP121", 0, 0
+}
+
+Texture "DMSUP122", 64, 128
+{
+	Patch "DMSUP122", 0, 0
+}
+
+Texture "DMSUP123", 128, 128
+{
+	Patch "DMSUP123", 0, 0
+}
+
+Texture "DMSUP124", 32, 128
+{
+	Patch "DMSUP124", 0, 0
+}
+
+Texture "DMSUP125", 128, 128
+{
+	Patch "DMSUP125", 0, 0
+}
+
+Texture "DMSUP126", 128, 128
+{
+	Patch "DMSUP126", 0, 0
+}
+
+Texture "DMSUP127", 128, 256
+{
+	Patch "DMSUP127", 0, 0
+}
+
+Texture "DMSUP128", 128, 128
+{
+	Patch "DMSUP128", 0, 0
+}
+
+Texture "DMSUP129", 32, 128
+{
+	Patch "DMSUP129", 0, 0
+}
+
+Texture "DMSUP130", 64, 129
+{
+	Patch "DMSUP130", 0, 0
+}
+
+Texture "DMSUP131", 128, 128
+{
+	Patch "DMSUP131", 0, 0
+}
+
+Texture "DMSUP132", 64, 128
+{
+	Patch "DMSUP132", 0, 0
+}
+
+Texture "DMSUP133", 64, 128
+{
+	Patch "DMSUP133", 0, 0
+}
+
+Texture "DMSUP134", 64, 64
+{
+	Patch "DMSUP134", 0, 0
+}
+
+Texture "DMSUP135", 64, 64
+{
+	Patch "DMSUP135", 0, 0
+}
+
+Texture "DMSUP136", 128, 128
+{
+	Patch "DMSUP136", 0, 0
+}
+
+Texture "DMSUP138", 16, 128
+{
+	Patch "DMSUP138", 0, 0
+}
+
+Texture "DMSUP139", 128, 128
+{
+	Patch "DMSUP139", 0, 0
+}
+
+Texture "DMSUP140", 128, 128
+{
+	Patch "DMSUP140", 0, 0
+}
+
+Texture "DMSUP141", 128, 128
+{
+	Patch "DMSUP141", 0, 0
+}
+
+Texture "DMSUP142", 128, 32
+{
+	Patch "DMSUP142", 0, 0
+}
+
+Texture "DMSUP143", 32, 128
+{
+	Patch "DMSUP143", 0, 0
+}
+
+Texture "DMSUP144", 128, 128
+{
+	Patch "DMSUP144", 0, 0
+}
+
+Texture "DMSUP137", 128, 16
+{
+	Patch "DMSUP137", 0, 0
+}
+
+Texture "DMSUP145", 128, 128
+{
+	Patch "DMSUP145", 0, 0
+}
+
+Texture "DMSUP146", 128, 64
+{
+	Patch "DMSUP146", 0, 0
+}
+
+Texture "DMDOOR1", 128, 128
+{
+	Patch "DMDOOR1", 0, 0
+}
+
+Texture "DMBORD1", 128, 128
+{
+	Patch "DMBORD1", 0, 0
+}
+
+Texture "DMBORD2", 128, 128
+{
+	Patch "DMBORD2", 0, 0
+}
+
+Texture "DMBORD3", 128, 128
+{
+	Patch "DMBORD3", 0, 0
+}
+
+Texture "DMBORD4", 128, 128
+{
+	Patch "DMBORD4", 0, 0
+}
+
+Texture "DMBORD5", 128, 128
+{
+	Patch "DMBORD5", 0, 0
+}
+
+Texture "DMBORD6", 128, 128
+{
+	Patch "DMBORD6", 0, 0
+}
+
+Texture "DMBORD7", 128, 256
+{
+	Patch "DMBORD7", 0, 0
+}
+
+Texture "DMBORD8", 128, 256
+{
+	Patch "DMBORD8", 0, 0
+}
+
+Texture "DMBORD9", 128, 256
+{
+	Patch "DMBORD9", 0, 0
+}
+
+Texture "DMBORD10", 128, 256
+{
+	Patch "DMBORD10", 0, 0
+}
+
+Texture "DMBORD11", 128, 256
+{
+	Patch "DMBORD11", 0, 0
+}
+
+Texture "DMBORD12", 128, 256
+{
+	Patch "DMBORD12", 0, 0
+}
+
+Texture "DMBORD12", 128, 256
+{
+	Patch "DMBORD12", 0, 0
+}
+
+Texture "DMBORD13", 128, 256
+{
+	Patch "DMBORD13", 0, 0
+}
+
+Texture "DMLGHT14", 32, 32
+{
+	Patch "DMLGHT14", 0, 0
+}
+
+Texture "DMLGHT15", 128, 128
+{
+	Patch "DMLGHT15", 0, 0
+}
+
+Texture "DMLGHT16", 64, 128
+{
+	Patch "DMLGHT16", 0, 0
+}
+
+Texture "DMSUP147", 128, 128
+{
+	Patch "DMSUP147", 0, 0
+}
+
+Texture "DMSUP148", 256, 128
+{
+	Patch "DMSUP148", 0, 0
+}
+
+Texture "DMSUP149", 256, 128
+{
+	Patch "DMSUP149", 0, 0
+}
+
+Texture "DMSUP150", 64, 64
+{
+	Patch "DMSUP150", 0, 0
+}
+
+Texture "DMSUP151", 128, 128
+{
+	Patch "DMSUP151", 0, 0
+}
+
+Texture "DMSUP152", 64, 128
+{
+	Patch "DMSUP152", 0, 0
+}
+
+Texture "DMSUP153", 64, 64
+{
+	Patch "DMSUP153", 0, 0
+}
+
+Texture "DMSUP154", 64, 128
+{
+	Patch "DMSUP154", 0, 0
+}
+
+Texture "DMSUP155", 128, 128
+{
+	Patch "DMSUP155", 0, 0
+}
+
+Texture "DMSUP156", 128, 128
+{
+	Patch "DMSUP156", 0, 0
+}
+
+Texture "DMSUP157", 128, 128
+{
+	Patch "DMSUP157", 0, 0
+}
+
+Texture "DMSUP158", 128, 128
+{
+	Patch "DMSUP158", 0, 0
+}
+
+Texture "DMSUP159", 128, 128
+{
+	Patch "DMSUP159", 0, 0
+}
+
+Texture "DMSUP160", 64, 128
+{
+	Patch "DMSUP160", 0, 0
+}
+
+Texture "DMSUP161", 128, 64
+{
+	Patch "DMSUP161", 0, 0
+}
+
+Texture "DMSUP162", 64, 128
+{
+	Patch "DMSUP162", 0, 0
+}
+
+Texture "DMCLONY1", 128, 128
+{
+	Patch "DMCLONY1", 0, 0
+}
+
+Texture "DMCLONY2", 64, 128
+{
+	Patch "DMCLONY2", 0, 0
+}
+
+Texture "DMCLONY3", 64, 128
+{
+	Patch "DMCLONY3", 0, 0
+}
+
+Texture "DMCLONY4", 128, 128
+{
+	Patch "DMCLONY4", 0, 0
+}
+
+Texture "DMCLONY5", 128, 128
+{
+	Patch "DMCLONY5", 0, 0
+}
+
+Texture "DMSUP163", 64, 64
+{
+	Patch "DMSUP163", 0, 0
+}
+
+Texture "DMSUP164", 64, 64
+{
+	Patch "DMSUP164", 0, 0
+}
+
+Texture "DMSUP165", 128, 64
+{
+	Patch "DMSUP165", 0, 0
+}
+
+Texture "DMSUP166", 64, 32
+{
+	Patch "DMSUP166", 0, 0
+}
+
+Texture "DMSUP167", 64, 64
+{
+	Patch "DMSUP167", 0, 0
+}
+
+Texture "DMSUP168", 64, 64
+{
+	Patch "DMSUP168", 0, 0
+}
+
+Texture "DMSUP169", 64, 64
+{
+	Patch "DMSUP169", 0, 0
+}
+
+Texture "DMSUP170", 128, 64
+{
+	Patch "DMSUP170", 0, 0
+}
+
+Texture "DMSUP171", 128, 128
+{
+	Patch "DMSUP171", 0, 0
+}
+
+Texture "DMSUP172", 64, 128
+{
+	Patch "DMSUP172", 0, 0
+}
+
+Texture "DMSUP173", 128, 128
+{
+	Patch "DMSUP173", 0, 0
+}
+
+Texture "DMSUP174", 64, 64
+{
+	Patch "DMSUP174", 0, 0
+}
+
+Texture "DMSUP175", 64, 128
+{
+	Patch "DMSUP175", 0, 0
+}
+
+Texture "DMSUP176", 32, 64
+{
+	Patch "DMSUP176", 0, 0
+}
+
+Texture "DMSUP177", 32, 128
+{
+	Patch "DMSUP177", 0, 0
+}
+
+Texture "DMSUP178", 32, 128
+{
+	Patch "DMSUP178", 0, 0
+}
+
+Texture "DMSUP179", 32, 128
+{
+	Patch "DMSUP179", 0, 0
+}
+
+Texture "DMCABL1", 128, 128
+{
+	Patch "DMCABL1", 0, 0
+}
+
+Texture "DMCABL2", 64, 128
+{
+	Patch "DMCABL2", 0, 0
+}
+
+Texture "DMCABL3", 128, 64
+{
+	Patch "DMCABL3", 0, 0
+}
+
+Texture "DMCABL4", 128, 128
+{
+	Patch "DMCABL4", 0, 0
+}
+
+Texture "DMSUP180", 128, 64
+{
+	Patch "DMSUP180", 0, 0
+}
+
+Texture "DMSUP181", 128, 64
+{
+	Patch "DMSUP181", 0, 0
+}
+
+Texture "DMSUP182", 32, 64
+{
+	Patch "DMSUP182", 0, 0
+}
+
+Texture "DMSUP183", 64, 128
+{
+	Patch "DMSUP183", 0, 0
+}
+
+Texture "SCREEN1", 256, 256
+{
+	Patch "SCREEN1", 0, 0
+}
+
+Texture "SCREEN2", 256, 256
+{
+	Patch "SCREEN2", 0, 0
+}
+
+Texture "DMSUP184", 64, 128
+{
+	Patch "DMSUP184", 0, 0
+}
+
+Texture "DMSUP185", 64, 128
+{
+	Patch "DMSUP185", 0, 0
+}
+
+Texture "DMSUP186", 64, 128
+{
+	Patch "DMSUP186", 0, 0
+}
+
+Texture "DMSUP187", 32, 128
+{
+	Patch "DMSUP187", 0, 0
+}
+
+Texture "DMSUP188", 128, 64
+{
+	Patch "DMSUP188", 0, 0
+}
+
+Texture "DMSUP189", 128, 128
+{
+	Patch "DMSUP189", 0, 0
+}
+
+Texture "DMSUP190", 128, 128
+{
+	Patch "DMSUP190", 0, 0
+}
+
 // End of texture definitions
 
 //130 dummy sprites for model frames, let's make models stand alone

@@ -1,6 +1,30 @@
 //USCM soundinfo
-//WEAPONS
 
+//Main Tech Door
+TechDoor/Open				DORNMDOP
+TechDoor/Close				DORNMDCL
+
+//Fourway Door
+FourwayBigDoor/Open			DORBIGOP
+FourwayBigDoor/Close		DORBIGCL
+
+//Lab Door
+LabDoor/Open				DORLABOP
+LabDoor/Close				DORLABCL
+
+//Lab Door Large
+LabDoorLarge/Open			DORLBGOP
+LabDoorLarge/Close			DORLBGCL
+
+//Industrial Door
+IndustrialDoor/Open			DORIDGOP
+IndustrialDoor/Close		DORIDGCL
+
+//Industrial Gate
+IndustrialGate/Open			DORGATOP
+IndustrialGate/Close		DORGATCL
+
+//WEAPONS
 weapons/GReady GNRDY
 weapons/weaponpickup GUNPCKUP
 weapons/reload1 AMMOPCKP

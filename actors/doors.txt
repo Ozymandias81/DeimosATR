@@ -1,0 +1,155 @@
+ACTOR BaseDoor
+{
+	//$Category 3D Doors
+	//$Color 8
+	//$IsDecoration
+	Radius 8
+    Height 16
+	ReactionTime 35
+	-SOLID
+	States
+    {
+	Spawn:
+	    DOR3 A 1
+		Loop
+	}
+}
+
+ACTOR DoomDoor : BaseDoor
+{
+	ReactionTime 45
+    States
+    {
+	Idle:
+	    DOR3 A 1
+		Loop
+	Open:
+		DOR3 A 3 A_PlaySound("TechDoor/Open",5)
+		DOR3 BCDE 3
+		DOR3 E 8
+		DOR3 FGHI 3
+		DOR3 I 8
+		DOR3 JKLM 3
+		Goto Opened
+	Opened:
+		DOR3 M 1
+		Loop
+	Close:
+	    DOR3 M 4 A_PlaySound("TechDoor/Close",5)
+		DOR3 LKJIHGFEDCBA 4
+		Goto Idle
+    }
+}
+
+ACTOR FourwayDoor : BaseDoor
+{
+	ReactionTime 45
+    States
+    {
+    Idle:
+	    DOR3 A 1
+		Loop
+	Open:
+		DOR3 A 2 A_PlaySound("FourwayBigDoor/Open",5)
+		DOR3 BCDEFGHIJKLMNOPQRSTUVWXYZ 2
+		NADB ABCDE 2
+		Goto Opened
+	Opened:
+		NADB E 1
+		Loop
+	Close:
+		NADB E 2 A_PlaySound("FourwayBigDoor/Close",5)
+		NADB DCBA 2
+		DOR3 ZYXWVUTSRQPONMLKJIHGFEDCBA 2
+		Goto Idle
+    }
+}
+
+ACTOR LabDoor : BaseDoor
+{
+	ReactionTime 20
+    States
+    {
+    Idle:
+	    DOR3 A 1
+		Loop
+	Open:
+		DOR3 A 3 A_PlaySound("LabDoor/Open",5)
+		DOR3 BCDEFGHIJK 3
+		Goto Opened
+	Opened:
+		DOR3 K 1
+		Loop
+	Close:
+		DOR3 K 4 A_PlaySound("LabDoor/Close",5)
+		DOR3 JIHGFEDCBA 4
+		Goto Idle
+    }
+}
+
+ACTOR LabDoorLarge : BaseDoor
+{
+	ReactionTime 40
+    States
+    {
+    Idle:
+	    DOR3 A 1
+		Loop
+	Open:
+		DOR3 A 3 A_PlaySound("LabDoorLarge/Open",5)
+		DOR3 BCDEFGHIJKLMNOP 3
+		Goto Opened
+	Opened:
+		DOR3 Q 1
+		Loop
+	Close:
+		DOR3 Q 4 A_PlaySound("LabDoorLarge/Close",5)
+		DOR3 PONMKJI 4
+		DOR3 HGFEDCBA 2
+		Goto Idle
+    }
+}
+
+ACTOR IndustrialDoor : BaseDoor
+{
+	ReactionTime 30
+    States
+    {
+    Idle:
+	    DOR3 A 1
+		Loop
+	Open:
+		DOR3 A 3 A_PlaySound("IndustrialDoor/Open",5)
+		DOR3 BCDEFGHIJKLM 3
+		Goto Opened
+	Opened:
+		DOR3 M 1
+		Loop
+	Close:
+		DOR3 M 4 A_PlaySound("IndustrialDoor/Close",5)
+		DOR3 KJIHGFEDCBA 4
+		Goto Idle
+    }
+}
+
+ACTOR IndustrialGate : BaseDoor
+{
+	ReactionTime 60
+    States
+    {
+    Idle:
+	    DOR3 A 1
+		Loop
+	Open:
+		DOR3 A 3 A_PlaySound("IndustrialGate/Open",5)
+		DOR3 BCDEFGHIJKLMNOPQRSTUVWXYZ 3
+		Goto Opened
+	Opened:
+		DOR3 Z 1
+		Loop
+	Close:
+		DOR3 Z 3 A_PlaySound("IndustrialGate/Close",5)
+		DOR3 YXWVUTSRQPONMLKJIHGFEDCBA 3
+		Goto Idle
+    }
+}

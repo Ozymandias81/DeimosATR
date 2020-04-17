@@ -1,370 +1,780 @@
 //BRIGHTMAPS
-
 brightmap texture ACMBAR
 {
-	map "materials/ACMBAR.png"
+	map "materials/textures/ACMBAR.png"
 }
 
 brightmap texture ACMPC1
 {
-	map "materials/ACMPC1.png"
+	map "materials/textures/ACMPC1.png"
 }
 
 brightmap texture AVP20012
 {
-	map "materials/AVP20012.png"
+	map "materials/textures/AVP20012.png"
 }
 
 brightmap texture AVP20066
 {
-	map "materials/AVP20066.png"
+	map "materials/textures/AVP20066.png"
 }
 
 brightmap texture AVP20099
 {
-	map "materials/AVP20099.png"
+	map "materials/textures/AVP20099.png"
 }
 
 brightmap texture AVP20429
 {
-	map "materials/AVP20429.png"
+	map "materials/textures/AVP20429.png"
 }
 
 brightmap texture AVP20497
 {
-	map "materials/AVP20497.png"
+	map "materials/textures/AVP20497.png"
 }
 
 brightmap texture AVP20498
 {
-	map "materials/AVP20498.png"
+	map "materials/textures/AVP20498.png"
 }
 
 brightmap texture AVP20502
 {
-	map "materials/AVP20502.png"
+	map "materials/textures/AVP20502.png"
 }
 
 brightmap texture AVP20541
 {
-	map "materials/AVP20541.png"
+	map "materials/textures/AVP20541.png"
 }
 
 brightmap texture AVP20554
 {
-	map "materials/AVP20554.png"
+	map "materials/textures/AVP20554.png"
 }
 
 brightmap texture AVP20740
 {
-	map "materials/AVP20740.png"
+	map "materials/textures/AVP20740.png"
 }
 
 brightmap texture AVP20741
 {
-	map "materials/AVP20741.png"
+	map "materials/textures/AVP20741.png"
 }
 
 brightmap texture AVP20742
 {
-	map "materials/AVP20742.png"
+	map "materials/textures/AVP20742.png"
 }
 
 brightmap texture AVP20743
 {
-	map "materials/AVP20743.png"
+	map "materials/textures/AVP20743.png"
 }
 
 brightmap texture AVP20776
 {
-	map "materials/AVP20776.png"
+	map "materials/textures/AVP20776.png"
 }
 
 brightmap texture AVP20807
 {
-	map "materials/AVP20807.png"
+	map "materials/textures/AVP20807.png"
 }
 
 brightmap texture AVP20818
 {
-	map "materials/AVP20818.png"
+	map "materials/textures/AVP20818.png"
 }
 
 brightmap texture AVP20819
 {
-	map "materials/AVP20819.png"
+	map "materials/textures/AVP20819.png"
 }
 
 brightmap texture AVP20842
 {
-	map "materials/AVP20842.png"
+	map "materials/textures/AVP20842.png"
 }
 
 brightmap texture AVP20909
 {
-	map "materials/AVP20909.png"
+	map "materials/textures/AVP20909.png"
 }
 
 brightmap texture AVP21181
 {
-	map "materials/AVP21181.png"
+	map "materials/textures/AVP21181.png"
 }
 
 brightmap texture AVP21222
 {
-	map "materials/AVP21222.png"
+	map "materials/textures/AVP21222.png"
 }
 
 brightmap texture AVP21223
 {
-	map "materials/AVP21223.png"
+	map "materials/textures/AVP21223.png"
 }
 
 brightmap texture DMS47
 {
-	map "materials/DMS47.png"
+	map "materials/textures/DMS47.png"
 }
 
 brightmap texture DMS48
 {
-	map "materials/DMS48.png"
+	map "materials/textures/DMS48.png"
 }
   
 brightmap texture DMS49
 {
-	map "materials/DMS49.png"
+	map "materials/textures/DMS49.png"
 }
 
 brightmap texture AVP20783
 {
-	map "materials/AVP20783.png"
+	map "materials/textures/AVP20783.png"
 }
 
 brightmap texture AVP20892
 {
-	map "materials/AVP20892.png"
+	map "materials/textures/AVP20892.png"
 }
 
 brightmap texture AVP21189
 {
-	map "materials/AVP21189.png"
+	map "materials/textures/AVP21189.png"
 }
 
 brightmap texture SW1S0
 {
-	map "materials/SW1S0.png"
+	map "materials/textures/SW1S0.png"
 }
 
 brightmap texture SW1S1
 {
-	map "materials/SW1S1.png"
+	map "materials/textures/SW1S1.png"
 }
 
 brightmap texture SW2S1
 {
-	map "materials/SW2S1.png"
+	map "materials/textures/SW2S1.png"
 }
 
 brightmap texture SW4S1
 {
-	map "materials/SW4S1.png"
+	map "materials/textures/SW4S1.png"
 }
 
 brightmap texture TOMW2_2
 {
-	map "materials/TOMW2_2.png"
+	map "materials/textures/TOMW2_2.png"
 }
 
 brightmap texture WARNA0
 {
-	map "materials/WARNA0.png"
+	map "materials/textures/WARNA0.png"
 }
 
 brightmap texture DMS63
 {
-	map "materials/DMS63.png"
+	map "materials/textures/DMS63.png"
 }
 
 brightmap texture DMS64
 {
-	map "materials/DMS64.png"
+	map "materials/textures/DMS64.png"
 }
 
 brightmap texture DMS65
 {
-	map "materials/DMS65.png"
+	map "materials/textures/DMS65.png"
 }
 
 brightmap texture DMS66
 {
-	map "materials/DMS66.png"
+	map "materials/textures/DMS66.png"
 }
 
 brightmap texture DMS67
 {
-	map "materials/DMS67.png"
+	map "materials/textures/DMS67.png"
 }
 
 brightmap texture DMS68
 {
-	map "materials/DMS68.png"
+	map "materials/textures/DMS68.png"
 }
 
 brightmap texture DMS69
 {
-	map "materials/DMS69.png"
+	map "materials/textures/DMS69.png"
 }
 
 brightmap texture DMS70
 {
-	map "materials/DMS70.png"
+	map "materials/textures/DMS70.png"
 }
 
 brightmap texture DMS135
 {
-	map "materials/DMS135.png"
+	map "materials/textures/DMS135.png"
 }
 
 brightmap texture DMS137
 {
-	map "materials/DMS137.png"
+	map "materials/textures/DMS137.png"
 }
 
 brightmap texture DMS138
 {
-	map "materials/DMS138.png"
+	map "materials/textures/DMS138.png"
 }
 
 brightmap texture DMS141
 {
-	map "materials/DMS141.png"
+	map "materials/textures/DMS141.png"
 }
 
 brightmap texture DMS142
 {
-	map "materials/DMS142.png"
+	map "materials/textures/DMS142.png"
 }
 
 brightmap texture DMS143
 {
-	map "materials/DMS143.png"
+	map "materials/textures/DMS143.png"
 }
 
 brightmap texture DMS144
 {
-	map "materials/DMS144.png"
+	map "materials/textures/DMS144.png"
 }
 
 brightmap texture DMS150
 {
-	map "materials/DMS150.png"
+	map "materials/textures/DMS150.png"
 }
 
 brightmap texture DMS153
 {
-	map "materials/DMS153.png"
+	map "materials/textures/DMS153.png"
 }
 
 brightmap texture DMS155
 {
-	map "materials/DMS155.png"
+	map "materials/textures/DMS155.png"
 }
 
 brightmap texture DMS156
 {
-	map "materials/DMS156.png"
+	map "materials/textures/DMS156.png"
 }
 
 brightmap texture DMS158
 {
-	map "materials/DMS158.png"
+	map "materials/textures/DMS158.png"
 }
 
 brightmap texture light5
 {
-	map "materials/light5.png"
+	map "materials/textures/light5.png"
 }
 
 brightmap texture light6
 {
-	map "materials/light6.png"
+	map "materials/textures/light6.png"
 }
 
 brightmap texture ATMOP
 {
-	map "materials/ATMOP.png"
+	map "materials/textures/ATMOP.png"
 }
 
 brightmap texture DMSTR01
 {
-	map "materials/DMSTR01.png"
+	map "materials/textures/DMSTR01.png"
 }
 
 brightmap texture DMSTR02
 {
-	map "materials/DMSTR02.png"
+	map "materials/textures/DMSTR02.png"
 }
 
 brightmap texture DMSTR03
 {
-	map "materials/DMSTR03.png"
+	map "materials/textures/DMSTR03.png"
 }
 
 brightmap texture DMSTR04
 {
-	map "materials/DMSTR04.png"
+	map "materials/textures/DMSTR04.png"
 }
 brightmap texture DMSTR05
 {
-	map "materials/DMSTR05.png"
+	map "materials/textures/DMSTR05.png"
 }
 
 brightmap texture DMSTR06
 {
-	map "materials/DMSTR06.png"
+	map "materials/textures/DMSTR06.png"
 }
 
 brightmap texture DMSTR07
 {
-	map "materials/DMSTR07.png"
+	map "materials/textures/DMSTR07.png"
 }
 
 brightmap texture DMSTR08
 {
-	map "materials/DMSTR08.png"
+	map "materials/textures/DMSTR08.png"
 }
 
 brightmap texture DMSTR13
 {
-	map "materials/DMSTR13.png"
+	map "materials/textures/DMSTR13.png"
 }
 
 brightmap texture DMSTR14
 {
-	map "materials/DMSTR14.png"
+	map "materials/textures/DMSTR14.png"
 }
 
 brightmap texture DMSTR15
 {
-	map "materials/DMSTR15.png"
+	map "materials/textures/DMSTR15.png"
 }
 
 brightmap texture DMSTR17
 {
-	map "materials/DMSTR17.png"
+	map "materials/textures/DMSTR17.png"
 }
 
 brightmap texture DMSTR19
 {
-	map "materials/DMSTR19.png"
+	map "materials/textures/DMSTR19.png"
 }
 
 brightmap texture DMSTR20
 {
-	map "materials/DMSTR20.png"
+	map "materials/textures/DMSTR20.png"
 }
 
 brightmap texture DMSTR21
 {
-	map "materials/DMSTR21.png"
+	map "materials/textures/DMSTR21.png"
+}
+
+brightmap texture DMTEK11
+{
+	map "materials/textures/DMTEK11.png"
+}
+
+brightmap texture DMANI1
+{
+	map "materials/textures/DMANI1.png"
+}
+
+brightmap texture DMANI2
+{
+	map "materials/textures/DMANI2.png"
+}
+
+brightmap texture DMANI3
+{
+	map "materials/textures/DMANI3.png"
+}
+
+brightmap texture DMANI4
+{
+	map "materials/textures/DMANI4.png"
+}
+
+brightmap texture DMANI5
+{
+	map "materials/textures/DMANI5.png"
+}
+
+brightmap texture DMANI6
+{
+	map "materials/textures/DMANI6.png"
+}
+
+
+brightmap texture DMANI7
+{
+	map "materials/textures/DMANI7.png"
+}
+
+brightmap texture DMCPU1
+{
+	map "materials/textures/DMCPU1.png"
+}
+
+brightmap texture DMCPU2
+{
+	map "materials/textures/DMCPU2.png"
+}
+
+brightmap texture DMCPU3
+{
+	map "materials/textures/DMCPU3.png"
+}
+
+brightmap texture DMKEY1
+{
+	map "materials/textures/DMKEY1.png"
+}
+
+brightmap texture DMKEY2
+{
+	map "materials/textures/DMKEY2.png"
+}
+
+brightmap texture DMKEY3
+{
+	map "materials/textures/DMKEY3.png"
+}
+
+brightmap texture DMLGHT1
+{
+	map "materials/textures/DMLGHT1.png"
+}
+
+brightmap texture DMLGHT2
+{
+	map "materials/textures/DMLGHT2.png"
+}
+
+brightmap texture DMLGHT3
+{
+	map "materials/textures/DMLGHT3.png"
+}
+
+brightmap texture DMPC1
+{
+	map "materials/textures/DMPC1.png"
+}
+
+brightmap texture DMPC2
+{
+	map "materials/textures/DMPC2.png"
+}
+
+brightmap texture DMPC3
+{
+	map "materials/textures/DMPC3.png"
+}
+
+brightmap texture DMPC4
+{
+	map "materials/textures/DMPC4.png"
+}
+
+brightmap texture DMRACK
+{
+	map "materials/textures/DMRACK.png"
+}
+
+brightmap texture DMSET1
+{
+	map "materials/textures/DMSET1.png"
+}
+
+brightmap texture DMSET2
+{
+	map "materials/textures/DMSET2.png"
+}
+
+brightmap texture DMSET3
+{
+	map "materials/textures/DMSET3.png"
+}
+
+brightmap texture DMSET4
+{
+	map "materials/textures/DMSET4.png"
+}
+
+brightmap texture DMTEK1
+{
+	map "materials/textures/DMTEK1.png"
+}
+  
+brightmap texture DMTEK2
+{
+	map "materials/textures/DMTEK2.png"
+}
+
+brightmap texture DMTEK5
+{
+	map "materials/textures/DMTEK5.png"
+}
+
+brightmap texture DMTEK6
+{
+	map "materials/textures/DMTEK6.png"
+}
+
+brightmap texture DMTEK7
+{
+	map "materials/textures/DMTEK7.png"
+}
+
+brightmap texture DMTEK8
+{
+	map "materials/textures/DMTEK8.png"
+}
+
+brightmap texture DMTEK9
+{
+	map "materials/textures/DMTEK9.png"
+}
+
+brightmap texture DMTEK10
+{
+	map "materials/textures/DMTEK10.png"
+}
+
+brightmap texture DMLGHT90
+{
+	map "materials/textures/DMLGHT90.png"
+}
+
+brightmap texture DMLGHT91
+{
+	map "materials/textures/DMLGHT91.png"
+}
+
+brightmap texture DMLGHT92
+{
+	map "materials/textures/DMLGHT92.png"
+}
+
+brightmap texture DMLGHT4
+{
+	map "materials/textures/DMLGHT4.png"
+}
+
+brightmap texture DMLGHT5
+{
+	map "materials/textures/DMLGHT5.png"
+}
+
+brightmap texture DMLGHT6
+{
+	map "materials/textures/DMLGHT6.png"
+}
+
+brightmap texture DMLGHT7
+{
+	map "materials/textures/DMLGHT7.png"
+}
+
+brightmap texture DMLGHT8
+{
+	map "materials/textures/DMLGHT8.png"
+}
+
+brightmap texture DMLGHT9
+{
+	map "materials/textures/DMLGHT9.png"
+}
+
+brightmap texture DMLGHT10
+{
+	map "materials/textures/DMLGHT10.png"
+}
+
+brightmap texture DMLGHT11
+{
+	map "materials/textures/DMLGHT11.png"
+}
+
+brightmap texture DMLGHT12
+{
+	map "materials/textures/DMLGHT12.png"
+}
+
+brightmap texture DMSUP86
+{
+	map "materials/textures/DMSUP86.png"
+}
+
+brightmap texture DMSUP87
+{
+	map "materials/textures/DMSUP87.png"
+}
+
+brightmap texture DMSUP89
+{
+	map "materials/textures/DMSUP89.png"
+}
+
+brightmap texture DMSUP91
+{
+	map "materials/textures/DMSUP91.png"
+}
+
+brightmap texture soda
+{
+	map "materials/textures/soda.png"
+}
+
+brightmap texture pinkt
+{
+	map "materials/textures/pinkt.png"
+}
+
+brightmap texture DMLGHT13
+{
+	map "materials/textures/DMLGHT13.png"
+}
+
+brightmap texture DMLGHT15
+{
+	map "materials/textures/DMLGHT15.png"
+}
+
+brightmap texture DMLGHT16
+{
+	map "materials/textures/DMLGHT16.png"
+}
+
+brightmap texture DMSUP135
+{
+	map "materials/textures/DMSUP135.png"
+}
+
+brightmap texture DMBORD1
+{
+	map "materials/textures/DMBORD1.png"
+}
+
+brightmap texture DMBORD2
+{
+	map "materials/textures/DMBORD2.png"
+}
+
+brightmap texture DMBORD3
+{
+	map "materials/textures/DMBORD3.png"
+}
+
+brightmap texture DMBORD4
+{
+	map "materials/textures/DMBORD4.png"
+}
+
+brightmap texture DMBORD5
+{
+	map "materials/textures/DMBORD5.png"
+}
+
+brightmap texture DMBORD6
+{
+	map "materials/textures/DMBORD6.png"
+}
+
+brightmap texture DMBORD7
+{
+	map "materials/textures/DMBORD7.png"
+}
+
+brightmap texture DMBORD8
+{
+	map "materials/textures/DMBORD8.png"
+}
+
+brightmap texture DMBORD9
+{
+	map "materials/textures/DMBORD9.png"
+}
+
+brightmap texture DMBORD10
+{
+	map "materials/textures/DMBORD10.png"
+}
+
+brightmap texture DMBORD11
+{
+	map "materials/textures/DMBORD11.png"
+}
+
+brightmap texture DMBORD12
+{
+	map "materials/textures/DMBORD12.png"
+}
+
+brightmap texture DMBORD13
+{
+	map "materials/textures/DMBORD13.png"
+}
+
+brightmap texture SCREEN1
+{
+	map "materials/textures/SCREEN1.png"
+}
+
+brightmap texture SCREEN2
+{
+	map "materials/textures/SCREEN2.png"
+}
+
+brightmap texture DMSUP184
+{
+	map "materials/textures/DMSUP184.png"
+}
+
+brightmap texture DMSUP185
+{
+	map "materials/textures/DMSUP185.png"
+}
+
+brightmap texture DMSUP188
+{
+	map "materials/textures/DMSUP188.png"
+}
+
+brightmap texture SW1S0
+{
+	map "materials/textures/SW1S0.png"
+}
+
+brightmap texture SW1S1
+{
+	map "materials/textures/SW1S1.png"
+}
+
+brightmap texture SW2_7
+{
+	map "materials/textures/SW2_7.png"
+}
+
+brightmap texture SW2_8
+{
+	map "materials/textures/SW2_8.png"
+}
+
+brightmap texture SW4S0
+{
+	map "materials/textures/SW4S0.png"
+}
+
+brightmap texture SW4S1
+{
+	map "materials/textures/SW4S1.png"
+}
+
+brightmap texture SW450
+{
+	map "materials/textures/SW450.png"
+}
+
+brightmap texture SW451
+{
+	map "materials/textures/SW451.png"
 }

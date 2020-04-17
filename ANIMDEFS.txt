@@ -1973,3 +1973,49 @@ texture RadJ01
    pic RadJ39 tics 1
    pic RadJ40 tics 1
    pic RadJ41 tics 1
+
+texture DMANI1
+        pic DMANI1 tics 15
+        pic DMANI2 tics 15
+        pic DMANI3 tics 15
+        pic DMANI4 tics 15
+		pic DMANI5 tics 15
+        pic DMANI6 tics 15
+		pic DMANI7 tics 15
+		
+texture DMPC1
+        pic DMPC1 tics 15
+        pic DMPC2 tics 15
+
+texture DMPC3
+        pic DMPC3 tics 15
+        pic DMPC4 tics 15
+		
+texture DMSET1
+        pic DMSET1 tics 15
+        pic DMSET2 tics 15
+		
+texture DMTEK5
+        pic DMTEK5 tics 15
+        pic DMTEK6 tics 15
+        pic DMTEK7 tics 15
+        pic DMTEK8 tics 15
+		pic DMTEK9 tics 15
+        pic DMTEK10 tics 15
+		
+texture DMBORD1
+        pic DMBORD1 tics 5
+		pic DMBORD2 tics 5
+		pic DMBORD3 tics 5
+		pic DMBORD4 tics 5
+		pic DMBORD5 tics 5
+		pic DMBORD6 tics 5
+		
+texture DMBORD7
+        pic DMBORD7 tics 5
+		pic DMBORD8 tics 5
+		pic DMBORD9 tics 5
+		pic DMBORD10 tics 5
+		pic DMBORD11 tics 5
+		pic DMBORD12 tics 5
+		pic DMBORD13 tics 5
